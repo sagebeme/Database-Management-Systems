@@ -1,0 +1,2 @@
+-- How many loans started in each month: month (like 2026-01), loans. In month order.
+-- Write your statement below this line.

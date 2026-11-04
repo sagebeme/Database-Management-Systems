@@ -1,0 +1,4 @@
+-- Loans that came back late, or are still out and late on 2026-03-31: id, name (the member), days_late
+-- (counted to the return day, or to 2026-03-31 if still out), fine (10 shillings a day, at most 500).
+-- Most days late first, ties by id.
+-- Write your statement below this line.
