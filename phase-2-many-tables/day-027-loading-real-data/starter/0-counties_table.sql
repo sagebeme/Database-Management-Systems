@@ -1,0 +1,2 @@
+-- Create counties: code CHAR(3) primary key; name (VARCHAR(40), required, unique); former_province (VARCHAR(20)), capital (VARCHAR(40)), total_area_km2, land_area_km2 and population (INT), all required.
+-- Write your statement below this line.

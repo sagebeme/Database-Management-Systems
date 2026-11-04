@@ -1,0 +1,2 @@
+-- Kata: Counties on the Water. Counties where water is at least 10% of the total area: county, water_percent (1 decimal place). Most water first.
+-- Write your statement below this line.

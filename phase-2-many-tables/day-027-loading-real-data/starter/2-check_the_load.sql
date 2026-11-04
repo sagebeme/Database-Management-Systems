@@ -1,0 +1,2 @@
+-- Check the import: how many counties (counties) and the total population (population).
+-- Write your statement below this line.

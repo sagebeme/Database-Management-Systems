@@ -1,0 +1,2 @@
+-- Load counties.csv into counties (run from the course folder). The numbers have thousands commas: remove them.
+-- Write your statement below this line.
