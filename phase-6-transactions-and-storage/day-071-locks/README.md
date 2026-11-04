@@ -21,6 +21,9 @@ In schedules: `sl1(A)` (T1 takes a shared lock on A), `xl1(A)` (exclusive), `u1(
 
 - **Strict 2PL**: exclusive locks are held until commit or abort, so nobody reads uncommitted data. That makes schedules strict (Day 68).
 - **Rigorous 2PL**: *every* lock is held until commit. That's what InnoDB does with the locks it takes.
+- **Conservative (static) 2PL**: a transaction takes *all* its locks before it does anything, or none and tries again later. A transaction holding locks never waits for one, so no deadlock can form. The catch: it must know every item it will touch in advance, which real transactions rarely do. GATE asks about it; real databases don't use it.
+
+So: basic 2PL gives serializability; strict 2PL adds no cascading aborts; rigorous 2PL is stricter still; conservative 2PL alone rules out deadlocks.
 
 **In MySQL**: `UPDATE` and `DELETE` take exclusive row locks. `SELECT ... FOR UPDATE` takes exclusive locks on the rows it reads, and `SELECT ... FOR SHARE` shared ones. A plain `SELECT` takes none: it reads a snapshot (Day 67).
 
