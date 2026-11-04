@@ -1,0 +1,3 @@
+-- A trigger, keep_verified_users: refuse to delete a user whose email is confirmed, with SQLSTATE '45000' and
+-- the message 'Verified users cannot be deleted'. Unconfirmed users can be deleted. Safe to run twice.
+-- Write your statement below this line.

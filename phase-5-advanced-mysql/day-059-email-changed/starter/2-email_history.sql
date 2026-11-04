@@ -1,0 +1,3 @@
+-- A trigger, record_email_change: after an update that changes a user's email, add a row to email_history
+-- (user_id, old_email, new_email). Safe to run twice.
+-- Write your statement below this line.

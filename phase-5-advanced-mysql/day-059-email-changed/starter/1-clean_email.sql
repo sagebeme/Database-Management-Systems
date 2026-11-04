@@ -1,0 +1,4 @@
+-- Two triggers that store every email trimmed and in lower case: clean_email_insert (on insert) and
+-- clean_email_update (on update). The update one must run before reset_valid_email, so ' wanjiku@pamoja.test'
+-- doesn't count as a new address. Safe to run twice.
+-- Write your statement below this line.

@@ -1,0 +1,3 @@
+-- A trigger, reset_valid_email: when a user's email changes, set valid_email back to 0 (they must confirm the
+-- new address). Any other change leaves valid_email alone. Safe to run twice.
+-- Write your statement below this line.

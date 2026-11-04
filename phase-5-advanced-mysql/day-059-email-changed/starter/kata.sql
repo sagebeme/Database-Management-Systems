@@ -1,0 +1,4 @@
+-- A trigger, limit_email_changes: refuse a user's fourth email change (three are allowed, counted in
+-- email_history), with SQLSTATE '45000' and the message 'Too many email changes'. Other updates still work.
+-- Safe to run twice.
+-- Write your statement below this line.
