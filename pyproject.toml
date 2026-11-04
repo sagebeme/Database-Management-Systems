@@ -1,0 +1,14 @@
+[project]
+name = "database-management-systems-course"
+version = "1.0.0"
+description = "100 Days of Databases: from your first SELECT to designing, tuning and running databases like an expert."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+# Every day has its own test_day.py; importlib mode lets them share that name.
+addopts = "--import-mode=importlib -p no:cacheprovider -q"
+testpaths = ["phase-*", "tools"]
+python_files = ["test_*.py"]
+markers = [
+    "passes_on_starter: this test checks something the untouched starter already gets right (tools/verify.py won't expect it to fail)",
+]
