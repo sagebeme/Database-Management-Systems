@@ -1,0 +1,2 @@
+-- How many rows record which room Mr Omondi teaches in? Column: rows.
+-- Write your statement below this line.

@@ -1,0 +1,3 @@
+-- Join the split tables back into the spreadsheet's shape: student, student_phone, subject, fee, tutor, tutor_room.
+-- Ordered by student, then subject.
+-- Write your statement below this line.

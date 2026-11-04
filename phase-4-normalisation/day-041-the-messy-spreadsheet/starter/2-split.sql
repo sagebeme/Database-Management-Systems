@@ -1,0 +1,3 @@
+-- Split the spreadsheet so each fact is stored once: create tutors (name PK, room), subjects (name PK, fee, tutor FK),
+-- students (name PK, phone UNIQUE) and registrations (student FK, subject FK, both the key), then fill them from registrations_flat.
+-- Write your statement below this line.
