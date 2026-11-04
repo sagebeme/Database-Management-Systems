@@ -1,0 +1,2 @@
+-- Each manager and how many people report to them directly: manager, reports. Most first, ties alphabetical.
+-- Write your statement below this line.

@@ -1,0 +1,18 @@
+erDiagram
+    %% Draw EMPLOYEE and DEPENDANT with their keys, the identifying relationship between them,
+    %% and the relationship of EMPLOYEE to itself.
+    EMPLOYEE ||--o{ DEPENDANT : covers
+    EMPLOYEE |o..o{ EMPLOYEE : manages
+
+    EMPLOYEE {
+        int id PK
+        string name
+        string title
+        int manager_id FK
+    }
+    DEPENDANT {
+        int employee_id PK, FK
+        string name PK "partial key"
+        string relationship
+        date born_on
+    }

@@ -1,0 +1,2 @@
+-- Kata: The Boss's Boss. Each employee whose manager has a manager too, with that person: employee, grand_manager. Alphabetical by employee.
+-- Write your statement below this line.

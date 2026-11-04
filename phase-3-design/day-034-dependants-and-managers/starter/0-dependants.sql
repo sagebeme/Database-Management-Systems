@@ -1,0 +1,3 @@
+-- Create dependants, a weak entity owned by employees: employee_id, name (VARCHAR(40)), relationship ('spouse' or 'child')
+-- and born_on (DATE), all required. A dependant is identified by its employee and its name. Deleting an employee deletes their dependants.
+-- Write your statement below this line.
