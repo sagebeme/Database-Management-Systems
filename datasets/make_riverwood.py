@@ -93,7 +93,7 @@ INSERT INTO watchlist (viewer, show_id, requested_title) VALUES
     ('baraka', 2, NULL),
     ('chebet', 5, NULL),
     ('chebet', 12, NULL),
-    ('chebet', NULL, 'Tusker Ride'),
+    ('chebet', NULL, 'Boda Boda Diaries'),
     ('dennis', 7, NULL),
     ('dennis', 11, NULL);"""
 
