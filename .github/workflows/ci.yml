@@ -28,6 +28,9 @@ jobs:
       - name: Install the Python packages
         run: pip install -r requirements.txt
 
+      - name: The website's course data matches the syllabus
+        run: python tools/sitedata.py --check
+
       # The same server settings tools/devdb.sh uses, on the same port.
       - name: Start MySQL 8.4
         run: |
