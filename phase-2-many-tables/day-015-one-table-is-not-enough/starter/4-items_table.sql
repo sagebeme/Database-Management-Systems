@@ -1,0 +1,2 @@
+-- Make an items table with one row per item: name, and price as the highest price recorded for it.
+-- Write your statement below this line.

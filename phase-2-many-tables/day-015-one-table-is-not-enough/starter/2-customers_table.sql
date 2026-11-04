@@ -1,0 +1,2 @@
+-- Make a customers table with one row per customer: name, phone, town (from orders_flat, after the fix).
+-- Write your statement below this line.

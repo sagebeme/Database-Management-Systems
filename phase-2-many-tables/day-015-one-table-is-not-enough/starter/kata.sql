@@ -1,0 +1,2 @@
+-- Kata: Lost With the Order. Items that appear in only one order (deleting that order would forget the item exists): item and order_id. Alphabetical.
+-- Write your statement below this line.
