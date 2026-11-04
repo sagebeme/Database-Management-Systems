@@ -1,0 +1,28 @@
+erDiagram
+    %% Draw Mama Amina's shop: CUSTOMER, CATEGORY, PRODUCT and ORDER, their attributes and keys,
+    %% and how they're related. The README lists everything the diagram needs.
+    CUSTOMER ||--o{ ORDER : places
+    CATEGORY ||--o{ PRODUCT : groups
+    ORDER }o--|{ PRODUCT : contains
+
+    CUSTOMER {
+        int id PK
+        string name
+        string phone UK "2547XXXXXXXX"
+        string town
+    }
+    CATEGORY {
+        int id PK
+        string name UK
+    }
+    PRODUCT {
+        int id PK
+        string name
+        decimal price
+        int category_id FK
+    }
+    ORDER {
+        int id PK
+        datetime placed_at
+        int customer_id FK
+    }

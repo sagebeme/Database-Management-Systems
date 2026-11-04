@@ -1,0 +1,25 @@
+erDiagram
+    %% Kata: The Stage. Draw SACCO, MATATU, DRIVER and ROUTE, with a primary key on each,
+    %% and the three relationships the README describes.
+    SACCO ||--o{ MATATU : owns
+    ROUTE ||--o{ MATATU : serves
+    DRIVER }o--o{ MATATU : drives
+
+    SACCO {
+        int id PK
+        string name UK
+    }
+    MATATU {
+        string reg_no PK
+        int sacco_id FK
+        string route_no FK
+    }
+    DRIVER {
+        string licence_no PK
+        string name
+    }
+    ROUTE {
+        string route_no PK
+        string from_stage
+        string to_stage
+    }
