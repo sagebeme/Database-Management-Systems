@@ -36,7 +36,7 @@ It's the `mongosh` you know with Python dicts and snake_case names. Operators ar
 
 **Cursors** chain: `.sort("name", 1)` (or `.sort([("students", -1), ("name", 1)])`), `.skip(n)`, `.limit(n)`. Page `p` of size `k` is `.skip((p - 1) * k).limit(k)`, after a sort, or the pages can overlap.
 
-**Operator injection**: when a value comes from outside, check its type before it goes into a query. A string can't carry an operator; a dict can. The same goes for numbers sent as strings: `{"$gte": "1000"}` compares as text, and every number is less than every string in MongoDB's sort order.
+**Operator injection**: when a value comes from outside, check its type before it goes into a query. A string can't carry an operator; a dict can. Numbers sent as strings fail quietly instead: `{"$gte": "1000"}` only matches fields that hold *strings*, so no school matches at all.
 
 ## Steps
 
