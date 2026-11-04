@@ -9,7 +9,7 @@
   function row(d) {
     var done = P.dayDone(state, d.day);
     return '<li class="row' + (done ? " is-done" : "") + '">' +
-      '<span class="n">' + d.day + "</span>" +
+      '<span class="n">' + (done ? "<mark>" + d.day + "</mark>" : d.day) + "</span>" +
       '<a class="t" href="' + P.dayUrl(d.day) + '">' + esc(d.title) + "</a>" +
       '<span class="what">' + P.md(d.teaches) + "</span>" +
       '<span class="st">' + (done ? P.stamp(state.days[d.day].done) : "") + "</span></li>";

@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Database Management Systems · 100 days</title>
 <meta name="description" content="A hundred-day databases course: from your first SELECT to running a production database, with tests that run your SQL against a real database. MySQL, PostgreSQL, MongoDB and Redis, and GATE practice.">
-<meta name="theme-color" content="#E8EDE4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#111916" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#5BC0EB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#123F58" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,11 +83,11 @@
     <div class="terminal" aria-label="A real test run of Day 4">
 <pre><span class="dim">$</span> pytest phase-1-first-queries/day-004-matatu-stages -x --tb=line
 test_day.py:18: AssertionError: assert [] == ['route_no', 'fare_kes']
-FAILED test_day.py::test_cheap_routes
+<span class="bad">FAILED</span> test_day.py::test_cheap_routes
 
 <span class="dim">$</span> pytest phase-1-first-queries/day-004-matatu-stages
 .......                                         [100%]
-7 passed in 1.97s</pre>
+<span class="ok">7 passed</span> in 1.97s</pre>
     </div>
   </div>
 </section>
