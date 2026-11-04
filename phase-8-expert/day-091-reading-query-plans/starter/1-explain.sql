@@ -1,0 +1,4 @@
+-- EXPLAIN ANALYZE the county report below, without costs or timings (so the output is the same every run):
+-- EXPLAIN (ANALYZE, COSTS OFF, TIMING OFF, SUMMARY OFF) followed by the query.
+--   SELECT c.county, sum(o.total) AS spent FROM customers AS c JOIN orders AS o ON o.customer_id = c.id
+--   GROUP BY c.county ORDER BY spent DESC;
