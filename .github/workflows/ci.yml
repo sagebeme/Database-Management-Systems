@@ -68,3 +68,8 @@ jobs:
 
       - name: Solutions pass, starters fail
         run: python tools/verify.py
+
+      # verify.py only names the failing tests; this shows why, for the first few.
+      - name: Show the first failures in detail
+        if: failure()
+        run: DBMS_TARGET=solution python -m pytest -q --tb=short --maxfail=8 -p no:cacheprovider phase-*/
