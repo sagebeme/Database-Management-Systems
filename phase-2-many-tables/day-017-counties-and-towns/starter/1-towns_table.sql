@@ -1,0 +1,2 @@
+-- Create towns: id (numbered automatically, primary key), county_id (required, must be a real county's id), name (VARCHAR(60), required).
+-- Write your statement below this line.

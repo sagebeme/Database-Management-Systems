@@ -1,0 +1,2 @@
+-- Create wards: id (auto, primary key), town_id (required, a real town), name (VARCHAR(60), required). Deleting a town deletes its wards.
+-- Write your statement below this line.

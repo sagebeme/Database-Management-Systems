@@ -1,0 +1,2 @@
+-- Kata: Who Points Here? Every table and column in this database that has a foreign key to counties: table_name and column_name, alphabetical.
+-- Write your statement below this line.

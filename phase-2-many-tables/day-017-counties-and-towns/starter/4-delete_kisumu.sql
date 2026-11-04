@@ -1,0 +1,2 @@
+-- Kisumu (county id 6) is leaving the list. Delete it, along with its towns: the order of your statements matters.
+-- Write your statement below this line.

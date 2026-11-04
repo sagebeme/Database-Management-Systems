@@ -1,0 +1,2 @@
+-- Create counties: id (numbered automatically, primary key), code (CHAR(3), required, unique), name (VARCHAR(60), required, unique).
+-- Write your statement below this line.
