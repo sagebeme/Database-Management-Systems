@@ -1,0 +1,2 @@
+-- Names of towns with no shop at all, alphabetical.
+-- Write your statement below this line.

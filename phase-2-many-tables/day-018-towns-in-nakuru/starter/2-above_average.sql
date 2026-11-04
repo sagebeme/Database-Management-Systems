@@ -1,0 +1,2 @@
+-- Name and monthly_sales of shops that sell more than the average shop, biggest first.
+-- Write your statement below this line.

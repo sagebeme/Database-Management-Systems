@@ -1,0 +1,2 @@
+-- For every town that has shops: town_id, and the name and monthly_sales of its best-selling shop. In town_id order.
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- Kata: The Average Town. Add up each town's shop sales, then average those totals over the towns that have shops: avg_town_sales, rounded to a whole number.
+-- Write your statement below this line.
