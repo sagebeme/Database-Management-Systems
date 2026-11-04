@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Database Management Systems · 100 days</title>
+<meta name="description" content="A hundred-day databases course: from your first SELECT to running a production database, with tests that run your SQL against a real database. MySQL, PostgreSQL, MongoDB and Redis, and GATE practice.">
+<meta name="theme-color" content="#E8EDE4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111916" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#ledger">Skip to the ledger</a>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="wordmark" href="index.html" aria-current="page">Database Management Systems <span>100 days</span></a>
+    <nav aria-label="Main">
+      <a class="wide" href="#ledger">The ledger</a>
+      <a class="wide" href="#setup">Setting up</a>
+      <a href="day.html?doc=SYLLABUS.md">Syllabus</a>
+      <a href="https://github.com/sagebeme/Database-Management-Systems">GitHub</a>
+      <button class="theme" type="button" id="theme" aria-label="Switch to the dark theme">Night</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <h1>From your first SELECT to a production database</h1>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="lede">One small job a day for a hundred days: dukas, matatu SACCOs, schools and county offices. You write the SQL; the tests run it against a real database, change the data, and run it again.</p>
+        <p class="facts">Eight phases. MySQL first, then PostgreSQL, MongoDB and Redis. A GATE-style practice test after every theory phase, and three portfolio projects at the end.</p>
+        <p class="hero-actions">
+          <a class="btn" id="cta" href="day.html?d=1">Start Day 1</a>
+          <span class="carried" id="carried">Nothing posted yet.</span>
+        </p>
+      </div>
+
+      <div class="console" id="console" hidden>
+        <p class="console-head">Ask the course. It's a database too: <code>days</code>, <code>phases</code> and <code>extras</code>.</p>
+        <form id="query-form" autocomplete="off">
+          <label class="prompt" for="query">mysql&gt;</label>
+          <textarea id="query" rows="2" spellcheck="false" aria-describedby="query-help">SELECT phase, title, days, done FROM phases;</textarea>
+          <button class="run" type="submit">Run</button>
+        </form>
+        <pre class="result" id="result" aria-live="polite"></pre>
+        <p class="tries" id="query-help">Try:
+          <a href="#" data-q="SELECT day, title FROM days WHERE phase = 4 AND status = 'todo' LIMIT 5;">what's left in Phase 4</a>,
+          <a href="#" data-q="SELECT day, title FROM days WHERE title LIKE 'Capstone%';">every capstone</a>,
+          <a href="#" data-q="SELECT kind, COUNT(*) FROM extras GROUP BY kind;">the extras</a>,
+          <a href="#" data-q="UPDATE days SET status = 'done' WHERE day = 1;">post Day 1 with an UPDATE</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ledger-intro" id="ledger">
+  <div class="wrap folio-grid">
+    <h2>The ledger</h2>
+    <p>Every day of the course, in order, a folio to a phase. Post a day from its page when its tests pass, or with an <code>UPDATE</code> in the box above. The extras in italics sit between the days they follow: in the book, but outside the hundred.</p>
+  </div>
+</section>
+<div id="folios"></div>
+<noscript><div class="wrap"><p>The ledger needs JavaScript. The same list is in <a href="https://github.com/sagebeme/Database-Management-Systems/blob/master/SYLLABUS.md">SYLLABUS.md</a>.</p></div></noscript>
+
+<section class="howto">
+  <div class="wrap howto-grid">
+    <div>
+      <h2>How a day goes</h2>
+      <p>Day 4: Brian is building a matatu app for people new to Nairobi, and needs five lists from the stages table. Each list is one file in <code>starter/</code>. You run the tests; until the query is right, they say exactly what came back and what should have.</p>
+      <p>When all seven pass, the kata is a five-minute puzzle in the style of HackerRank or a GATE paper. Then post the day.</p>
+      <p><a href="day.html?d=4">Read Day 4</a></p>
+    </div>
+    <div class="terminal" aria-label="A real test run of Day 4">
+<pre><span class="dim">$</span> pytest phase-1-first-queries/day-004-matatu-stages -x --tb=line
+test_day.py:18: AssertionError: assert [] == ['route_no', 'fare_kes']
+FAILED test_day.py::test_cheap_routes
+
+<span class="dim">$</span> pytest phase-1-first-queries/day-004-matatu-stages
+.......                                         [100%]
+7 passed in 1.97s</pre>
+    </div>
+  </div>
+</section>
+
+<section class="setup" id="setup">
+  <div class="wrap">
+    <h2>Setting up, once</h2>
+    <table class="setup-table">
+      <tbody>
+        <tr>
+          <th scope="row">Linux or macOS</th>
+          <td>Install Python, MySQL and the rest, then <code>tools/devdb.sh up</code> starts private copies of all four databases. No passwords, nothing touches a server you already run.</td>
+          <td><a href="day.html?doc=README.md#setting-up">Setting up</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Windows</th>
+          <td>Through WSL, Ubuntu inside Windows, about twenty minutes once. PowerShell can't feed a file to a database with <code>&lt;</code>, so every README command would fail there.</td>
+          <td><a href="day.html?doc=WINDOWS.md">The Windows guide</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Docker</th>
+          <td><code>docker compose up -d</code> runs the same versions CI uses, on the same ports. You still install the client programs the tests call.</td>
+          <td><a href="day.html?doc=README.md#setting-up">Details</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Did ALX's MongoDB?</th>
+          <td>That was an older MongoDB. <code>mongo</code> is now <code>mongosh</code>, <code>insert()</code> is <code>insertOne()</code>, and PyMongo 4 removed the old methods.</td>
+          <td><a href="day.html?doc=phase-7-beyond-mysql/README.md#coming-from-alxs-older-mongodb">What changed</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-name">Database Management Systems</p>
+    <p>A hundred days, free, on <a href="https://github.com/sagebeme/Database-Management-Systems">GitHub</a>. The businesses and figures in the exercises are made up for practice; each <code>setup.sql</code> says which parts are real. Your progress is kept in this browser only.</p>
+  </div>
+</footer>
+
+<script src="assets/course.js"></script>
+<script src="assets/progress.js"></script>
+<script src="assets/query.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
