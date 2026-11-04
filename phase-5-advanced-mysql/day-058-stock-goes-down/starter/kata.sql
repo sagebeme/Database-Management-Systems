@@ -1,0 +1,3 @@
+-- A trigger, adjust_stock: when an order is changed, fix the stock. The number can change, and so can the
+-- item (then the old item gets its number back and the new item loses the new number). Safe to run twice.
+-- Write your statement below this line.

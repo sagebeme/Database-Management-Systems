@@ -1,0 +1,3 @@
+-- A trigger, decrease_stock: after a new order goes in, take its number off the item's quantity.
+-- Safe to run twice.
+-- Write your statement below this line.

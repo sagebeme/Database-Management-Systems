@@ -1,0 +1,2 @@
+-- A trigger, restore_stock: when an order is deleted (cancelled), put its number back. Safe to run twice.
+-- Write your statement below this line.

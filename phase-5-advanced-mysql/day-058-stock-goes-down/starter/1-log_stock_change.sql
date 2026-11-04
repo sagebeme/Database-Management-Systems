@@ -1,0 +1,3 @@
+-- A trigger, log_stock_change: whenever an item's quantity changes, add a row to stock_log with the item's
+-- name and its quantity before and after. Updates that don't change the quantity log nothing. Safe to run twice.
+-- Write your statement below this line.
