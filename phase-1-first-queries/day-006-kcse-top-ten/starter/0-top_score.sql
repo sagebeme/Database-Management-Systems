@@ -1,0 +1,2 @@
+-- Name and points of every candidate, best first; candidates on the same points in alphabetical order.
+-- Write your statement below this line.

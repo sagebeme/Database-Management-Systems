@@ -1,0 +1,2 @@
+-- Every county that has a candidate, once each, in alphabetical order.
+-- Write your statement below this line.

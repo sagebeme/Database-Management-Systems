@@ -1,0 +1,2 @@
+-- Name and points of candidates 11 to 20, in the same order.
+-- Write your statement below this line.
