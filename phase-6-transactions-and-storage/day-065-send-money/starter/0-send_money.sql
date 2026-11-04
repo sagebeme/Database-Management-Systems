@@ -1,0 +1,5 @@
+-- A procedure, SendMoney(from_phone, to_phone, amount), all in one transaction: take the amount from the
+-- sender, give it to the receiver, and record it in transfers. Refuse with SQLSTATE '45000' and one of these
+-- messages, changing nothing: 'Amount must be positive', 'No such account' (either phone), 'Insufficient funds'.
+-- If anything fails part-way, nothing it did may be kept. Safe to run twice.
+-- Write your statement below this line.

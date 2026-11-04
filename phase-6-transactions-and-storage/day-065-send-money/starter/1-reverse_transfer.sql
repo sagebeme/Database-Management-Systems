@@ -1,0 +1,4 @@
+-- A procedure, ReverseTransfer(transfer_id), in one transaction: send the money back and mark the transfer
+-- reversed. Refuse with SQLSTATE '45000', changing nothing: 'No such transfer', 'Already reversed', or
+-- 'Insufficient funds' (the receiver has spent it). Safe to run twice.
+-- Write your statement below this line.
