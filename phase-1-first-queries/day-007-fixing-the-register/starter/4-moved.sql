@@ -1,0 +1,2 @@
+-- Khaemba Simiyu (id 7) moved to Bungoma and has a new number, 254733000107: change both in one statement.
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- Members in Kakamega increase their monthly contribution by 10%.
+-- Write your statement below this line.

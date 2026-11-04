@@ -1,0 +1,2 @@
+-- Everyone paying 500 a month now pays 600.
+-- Write your statement below this line.

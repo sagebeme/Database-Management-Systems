@@ -1,0 +1,2 @@
+-- Makokha Juma (id 4) has a digit missing from his phone; his number is 254712000104.
+-- Write your statement below this line.

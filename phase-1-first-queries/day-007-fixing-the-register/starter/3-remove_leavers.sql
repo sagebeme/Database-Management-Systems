@@ -1,0 +1,2 @@
+-- Remove every member whose status is left.
+-- Write your statement below this line.
