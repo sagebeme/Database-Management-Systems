@@ -1,0 +1,3 @@
+-- A procedure, ComputeAverageScoreForUser(user_id): store that user's average score in users.average_score
+-- (0 if they have no corrections). Safe to run twice.
+-- Write your statement below this line.

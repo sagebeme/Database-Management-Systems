@@ -1,0 +1,4 @@
+-- A procedure, ComputeAverageWeightedScoreForUser(user_id): store that user's weighted average in
+-- users.average_score: each score times its project's weight, added up, divided by the weights added up
+-- (0 if they have no corrections). Safe to run twice.
+-- Write your statement below this line.

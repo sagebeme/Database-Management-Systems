@@ -1,0 +1,3 @@
+-- A function, Grade(score): 'A' for 80 and up, 'B' for 65 and up, 'C' for 50 and up, 'D' for 40 and up,
+-- otherwise 'E'. Safe to run twice.
+-- Write your statement below this line.

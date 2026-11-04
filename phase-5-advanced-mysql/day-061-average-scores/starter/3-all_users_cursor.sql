@@ -1,0 +1,3 @@
+-- A procedure, ComputeAverageWeightedScoreForUsers(): loop over every user with a CURSOR and call
+-- ComputeAverageWeightedScoreForUser for each (that procedure is already installed). Safe to run twice.
+-- Write your statement below this line.

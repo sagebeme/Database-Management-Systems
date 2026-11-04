@@ -1,0 +1,3 @@
+-- A procedure, ComputeAllInOneGo(): the same result as ComputeAverageWeightedScoreForUsers, for every user,
+-- in one UPDATE statement: no cursor, no loop. Safe to run twice.
+-- Write your statement below this line.
