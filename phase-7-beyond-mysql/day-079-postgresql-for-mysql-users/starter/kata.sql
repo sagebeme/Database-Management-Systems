@@ -1,0 +1,4 @@
+-- Kata: for each sacco, its name as sacco and its route numbers as routes, a comma and space between them,
+-- in route number order (as text: '19C' comes before '33'). Saccos with no routes too, with routes NULL.
+-- By sacco.
+-- Write your statement below this line.

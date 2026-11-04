@@ -1,0 +1,2 @@
+-- Add the sacco 'Mji Movers' and print its new id and name, in the same statement.
+-- Write your statement below this line.
