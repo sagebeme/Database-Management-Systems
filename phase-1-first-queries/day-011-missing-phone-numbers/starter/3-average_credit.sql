@@ -1,0 +1,2 @@
+-- Two averages of credit_limit, rounded to 2 places: avg_known (ignoring unknown limits) and avg_unknown_as_zero.
+-- Write your statement below this line.

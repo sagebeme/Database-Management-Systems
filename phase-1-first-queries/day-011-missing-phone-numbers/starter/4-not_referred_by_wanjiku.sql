@@ -1,0 +1,2 @@
+-- Names of every customer not referred by Wanjiku (id 1), including those nobody referred. Alphabetical.
+-- Write your statement below this line.

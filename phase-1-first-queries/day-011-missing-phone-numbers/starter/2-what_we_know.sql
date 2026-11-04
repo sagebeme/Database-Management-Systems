@@ -1,0 +1,2 @@
+-- Three counts in one row: customers, with_phone, with_email.
+-- Write your statement below this line.

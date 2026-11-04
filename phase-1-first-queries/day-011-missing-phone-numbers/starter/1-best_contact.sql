@@ -1,0 +1,2 @@
+-- Every customer's name and one way to reach them (contact): their phone, else their email, else the words no contact. Alphabetical.
+-- Write your statement below this line.
