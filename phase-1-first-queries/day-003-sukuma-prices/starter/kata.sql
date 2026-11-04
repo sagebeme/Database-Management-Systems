@@ -1,0 +1,2 @@
+-- Kata: Price for Three. Every item's name, and the price of three of it in a column called price for 3.
+-- Write your statement below this line.

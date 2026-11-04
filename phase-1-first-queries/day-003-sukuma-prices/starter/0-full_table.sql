@@ -1,0 +1,2 @@
+-- Show the statement that would create the produce table.
+-- Write your statement below this line.
