@@ -1,0 +1,3 @@
+-- A summary table: daily_sales (shop_id, day, order_count, revenue), primary key (shop_id, day), one row for
+-- each shop and day that has orders. Create it and fill it from orders.
+-- Write your statement below this line.

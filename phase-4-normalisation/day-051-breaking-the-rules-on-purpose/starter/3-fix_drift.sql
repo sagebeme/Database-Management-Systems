@@ -1,0 +1,2 @@
+-- Set every shop's orders_count to its real number of orders, in one statement.
+-- Write your statement below this line.

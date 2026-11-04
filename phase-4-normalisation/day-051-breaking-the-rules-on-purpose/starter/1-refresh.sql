@@ -1,0 +1,3 @@
+-- Bring daily_sales up to date with orders. It must be safe to run again and again: after new orders, after
+-- none, after an order is deleted.
+-- Write your statement below this line.

@@ -1,0 +1,3 @@
+-- Each shop's best day, from daily_sales only (don't touch orders): name, day, revenue.
+-- Ties: the earlier day. Alphabetical by name.
+-- Write your statement below this line.
