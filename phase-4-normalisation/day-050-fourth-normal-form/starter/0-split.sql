@@ -1,0 +1,5 @@
+-- Replace tutor_offers with two tables, filled from it:
+--   tutor_subjects (tutor, subject), primary key both columns
+--   tutor_languages (tutor, language), primary key both columns
+-- Keep tutor_offers for now (step 1 compares against it).
+-- Write your statement below this line.
