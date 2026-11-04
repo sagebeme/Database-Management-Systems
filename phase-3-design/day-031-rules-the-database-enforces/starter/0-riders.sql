@@ -1,0 +1,3 @@
+-- Create riders: id (auto-numbered primary key), name (VARCHAR(60), required), licence_no (CHAR(9), required, unique)
+-- and age (TINYINT, required, from 18 to 70).
+-- Write your statement below this line.

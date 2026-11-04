@@ -1,0 +1,4 @@
+-- Create trips: id (auto-numbered primary key), plate (required, a real bike), fare (INT, required, more than 0),
+-- started_at (DATETIME, required), ended_at (DATETIME, optional, after started_at if given).
+-- Deleting a bike deletes its trips; changing a bike's plate changes its trips' plate.
+-- Write your statement below this line.

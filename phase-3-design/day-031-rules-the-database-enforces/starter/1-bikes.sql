@@ -1,0 +1,3 @@
+-- Create bikes: plate (VARCHAR(10), primary key), rider_id (optional, a real rider), engine_cc (SMALLINT, required, 50 to 1000).
+-- If a rider is deleted, their bikes stay with no rider. If a rider's id changes, their bikes follow.
+-- Write your statement below this line.
