@@ -1,0 +1,2 @@
+-- Every tag and how many products carry it: tag, products. Most first, ties by tag.
+-- Write your statement below this line.

@@ -1,0 +1,3 @@
+-- A CHECK constraint, phone_shape, using JSON_SCHEMA_VALID: a phone's attributes must have ram_gb and
+-- storage_gb, both whole numbers from 0 up. Other categories can hold anything.
+-- Write your statement below this line.
