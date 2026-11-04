@@ -1,0 +1,2 @@
+-- Create the user rw_admin (any host, password rw_admin_dev) if it doesn't exist, with every privilege on every database.
+-- Write your statement below this line.

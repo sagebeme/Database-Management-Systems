@@ -1,0 +1,2 @@
+-- Show the privileges of rw_admin, then of rw_reader.
+-- Write your statement below this line.

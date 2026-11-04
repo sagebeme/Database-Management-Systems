@@ -1,0 +1,2 @@
+-- Create the user rw_app (any host, password rw_app_dev) if missing. In riverwood_ops it may read, add and change rows, but never delete them.
+-- Write your statement below this line.

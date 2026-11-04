@@ -1,0 +1,2 @@
+-- Create the database riverwood_ops and the user rw_reader (any host, password rw_reader_dev), both only if missing. rw_reader may only read riverwood_ops.
+-- Write your statement below this line.

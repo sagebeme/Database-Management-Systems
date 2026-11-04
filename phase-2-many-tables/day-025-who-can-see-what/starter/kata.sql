@@ -1,0 +1,2 @@
+-- Kata: Change the Locks. rw_reader's password leaked. Change it to rw_reader_new.
+-- Write your statement below this line.
