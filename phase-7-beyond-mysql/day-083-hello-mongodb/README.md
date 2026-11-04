@@ -70,7 +70,7 @@ In `starter/kata`, list the schools with more than 1,000 students and a chess or
 
 ## When you're stuck
 
-- **`DeprecationWarning: Collection.insert() is deprecated`**: older tutorials (and older exam papers) use `insert`, `update` and `count`. mongosh still runs them but warns. Use `insertOne`/`insertMany`, `updateOne`/`updateMany` and `countDocuments`.
+- **`DeprecationWarning: Collection.insert() is deprecated`**: older tutorials (and older exam papers) use `insert`, `update` and `count`. mongosh still runs them but warns. Use `insertOne`/`insertMany`, `updateOne`/`updateMany` and `countDocuments`. Learned MongoDB on ALX's older version? The [Phase 7 README](../README.md#coming-from-alxs-older-mongodb) lists everything that changed.
 - **Nothing found, no error**: field names and values are case-sensitive, and a misspelled field silently matches nothing. `{ County: "Kiambu" }` finds no school.
 - **`Stadi Technical` shows up in the St. list**: in a regular expression `.` means "any character". Escape it: `/^St\./`.
 - **`Cannot do exclusion on field name in inclusion projection`**: a projection is all 1s or all 0s, except `_id`, which you can always turn off with `_id: 0`.

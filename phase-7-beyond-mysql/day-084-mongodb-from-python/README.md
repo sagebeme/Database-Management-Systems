@@ -55,6 +55,7 @@ In `starter/schools.py`, write `search(schools, county=None, min_students=None, 
 
 ## When you're stuck
 
+- **`TypeError: 'Collection' object is not callable. If you meant to call the 'insert' method...`**: PyMongo 4 removed `insert`, `update`, `remove`, `save` and `count`, which older tutorials (and ALX's project) use. Use `insert_one`/`insert_many`, `update_one`/`update_many`, `delete_one`/`delete_many` and `count_documents`. The [Phase 7 README](../README.md#coming-from-alxs-older-mongodb) has the full list.
 - **`list_all` returns `<pymongo.cursor.Cursor ...>`**: `find` returns a cursor. `list(...)` it.
 - **`insert_school` returns an `InsertOneResult`**: the id is its `.inserted_id`.
 - **`TypeError: document must be an instance of dict`**: `**fields` collects keyword arguments into a dict already. Pass `fields`, not `**fields`, to `insert_one`.
