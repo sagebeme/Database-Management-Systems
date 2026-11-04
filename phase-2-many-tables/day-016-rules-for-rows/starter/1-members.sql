@@ -1,0 +1,2 @@
+-- Create members (id INT, name VARCHAR(100), status VARCHAR(10)) where status is never empty and is active unless you say otherwise.
+-- Write your statement below this line.

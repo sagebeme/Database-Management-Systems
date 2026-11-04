@@ -1,0 +1,2 @@
+-- Create customers (id INT, name VARCHAR(100), phone VARCHAR(12)) where no two customers can share a phone number.
+-- Write your statement below this line.
