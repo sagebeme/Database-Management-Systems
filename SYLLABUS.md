@@ -1,6 +1,6 @@
 # Syllabus
 
-One hundred days, eight phases, from your first `SELECT` to designing, tuning and running databases like a senior engineer. Each phase ends with a capstone that uses everything before it. The Status column says which days are written (**Done**) and which are still **Planned**.
+One hundred days, eight phases, from your first `SELECT` to designing, tuning and running databases like a senior engineer. Each phase ends with a capstone that uses everything before it. All hundred days are written.
 
 Every day has two parts:
 
@@ -162,13 +162,13 @@ Ends with: a production-ready database for a real business, designed and defende
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 91 | Reading Query Plans | EXPLAIN ANALYZE, join algorithms, cost | Planned |
-| 92 | Too Big for One Table | partitioning and sharding | Planned |
-| 93 | Never Lose Data | backups, restores, replication | Planned |
-| 94 | Lock It Down | least privilege, row-level security, auditing | Planned |
-| 95 | The Data Warehouse | star schemas, OLTP vs OLAP, ETL | Planned |
-| 96 | Portfolio: SACCO Database | a brief and its tests, no walkthrough | Planned |
-| 97 | Portfolio: The SQL Interview | twenty hard questions, HackerRank-style | Planned |
-| 98 | Portfolio: Build a Key-Value Store | a log-structured store with compaction | Planned |
-| 99 | The Final Exam | a full GATE-style subject test | Planned |
-| 100 | Capstone: Your Own Production Database | design doc, schema, migrations, queries, indexes and tests | Planned |
+| 91 | Reading Query Plans | EXPLAIN ANALYZE, join algorithms, cost | Done |
+| 92 | Too Big for One Table | partitioning and sharding | Done |
+| 93 | Never Lose Data | backups, restores, replication | Done |
+| 94 | Lock It Down | least privilege, row-level security, auditing | Done |
+| 95 | The Data Warehouse | star schemas, OLTP vs OLAP, ETL | Done |
+| 96 | Portfolio: SACCO Database | a brief and its tests, no walkthrough | Done |
+| 97 | Portfolio: The SQL Interview | twenty hard questions, HackerRank-style | Done |
+| 98 | Portfolio: Build a Key-Value Store | a log-structured store with compaction | Done |
+| 99 | The Final Exam | a full GATE-style subject test | Done |
+| 100 | Capstone: Your Own Production Database | design doc, migrations, constraints, indexes, roles and an undo | Done |
