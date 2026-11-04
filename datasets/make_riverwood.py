@@ -9,18 +9,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 SHOWS = [  # id, title, first aired, channel, genres
-    (1, "Mtaa wa Mapepe", 2016, "Kenya Kwanza TV", ["Comedy"]),
+    (1, "Mtaa wa Mapepe", 2016, "Jamii TV", ["Comedy"]),
     (2, "Nairobi Nights", 2019, "Citi Lights", ["Crime", "Drama"]),
     (3, "Pwani Love", 2021, "Bahari TV", ["Drama", "Romance"]),
     (4, "Kikosi Maalum", 2018, "Citi Lights", ["Action", "Crime"]),
-    (5, "Shamba Boys", 2015, "Kenya Kwanza TV", ["Comedy", "Family"]),
+    (5, "Shamba Boys", 2015, "Jamii TV", ["Comedy", "Family"]),
     (6, "Mama Pima", 2020, "Bahari TV", ["Drama"]),
     (7, "Fundi Hacker", 2023, "Riverwood Plus", ["Crime", "Thriller"]),
-    (8, "Matatu Kings", 2017, "Kenya Kwanza TV", ["Action", "Comedy"]),
+    (8, "Matatu Kings", 2017, "Jamii TV", ["Action", "Comedy"]),
     (9, "Siri za Lamu", 2022, "Bahari TV", ["Drama", "Mystery", "Romance"]),
     (10, "Jiko Wars", 2021, "Riverwood Plus", ["Reality"]),
     (11, "Kesho Kutwa", 2024, "Riverwood Plus", ["Sci-Fi", "Thriller"]),
-    (12, "Shule Yetu", 2014, "Kenya Kwanza TV", ["Comedy", "Family"]),
+    (12, "Shule Yetu", 2014, "Jamii TV", ["Comedy", "Family"]),
     (13, "Mwisho wa Reli", 2025, "Citi Lights", []),
 ]
 GENRES = ["Action", "Comedy", "Crime", "Documentary", "Drama", "Family", "Mystery", "Reality", "Romance", "Sci-Fi", "Thriller"]
@@ -30,9 +30,9 @@ def q(s):
     return "'" + s.replace("'", "''") + "'"
 
 
-def base(with_links=True, with_ratings=True):
+def base(with_links=True, with_ratings=True, with_watchlist=False):
     out = [
-        "DROP TABLE IF EXISTS tv_show_ratings, tv_show_genres, tv_genres, tv_shows;",
+        "DROP TABLE IF EXISTS watchlist, tv_show_ratings, tv_show_genres, tv_genres, tv_shows;",
         "CREATE TABLE tv_shows (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    title VARCHAR(80) NOT NULL,\n"
         "    first_aired YEAR NOT NULL,\n    channel VARCHAR(40) NOT NULL\n);",
         "CREATE TABLE tv_genres (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(40) NOT NULL UNIQUE\n);",
@@ -48,6 +48,8 @@ def base(with_links=True, with_ratings=True):
         out.append("CREATE TABLE tv_show_ratings (\n    show_id INT NOT NULL,\n    rate TINYINT NOT NULL,\n"
                    "    FOREIGN KEY (show_id) REFERENCES tv_shows (id)\n);")
         out.append(ratings())
+    if with_watchlist:
+        out.append(WATCHLIST)
     return "\n".join(out) + "\n"
 
 
@@ -75,6 +77,27 @@ def ratings():
         f"    ({s}, {r})" for s, r in rows) + ";"
 
 
+# Viewers' saved shows. show_id is NULL when a viewer saved a title Riverwood doesn't have yet:
+# exactly the row that makes `NOT IN (SELECT show_id FROM watchlist)` return nothing (Day 22).
+WATCHLIST = """CREATE TABLE watchlist (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    viewer VARCHAR(40) NOT NULL,
+    show_id INT NULL,
+    requested_title VARCHAR(80) NULL,
+    FOREIGN KEY (show_id) REFERENCES tv_shows (id)
+);
+INSERT INTO watchlist (viewer, show_id, requested_title) VALUES
+    ('akinyi', 2, NULL),
+    ('akinyi', 9, NULL),
+    ('baraka', 4, NULL),
+    ('baraka', 2, NULL),
+    ('chebet', 5, NULL),
+    ('chebet', 12, NULL),
+    ('chebet', NULL, 'Tusker Ride'),
+    ('dennis', 7, NULL),
+    ('dennis', 11, NULL);"""
+
+
 HEADER = """-- Riverwood: a made-up database of Kenyan TV shows (the titles are invented).
 -- Shows, genres, which show has which genres, and viewers' ratings out of 10.
 --   tools/mysql.sh riverwood < {path}
@@ -83,7 +106,7 @@ HEADER = """-- Riverwood: a made-up database of Kenyan TV shows (the titles are 
 if __name__ == "__main__":
     for day, kwargs in [
         ("phase-2-many-tables/day-021-shows-and-genres", dict(with_links=False, with_ratings=False)),
-        ("phase-2-many-tables/day-022-not-a-comedy", {}),
+        ("phase-2-many-tables/day-022-not-a-comedy", dict(with_watchlist=True)),
         ("phase-2-many-tables/day-023-ratings", {}),
     ]:
         folder = ROOT / day
