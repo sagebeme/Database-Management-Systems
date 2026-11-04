@@ -1,0 +1,2 @@
+-- Kata: Invoices per Month. Each month (written like 2025-01) and how many invoices were issued in it, in month order.
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- One line per invoice in id order, in a column called line, like: FATMA SAID: KES 18,500.00
+-- Write your statement below this line.

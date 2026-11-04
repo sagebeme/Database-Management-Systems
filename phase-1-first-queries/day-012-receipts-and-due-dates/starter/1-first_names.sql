@@ -1,0 +1,2 @@
+-- Each invoice's id and the customer's first name (first_name), in id order.
+-- Write your statement below this line.
