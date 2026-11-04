@@ -1,0 +1,2 @@
+-- Count each sacco's trips with 10 or more passengers (full_trips), and keep saccos with at least 10 such trips. Alphabetical by sacco.
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- Saccos that took more than 10,000 bob (passengers times fare, added up): sacco and revenue, biggest first.
+-- Write your statement below this line.
