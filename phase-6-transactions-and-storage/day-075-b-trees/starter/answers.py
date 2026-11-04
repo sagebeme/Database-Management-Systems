@@ -1,0 +1,11 @@
+"""Day 75: B-trees. Replace each None."""
+
+# In a B-tree of order 5:
+MOST_KEYS_IN_A_NODE = None
+FEWEST_KEYS_IN_A_NODE_THAT_ISNT_THE_ROOT = None
+MOST_CHILDREN = None
+
+# True or False
+EVERY_LEAF_IS_AT_THE_SAME_DEPTH = None
+A_B_TREE_GROWS_TALLER_AT_THE_LEAVES = None
+INSERTING_IN_SORTED_ORDER_MAKES_IT_A_LINKED_LIST = None
