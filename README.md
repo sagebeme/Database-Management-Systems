@@ -4,6 +4,8 @@ From your very first `SELECT` to designing, tuning and running databases like a 
 
 No experience needed. If you can open a terminal and edit a text file, you can start Day 1.
 
+**The course website:** <https://sagebeme.github.io/Database-Management-Systems/>. It has the whole ledger of days, each day's README with a checklist and a "mark day done" stamp (kept in your browser), and a box where you can query the course itself in SQL. To run it locally from the repo root, run `python -m http.server`, then open <http://localhost:8000/site/>.
+
 ## What you'll be able to do
 
 - Write SQL fluently: filtering, grouping, every kind of join, subqueries, window functions, recursive queries.
