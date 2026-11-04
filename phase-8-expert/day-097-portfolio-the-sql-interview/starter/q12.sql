@@ -1,0 +1,1 @@
+-- q12: write your query here.
