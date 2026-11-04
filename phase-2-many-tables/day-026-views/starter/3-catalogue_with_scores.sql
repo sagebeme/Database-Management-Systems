@@ -1,0 +1,2 @@
+-- Replace catalogue so it also shows each show's average (from show_scores) as a last column, average.
+-- Write your statement below this line.

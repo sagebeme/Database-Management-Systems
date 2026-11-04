@@ -1,0 +1,2 @@
+-- Create the view show_scores: show_id, title, votes (0 if none) and average (rounded to 2 places; NULL if no votes) for every show.
+-- Write your statement below this line.

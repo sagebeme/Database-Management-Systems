@@ -1,0 +1,2 @@
+-- Create the view jamii_shows (id, title, first_aired, channel) of Jamii TV's shows only, which refuses inserts and updates that would leave Jamii TV.
+-- Write your statement below this line.

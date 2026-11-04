@@ -1,0 +1,2 @@
+-- Create the view catalogue: title, channel, first_aired, and genres (the show's genre names, alphabetical, joined by ', '; NULL if none).
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- Kata: The Genre Board. Create the view genre_board: genre, shows, votes, average (2 places) for every genre, including genres with no shows (0, 0, NULL).
+-- Write your statement below this line.

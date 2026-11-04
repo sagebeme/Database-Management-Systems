@@ -1,4 +1,4 @@
-"""Writes the Riverwood TV database used on Days 21-23: python datasets/make_riverwood.py
+"""Writes the Riverwood TV database used on Days 21-23, 26 and 28: python datasets/make_riverwood.py
 
 Riverwood is what Kenya's film industry calls itself. The shows below are invented; any
 resemblance to real titles is a coincidence.
@@ -108,6 +108,8 @@ if __name__ == "__main__":
         ("phase-2-many-tables/day-021-shows-and-genres", dict(with_links=False, with_ratings=False)),
         ("phase-2-many-tables/day-022-not-a-comedy", dict(with_watchlist=True)),
         ("phase-2-many-tables/day-023-ratings", {}),
+        ("phase-2-many-tables/day-026-views", dict(with_watchlist=True)),
+        ("phase-2-many-tables/day-028-capstone-the-riverwood-report", dict(with_watchlist=True)),
     ]:
         folder = ROOT / day
         (folder / "starter").mkdir(parents=True, exist_ok=True)
