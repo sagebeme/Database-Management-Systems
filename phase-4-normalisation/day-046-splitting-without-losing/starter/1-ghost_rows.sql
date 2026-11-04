@@ -1,0 +1,3 @@
+-- Join student_lecturer and course_lecturer back together and list the rows that were never in enrolments:
+-- student, course, lecturer, ordered by student then course.
+-- Write your statement below this line.

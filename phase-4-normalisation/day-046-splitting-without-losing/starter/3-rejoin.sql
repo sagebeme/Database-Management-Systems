@@ -1,0 +1,2 @@
+-- Join student_course and course_lecturer back: student, course, lecturer, ordered by student then course.
+-- Write your statement below this line.

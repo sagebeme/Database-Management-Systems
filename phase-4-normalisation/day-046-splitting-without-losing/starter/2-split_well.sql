@@ -1,0 +1,2 @@
+-- Split enrolments into student_course (student, course) and course_lecturer (course, lecturer) instead.
+-- Write your statement below this line.
