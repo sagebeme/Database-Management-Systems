@@ -1,0 +1,2 @@
+-- Shows with at least 5 ratings: title, average (rounded to 2 places), votes. Best average first, ties alphabetical.
+-- Write your statement below this line.

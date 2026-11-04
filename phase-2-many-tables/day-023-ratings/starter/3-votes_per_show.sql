@@ -1,0 +1,2 @@
+-- Every show and how many ratings it has, zero included: title, votes. Most first, ties alphabetical.
+-- Write your statement below this line.

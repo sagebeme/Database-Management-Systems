@@ -1,0 +1,2 @@
+-- Every rated genre and the sum of its shows' ratings: name, rating. Highest first, ties alphabetical.
+-- Write your statement below this line.

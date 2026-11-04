@@ -1,0 +1,2 @@
+-- Genres whose ratings average above the average of all ratings: genre, average (2 places). Best first, ties alphabetical.
+-- Write your statement below this line.

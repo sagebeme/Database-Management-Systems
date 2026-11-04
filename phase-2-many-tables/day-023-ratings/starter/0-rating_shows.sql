@@ -1,0 +1,2 @@
+-- Every rated show and the sum of its ratings: title, rating. Highest first, ties alphabetical.
+-- Write your statement below this line.

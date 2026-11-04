@@ -1,0 +1,2 @@
+-- Kata: Above the Average Show. Shows whose rating sum beats the average of all shows' sums: title, rating. Highest first, ties alphabetical.
+-- Write your statement below this line.
