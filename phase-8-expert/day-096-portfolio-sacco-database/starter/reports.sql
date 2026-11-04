@@ -1,0 +1,1 @@
+-- Day 96: write this. The contract is in the README.
