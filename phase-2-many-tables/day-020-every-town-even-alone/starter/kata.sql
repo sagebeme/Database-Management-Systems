@@ -1,0 +1,2 @@
+-- Kata: Empty Counties. Counties with no towns on the list: county, alphabetical.
+-- Write your statement below this line.

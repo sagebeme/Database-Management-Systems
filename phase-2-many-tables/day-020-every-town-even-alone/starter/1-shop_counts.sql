@@ -1,0 +1,2 @@
+-- Every town and how many shops it has (shops), including towns with none. Most first, ties alphabetical.
+-- Write your statement below this line.

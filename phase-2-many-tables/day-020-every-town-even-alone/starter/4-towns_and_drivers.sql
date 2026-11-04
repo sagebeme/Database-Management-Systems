@@ -1,0 +1,2 @@
+-- Every town and every driver: town and driver, NULL where there's no match on the other side. Towns alphabetical, drivers with no town last; drivers alphabetical within.
+-- Write your statement below this line.

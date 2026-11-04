@@ -1,0 +1,2 @@
+-- The same answer as 1-shop_counts, written with RIGHT JOIN (shops on the left).
+-- Write your statement below this line.

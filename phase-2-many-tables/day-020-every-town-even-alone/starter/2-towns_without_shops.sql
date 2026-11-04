@@ -1,0 +1,2 @@
+-- Towns with no shops, found with a join this time: town, alphabetical.
+-- Write your statement below this line.

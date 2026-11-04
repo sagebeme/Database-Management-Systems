@@ -1,0 +1,2 @@
+-- Every town with each of its shops: town and shop (NULL for a town with no shops). Ordered by town, then shop.
+-- Write your statement below this line.
