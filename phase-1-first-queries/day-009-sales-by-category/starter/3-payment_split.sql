@@ -1,0 +1,2 @@
+-- For cash and for M-Pesa: the number of sales (sales) and the money (revenue), alphabetical by payment.
+-- Write your statement below this line.

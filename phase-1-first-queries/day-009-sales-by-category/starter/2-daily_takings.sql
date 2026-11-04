@@ -1,0 +1,2 @@
+-- Each day and the money taken that day (takings), in date order.
+-- Write your statement below this line.

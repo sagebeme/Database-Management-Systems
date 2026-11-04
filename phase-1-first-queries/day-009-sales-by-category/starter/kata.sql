@@ -1,0 +1,2 @@
+-- Kata: Busiest Day. The single day with the biggest takings: sold_on and takings.
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- Each category and its number of sales (sales), most sales first, ties alphabetical.
+-- Write your statement below this line.

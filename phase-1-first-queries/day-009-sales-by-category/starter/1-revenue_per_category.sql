@@ -1,0 +1,2 @@
+-- Each category and the money it took (revenue), biggest first.
+-- Write your statement below this line.
