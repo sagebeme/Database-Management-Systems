@@ -1,0 +1,3 @@
+-- A view, exam_ranking: for every exam and student: exam, form, name, total, mean (2 decimal places) and
+-- position in their form for that exam (by total; equal totals share a position, and the next is skipped).
+-- Write your statement below this line.

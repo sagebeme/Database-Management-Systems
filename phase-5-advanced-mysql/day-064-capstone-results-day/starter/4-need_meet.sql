@@ -1,0 +1,3 @@
+-- A view, need_meet: students whose mean in the latest exam (by sat_on) is below 50, and who have never met
+-- their class teacher or last met them more than 30 days before that exam: name, form, mean (2 decimal places).
+-- Write your statement below this line.

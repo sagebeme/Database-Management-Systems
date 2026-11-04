@@ -1,0 +1,3 @@
+-- Most improved: the student (or students, if tied) whose mean rose the most from the Opener to the Midterm:
+-- name, form, opener, midterm, gain (all 2 decimal places). Ties by name.
+-- Write your statement below this line.

@@ -1,0 +1,4 @@
+-- A function Grade(score) (A from 80, B from 65, C from 50, D from 40, else E), two triggers,
+-- grade_on_insert and grade_on_update, that keep results.grade equal to Grade(score), and fill in the grades of
+-- the results already there. Safe to run twice.
+-- Write your statement below this line.
