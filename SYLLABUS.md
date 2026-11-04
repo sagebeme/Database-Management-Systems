@@ -142,18 +142,18 @@ Ends with: a matatu booking system using three databases
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 79 | PostgreSQL for MySQL Users | psql, schemas, identity columns, the differences | Planned |
-| 80 | Postgres Superpowers | JSONB, arrays, full-text search | Planned |
-| 81 | Python Meets SQL | DB-API, parameters, SQL injection | Planned |
-| 82 | Migrations | versioned schema changes | Planned |
-| 83 | Hello, MongoDB | the mongo shell: insert, find, update, delete | Planned |
-| 84 | MongoDB from Python | PyMongo | Planned |
-| 85 | Log Stats | aggregation pipelines | Planned |
-| 86 | Embed or Reference? | document modelling | Planned |
-| 87 | Hello, Redis | strings, keys, expiry, a Cache class | Planned |
-| 88 | Counting Calls | decorators that record into Redis | Planned |
-| 89 | Caching Pages | expiring caches, lists, sets, sorted sets | Planned |
-| 90 | Capstone: Matatu Bookings | PostgreSQL, Redis and MongoDB in one app | Planned |
+| 79 | PostgreSQL for MySQL Users | psql, schemas, identity columns, the differences | Done |
+| 80 | Postgres Superpowers | JSONB, arrays, full-text search | Done |
+| 81 | Python Meets SQL | DB-API, parameters, SQL injection | Done |
+| 82 | Migrations | versioned schema changes | Done |
+| 83 | Hello, MongoDB | the mongo shell: insert, find, update, delete | Done |
+| 84 | MongoDB from Python | PyMongo | Done |
+| 85 | Log Stats | aggregation pipelines | Done |
+| 86 | Embed or Reference? | document modelling | Done |
+| 87 | Hello, Redis | strings, keys, expiry, a Cache class | Done |
+| 88 | Counting Calls | decorators that record into Redis | Done |
+| 89 | Caching Pages | expiring caches, lists, sets, sorted sets | Done |
+| 90 | Capstone: Matatu Bookings | PostgreSQL, Redis and MongoDB in one app | Done |
 
 ## Phase 8: Expert
 
