@@ -1,0 +1,42 @@
+# Proves the course still works on every push and pull request: every solution passes its
+# tests against a real database, and every untouched starter fails them.
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install the Python packages
+        run: pip install -r requirements.txt
+
+      # The same server settings tools/devdb.sh uses, on the same port.
+      - name: Start MySQL 8.4
+        run: |
+          docker run -d --name mysql -p 3307:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes mysql:8.4 \
+            --local-infile=ON --log-bin-trust-function-creators=ON \
+            --character-set-server=utf8mb4 --collation-server=utf8mb4_0900_ai_ci
+          for i in $(seq 1 60); do
+            mysqladmin --no-defaults -h127.0.0.1 -P3307 -uroot ping 2>/dev/null && exit 0
+            sleep 2
+          done
+          docker logs mysql
+          exit 1
+
+      - name: Solutions pass, starters fail
+        run: python tools/verify.py
