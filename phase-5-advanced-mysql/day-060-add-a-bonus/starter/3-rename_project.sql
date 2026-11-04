@@ -1,0 +1,4 @@
+-- A procedure, RenameProject(old_name, new_name). Refuse (SQLSTATE '45000') with the message
+-- 'No such project' if old_name doesn't exist, or 'Name already taken' if another project has new_name.
+-- Safe to run twice.
+-- Write your statement below this line.

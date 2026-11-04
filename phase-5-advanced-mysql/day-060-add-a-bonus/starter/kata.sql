@@ -1,0 +1,4 @@
+-- A procedure, CurveProject(project_name, target): if the project's average score is below target, add the same
+-- whole number of points to every score on it (the difference, rounded to the nearest point), never going over
+-- 100. If the average is already at or above target, change nothing. Safe to run twice.
+-- Write your statement below this line.

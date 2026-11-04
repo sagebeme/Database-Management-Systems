@@ -1,0 +1,3 @@
+-- A procedure, CountCorrections(user_id, OUT how_many): put the number of corrections that user has into
+-- how_many. Safe to run twice.
+-- Write your statement below this line.
