@@ -80,18 +80,18 @@ Ends with: an M-Pesa agent's spreadsheet turned into a clean schema
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 41 | The Messy Spreadsheet | insert, update and delete anomalies | Planned |
-| 42 | Does It Depend? | functional dependencies, checked against data | Planned |
-| 43 | Closure | attribute closure and finding every candidate key | Planned |
-| 44 | Same Rules, Different Words | Armstrong's axioms, implied and equivalent FD sets | Planned |
-| 45 | The Shortest Rulebook | minimal and canonical covers | Planned |
-| 46 | Splitting Without Losing | lossless-join decomposition | Planned |
-| 47 | Splitting Without Forgetting | dependency-preserving decomposition | Planned |
-| 48 | First and Second Normal Form | atomic values, partial dependencies | Planned |
-| 49 | Third Normal Form and BCNF | transitive dependencies, 3NF synthesis, BCNF decomposition | Planned |
-| 50 | Fourth Normal Form | multi-valued dependencies | Planned |
-| 51 | Breaking the Rules on Purpose | denormalisation, summary tables | Planned |
-| 52 | Capstone: The Agent's Ledger | normalise a real-looking spreadsheet and migrate the data | Planned |
+| 41 | The Messy Spreadsheet | insert, update and delete anomalies | Done |
+| 42 | Does It Depend? | functional dependencies, checked against data | Done |
+| 43 | Closure | attribute closure and finding every candidate key | Done |
+| 44 | Same Rules, Different Words | Armstrong's axioms, implied and equivalent FD sets | Done |
+| 45 | The Shortest Rulebook | minimal and canonical covers | Done |
+| 46 | Splitting Without Losing | lossless-join decomposition | Done |
+| 47 | Splitting Without Forgetting | dependency-preserving decomposition | Done |
+| 48 | First and Second Normal Form | atomic values, partial dependencies | Done |
+| 49 | Third Normal Form and BCNF | transitive dependencies, 3NF synthesis, BCNF decomposition | Done |
+| 50 | Fourth Normal Form | multivalued dependencies | Done |
+| 51 | Breaking the Rules on Purpose | denormalisation, summary tables | Done |
+| 52 | Capstone: The Agent's Ledger | normalise a real-looking spreadsheet and migrate the data | Done |
 
 ## Phase 5: Advanced MySQL
 
