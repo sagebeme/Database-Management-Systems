@@ -1,0 +1,3 @@
+-- id, passengers (how many fares in the trip's "fares" array) and takings (their sum) for every trip, by id.
+-- A trip with no fares has 0 passengers and 0 takings.
+-- Write your statement below this line.

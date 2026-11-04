@@ -1,0 +1,3 @@
+-- Kata: one row per route, by number: number, and trips, a JSON array (jsonb) of that route's trips as objects
+-- {"id": ..., "driver": ...}, by trip id. A route with no trips gets [].
+-- Write your statement below this line.

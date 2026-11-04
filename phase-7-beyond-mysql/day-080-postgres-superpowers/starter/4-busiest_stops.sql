@@ -1,0 +1,2 @@
+-- Every stop, with routes: how many routes stop there. Most first; ties alphabetical.
+-- Write your statement below this line.
