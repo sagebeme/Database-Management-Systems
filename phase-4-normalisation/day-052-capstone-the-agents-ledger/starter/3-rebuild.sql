@@ -1,0 +1,3 @@
+-- The flat ledger again, from the new tables, clean: code, done_at, till, agent_name, location, phone,
+-- customer_name, type, amount, commission. Oldest first, ties by code.
+-- Write your statement below this line.

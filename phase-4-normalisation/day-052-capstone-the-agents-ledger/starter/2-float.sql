@@ -1,0 +1,3 @@
+-- For every agent: till, name, deposits (total amount), withdrawals (total amount), commission (total).
+-- 0, not NULL, when there's nothing. In till order.
+-- Write your statement below this line.

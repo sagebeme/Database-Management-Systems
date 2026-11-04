@@ -1,0 +1,3 @@
+-- Move everything from ledger_raw into the new tables, cleaned: no stray spaces, phones as 254..., dates as
+-- DATETIME, types as 'Deposit' or 'Withdrawal', amounts and commissions as numbers. ledger_raw stays as it is.
+-- Write your statement below this line.

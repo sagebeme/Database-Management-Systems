@@ -1,0 +1,5 @@
+-- The 3NF design, with every rule the business has (see the README's table contract):
+--   agents (till, name, location)
+--   customers (phone, name)                       phone as 2547XXXXXXXX or 2541XXXXXXXX
+--   transactions (code, done_at, till, phone, type, amount, commission)
+-- Write your statement below this line.
