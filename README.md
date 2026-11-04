@@ -51,14 +51,19 @@ Open `solution/` only after you've tried. Read it, close it, and write your own 
 
 ## Setting up
 
-You need **Python 3.11+** and the database programs. Days 1–64 only need MySQL; PostgreSQL, MongoDB and Redis join in Phase 7.
+You need **Python 3.11+** and the database programs. Days 1–66 only need MySQL; PostgreSQL joins on Day 67, and MongoDB and Redis in Phase 7.
 
 **Ubuntu / Debian / WSL on Windows**
 
 ```bash
 sudo apt install python3-venv mysql-server mysql-client postgresql redis-server
 # MongoDB (Phase 7): see https://www.mongodb.com/docs/manual/administration/install-on-linux/
+# and mongosh, MongoDB's shell: https://www.mongodb.com/docs/mongodb-shell/install/
 ```
+
+Use PostgreSQL 17 and a `psql` of the same version: an older `psql` can fail on commands like `\l` against a
+newer server. Install mongosh from MongoDB's own packages rather than with `npm`: the npm build has crashed
+on scripts piped into it (`mongosh < file`) with newer Node versions, and the course pipes scripts in.
 
 **macOS** (with Homebrew)
 

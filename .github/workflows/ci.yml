@@ -56,12 +56,19 @@ jobs:
           docker logs postgres
           exit 1
 
-      # psql is on the runner already; mongosh isn't.
-      - name: Install mongosh
+      # The runner's psql is version 16, and some of its commands (\l) break on a version 17 server, so install
+      # the matching client. mongosh comes as MongoDB's standalone build: the npm package crashes on piped
+      # scripts under the runner's Node.
+      - name: Install psql 17 and mongosh
         run: |
-          npm install --global --silent mongosh@2.5.2
+          sudo apt-get install -y -qq postgresql-common > /dev/null
+          sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y > /dev/null
+          sudo apt-get install -y -qq postgresql-client-17 > /dev/null
+          psql --version
+          curl -fsSL https://downloads.mongodb.com/compass/mongosh-2.5.2-linux-x64.tgz | tar -xz -C "$RUNNER_TEMP"
+          sudo install "$RUNNER_TEMP/mongosh-2.5.2-linux-x64/bin/mongosh" /usr/local/bin/mongosh
           for i in $(seq 1 30); do
-            mongosh --quiet --port 27018 --eval 'db.runCommand({ping: 1}).ok' && exit 0
+            echo 'db.runCommand({ping: 1}).ok' | mongosh --quiet --norc mongodb://127.0.0.1:27018/test && exit 0
             sleep 2
           done
           exit 1
