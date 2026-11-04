@@ -1,0 +1,6 @@
+// Kata: name and students (no _id) of schools with more than 1,000 students that have a chess or robotics
+// club, most students first.
+db.schools.find(
+  { students: { $gt: 1000 }, clubs: { $in: ["chess", "robotics"] } },
+  { _id: 0, name: 1, students: 1 }
+).sort({ students: -1 })

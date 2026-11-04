@@ -1,0 +1,2 @@
+// List every database on the server.
+show dbs

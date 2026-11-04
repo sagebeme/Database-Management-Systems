@@ -1,0 +1,2 @@
+// Every school in Nairobi gets the field region: "Nairobi Metro". Other schools are left alone.
+db.schools.updateMany({ county: "Nairobi" }, { $set: { region: "Nairobi Metro" } })

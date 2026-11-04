@@ -1,0 +1,2 @@
+// Every school in Kiambu.
+db.schools.find({ county: "Kiambu" })

@@ -1,0 +1,2 @@
+// Every school whose name starts with "St.", showing only its name (no _id).
+db.schools.find({ name: { $regex: /^St\./ } }, { _id: 0, name: 1 })

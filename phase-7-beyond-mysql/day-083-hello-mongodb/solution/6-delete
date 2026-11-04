@@ -1,0 +1,2 @@
+// Remove every sub-county school.
+db.schools.deleteMany({ category: "sub-county" })
