@@ -1,0 +1,3 @@
+-- How each day compares with the till's previous trading day: till, day, amount, vs_previous (amount minus the
+-- previous day's amount; NULL on the first day). By till, then day.
+-- Write your statement below this line.

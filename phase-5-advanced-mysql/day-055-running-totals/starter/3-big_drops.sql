@@ -1,0 +1,3 @@
+-- Days followed by a drop of more than 30% on the till's next trading day:
+-- till, day, amount, next_amount. By till, then day.
+-- Write your statement below this line.

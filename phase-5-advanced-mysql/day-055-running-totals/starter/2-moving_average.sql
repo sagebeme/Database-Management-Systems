@@ -1,0 +1,3 @@
+-- A 3-day moving average: the average of this trading day and the two before it (fewer at the start),
+-- rounded to a whole shilling: till, day, amount, avg3. By till, then day.
+-- Write your statement below this line.

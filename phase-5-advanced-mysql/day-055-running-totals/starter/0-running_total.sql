@@ -1,0 +1,2 @@
+-- Each till's takings so far, day by day: till, day, amount, running_total. By till, then day.
+-- Write your statement below this line.

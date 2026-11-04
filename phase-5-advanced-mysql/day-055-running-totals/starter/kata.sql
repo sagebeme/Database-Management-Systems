@@ -1,0 +1,3 @@
+-- Record days: days when a till took more than on any earlier day (its first day counts):
+-- till, day, amount. By till, then day.
+-- Write your statement below this line.
