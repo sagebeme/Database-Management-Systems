@@ -11,6 +11,7 @@ For every day (or only the days you name):
 
     python tools/verify.py            # every day
     python tools/verify.py 1 2 14     # just those days
+    python tools/verify.py checkpoint # folders whose name contains "checkpoint"
 
 Needs the databases running (tools/devdb.sh up). Exits non-zero if anything is wrong.
 """
@@ -30,13 +31,25 @@ ROOT = Path(__file__).resolve().parents[1]
 IGNORED = {"__pycache__", ".pytest_cache", ".DS_Store"}
 
 
-def day_dirs(selected: set[int]) -> list[Path]:
-    days = []
-    for path in sorted(ROOT.glob("phase-*/day-*")):
+def day_dirs(selected: set[int], names: set[str] | None = None) -> list[Path]:
+    """Day folders (day-NNN-...) and the extras that sit outside the hundred days (checkpoint-...,
+    extra-...). With numbers, just those days; with words, folders whose name contains one of them."""
+    names = names or set()
+    found = []
+    for path in sorted(ROOT.glob("phase-*/*")):
+        if not path.is_dir():
+            continue
         match = re.match(r"day-(\d{3})-", path.name)
-        if path.is_dir() and match and (not selected or int(match.group(1)) in selected):
-            days.append(path)
-    return days
+        is_extra = re.match(r"(checkpoint|extra)-", path.name) is not None
+        if not (match or is_extra):
+            continue
+        if not selected and not names:
+            found.append(path)
+        elif match and int(match.group(1)) in selected:
+            found.append(path)
+        elif any(n in path.name for n in names):
+            found.append(path)
+    return found
 
 
 def files_in(folder: Path) -> set[str]:
@@ -86,7 +99,7 @@ def run_pytest(days: list[Path], which: str) -> dict[str, list[dict]]:
 
 def main(argv: list[str]) -> int:
     selected = {int(a) for a in argv if a.isdigit()}
-    days = day_dirs(selected)
+    days = day_dirs(selected, {a for a in argv if not a.isdigit()})
     if not days:
         print("No days found.")
         return 1
@@ -121,7 +134,7 @@ def main(argv: list[str]) -> int:
         print(("FAIL " if key in bad else "ok   ") + key)
         for p in bad.get(key, []):
             print(f"       {p}")
-    print(f"\n{len(days)} days, {total_tests} tests, {len(bad)} with problems.")
+    print(f"\n{len(days)} folders, {total_tests} tests, {len(bad)} with problems.")
     return 1 if bad else 0
 
 
