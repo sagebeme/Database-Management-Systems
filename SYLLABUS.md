@@ -120,20 +120,20 @@ Ends with: a tiny storage engine with a B+ tree index and a log
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 65 | Send Money | transactions, COMMIT, ROLLBACK, ACID | Planned |
-| 66 | Two Tellers, One Account | lost updates, dirty and non-repeatable reads, phantoms | Planned |
-| 67 | Isolation Levels | what each level allows, in MySQL and PostgreSQL | Planned |
-| 68 | Can We Undo It? | schedules, recoverable, cascadeless and strict | Planned |
-| 69 | As If One at a Time | conflict serializability, precedence graphs | Planned |
-| 70 | View Serializability | view equivalence, blind writes | Planned |
-| 71 | Locks | two-phase locking, SELECT ... FOR UPDATE, deadlocks | Planned |
-| 72 | Timestamps | timestamp ordering, Thomas write rule, wait-die and wound-wait | Planned |
-| 73 | After the Crash | write-ahead logging, undo, redo, checkpoints | Planned |
-| 74 | Blocks and Records | file organisation, blocking factor, index sizes | Planned |
-| 75 | B-Trees | search and insert in a B-tree | Planned |
-| 76 | B+ Trees | order, insert, split, range scans | Planned |
-| 77 | Indexes in Real Life | clustered and secondary indexes, composite and covering indexes | Planned |
-| 78 | Capstone: Build a Storage Engine | a heap file, a B+ tree index and a log, in Python | Planned |
+| 65 | Send Money | transactions, COMMIT, ROLLBACK, ACID | Done |
+| 66 | Two Tellers, One Account | lost updates, dirty and non-repeatable reads, phantoms | Done |
+| 67 | Isolation Levels | what each level allows, in MySQL and PostgreSQL | Done |
+| 68 | Can We Undo It? | schedules, recoverable, cascadeless and strict | Done |
+| 69 | As If One at a Time | conflict serializability, precedence graphs | Done |
+| 70 | View Serializability | view equivalence, blind writes | Done |
+| 71 | Locks | two-phase locking, SELECT ... FOR UPDATE, deadlocks | Done |
+| 72 | Who Came First | timestamp ordering, Thomas write rule, wait-die and wound-wait | Done |
+| 73 | After the Blackout | write-ahead logging, undo, redo, checkpoints | Done |
+| 74 | How Many Pages | file organisation, blocking factor, index sizes | Done |
+| 75 | B-Trees | search and insert in a B-tree | Done |
+| 76 | B+ Trees | order, insert, split, range scans | Done |
+| 77 | Where the Rows Live | clustered and secondary indexes, composite and covering indexes | Done |
+| 78 | Capstone: The SACCO Engine | a heap file, a B+ tree index and a log, in Python | Done |
 
 ## Phase 7: Beyond MySQL
 
