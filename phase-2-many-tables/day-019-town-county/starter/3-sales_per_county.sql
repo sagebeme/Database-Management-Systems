@@ -1,0 +1,2 @@
+-- Each county's name (county) and its shops' total monthly sales (sales), biggest first.
+-- Write your statement below this line.

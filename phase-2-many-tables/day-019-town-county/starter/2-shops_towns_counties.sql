@@ -1,0 +1,2 @@
+-- Every shop with its town and county: shop, town, county. Ordered by county, then shop.
+-- Write your statement below this line.
