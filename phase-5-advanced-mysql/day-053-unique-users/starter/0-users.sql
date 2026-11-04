@@ -1,0 +1,3 @@
+-- Create users (id, email, name) if it doesn't exist yet: id counts up by itself, email is required and never
+-- repeats, name is optional. Running the file twice must not fail or lose rows.
+-- Write your statement below this line.

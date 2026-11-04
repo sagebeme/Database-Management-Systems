@@ -1,0 +1,3 @@
+-- chama_members, with every rule in the README's table:
+--   id, chama_id, name, phone, born_on, role, monthly_contribution
+-- Write your statement below this line.

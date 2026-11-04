@@ -1,0 +1,3 @@
+-- The same users table (if it doesn't exist yet), plus country: one of KE, UG, TZ, RW, BI, SS, required,
+-- 'KE' when it isn't given.
+-- Write your statement below this line.

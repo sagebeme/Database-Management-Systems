@@ -1,0 +1,3 @@
+-- Emails in signups that are really the same address (ignore case and spaces at either end): the cleaned
+-- email, and how many sign-ups use it (as copies). Only those used more than once, most first, ties by email.
+-- Write your statement below this line.

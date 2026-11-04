@@ -1,0 +1,3 @@
+-- Keep only the first sign-up (lowest id) for each address, store every email trimmed and lower-case, then
+-- make email unique so it can't happen again.
+-- Write your statement below this line.
