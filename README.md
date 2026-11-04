@@ -28,6 +28,21 @@ The topics cover the full GATE CSE databases syllabus and the SQL and NoSQL proj
 | 7. Beyond MySQL | 79–90 | PostgreSQL, Python and SQL, migrations, MongoDB, Redis | a booking system using three databases |
 | 8. Expert | 91–100 | query plans, partitioning, replication, security, warehousing, portfolio projects | your own production database, designed and defended |
 
+Each phase folder has its own README: the days, how to run and test that phase's kind of work, and further reading.
+
+## Outside the hundred days
+
+Extras that make the theory stick, mostly for GATE. Nothing later depends on them:
+
+| Where | What | When |
+|---|---|---|
+| [Phase 2](phase-2-many-tables/extra-predict-the-output/README.md) | **Predict the Output**: 17 "what does this query return?" traps, including `ALL` and `ANY` | after Day 28 |
+| [Phase 3](phase-3-design/worked-examples.md), [4](phase-4-normalisation/worked-examples.md), [6](phase-6-transactions-and-storage/worked-examples.md) | **Worked examples**: exam problems solved step by step | before each practice test |
+| [Phase 4](phase-4-normalisation/checkpoint-2-practice-test-2/README.md) | **Checkpoint 2**: a practice test on normalisation | after Day 52 |
+| [Phase 6](phase-6-transactions-and-storage/checkpoint-3-practice-test-3/README.md) | **Checkpoint 3**: a practice test on transactions and storage | after Day 78 |
+
+With Day 39 (Practice Test 1) and Day 99 (the final exam), that's a checkpoint after every theory phase.
+
 ## How each day works
 
 ```
@@ -53,7 +68,9 @@ Open `solution/` only after you've tried. Read it, close it, and write your own 
 
 You need **Python 3.11+** and the database programs. Days 1–66 only need MySQL; PostgreSQL joins on Day 67, and MongoDB and Redis in Phase 7.
 
-**Ubuntu / Debian / WSL on Windows**
+**On Windows?** Use WSL (Ubuntu inside Windows), not PowerShell: [WINDOWS.md](WINDOWS.md) walks through it, about 20 minutes once.
+
+**Ubuntu / Debian / WSL**
 
 ```bash
 sudo apt install python3-venv mysql-server mysql-client postgresql redis-server
@@ -82,6 +99,10 @@ pytest phase-1-first-queries/day-001-hello-mysql
 
 `tools/devdb.sh up` starts copies of each database that belong to you: no `sudo`, no passwords, and nothing touches a database server you already run. They listen on `127.0.0.1` on their own ports (MySQL 3307, PostgreSQL 5434, MongoDB 27018, Redis 6380). `tools/devdb.sh status` shows what's running; `tools/devdb.sh down` stops them. On Ubuntu, the private MySQL keeps its data under `/tmp` (Ubuntu's AppArmor rules only let MySQL write there), so it starts empty after a reboot. That's fine: every day loads its own data.
 
+**Rather use Docker?** `docker compose up -d` starts the same four databases (MySQL 8.4, PostgreSQL 17, MongoDB 7, Redis 8) on the same ports, with the settings CI uses. You still need the client programs (`mysql`, `psql` 17, `mongosh`, `redis-cli`) installed, because the tests run them. Use either `tools/devdb.sh` or Docker, not both: they want the same ports.
+
+**Done ALX's MongoDB project on an older version?** Phase 7's [README](phase-7-beyond-mysql/README.md#coming-from-alxs-older-mongodb) lists what changed (`mongo` is now `mongosh`, `insert()` is now `insertOne()`, and PyMongo 4 removed the old methods).
+
 **Using your own servers instead?** Copy `.env.example` to `.env` and fill in the host, port, user and password. The tests and `tools/mysql.sh` read it. `.env` is ignored by Git; never commit real passwords.
 
 **Opening a prompt**
@@ -97,6 +118,7 @@ tools/psql.sh                                    # postgres=# prompt (Phase 7)
 ```bash
 python tools/verify.py         # every day: the solution passes, the untouched starter fails
 python tools/verify.py 3 14    # just Days 3 and 14
+python tools/verify.py extra checkpoint   # the extras outside the hundred days
 ```
 
 GitHub Actions runs the same check on every push (`.github/workflows/ci.yml`).

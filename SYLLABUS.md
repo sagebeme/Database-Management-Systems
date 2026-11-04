@@ -172,3 +172,14 @@ Ends with: a production-ready database for a real business, designed and defende
 | 98 | Portfolio: Build a Key-Value Store | a log-structured store with compaction | Done |
 | 99 | The Final Exam | a full GATE-style subject test | Done |
 | 100 | Capstone: Your Own Production Database | design doc, migrations, constraints, indexes, roles and an undo | Done |
+
+## Outside the hundred days
+
+| After | Extra | What it is |
+|---|---|---|
+| Day 28 | [Predict the Output](phase-2-many-tables/extra-predict-the-output/README.md) | 17 SQL output traps: `NULL`, empty subqueries, `ALL` and `ANY`, outer joins |
+| Day 38 | [Phase 3 worked examples](phase-3-design/worked-examples.md) | keys, ER to tables, join sizes, division, calculus, step by step |
+| Day 49 | [Phase 4 worked examples](phase-4-normalisation/worked-examples.md) | closure, keys, covers, the chase, normal forms, synthesis, BCNF, 4NF |
+| Day 52 | [Checkpoint 2: Practice Test 2](phase-4-normalisation/checkpoint-2-practice-test-2/README.md) | GATE-style questions on Phase 4 |
+| Day 77 | [Phase 6 worked examples](phase-6-transactions-and-storage/worked-examples.md) | schedules, locking, timestamps, recovery, blocks, B+ trees |
+| Day 78 | [Checkpoint 3: Practice Test 3](phase-6-transactions-and-storage/checkpoint-3-practice-test-3/README.md) | GATE-style questions on Phase 6 |
