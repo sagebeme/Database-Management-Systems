@@ -1,0 +1,3 @@
+-- Create national_ids: id_no (CHAR(8), primary key) and person_id (a real person).
+-- A person holds at most one ID, and every ID belongs to exactly one person.
+-- Write your statement below this line.

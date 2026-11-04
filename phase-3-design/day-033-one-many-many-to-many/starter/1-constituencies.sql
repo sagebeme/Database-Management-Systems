@@ -1,0 +1,3 @@
+-- Create constituencies: id (auto-numbered primary key), name (VARCHAR(60), required) and county_code,
+-- so that every constituency is in exactly one real county.
+-- Write your statement below this line.
