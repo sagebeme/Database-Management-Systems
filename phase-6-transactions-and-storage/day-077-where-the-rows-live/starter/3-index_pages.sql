@@ -1,0 +1,3 @@
+-- For each index on members: index_name and pages (its size in pages, from mysql.innodb_index_stats, where
+-- stat_name is 'size'). Alphabetical by index name. Run ANALYZE TABLE first if the numbers look stale.
+-- Write your statement below this line.

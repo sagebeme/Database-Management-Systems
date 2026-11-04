@@ -1,0 +1,5 @@
+-- Kata: one index, called idx_top_savers, so that
+--     SELECT id, name, savings FROM members WHERE county = 'Nairobi' ORDER BY savings DESC LIMIT 10;
+-- needs no sort and never touches the table's rows.
+-- Write your statement below this line.
+CREATE INDEX idx_top_savers ON members (county, savings, name);
