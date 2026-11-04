@@ -1,0 +1,3 @@
+-- With a CTE (WITH ... AS): people paid more than their department's average: name, department, salary,
+-- dept_avg (rounded to a whole shilling). By department, then salary (highest first).
+-- Write your statement below this line.

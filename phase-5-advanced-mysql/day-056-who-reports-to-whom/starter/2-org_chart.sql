@@ -1,0 +1,3 @@
+-- Everyone, with depth (the top person is 0) and path: the names from the top down to them, joined with ' > '.
+-- name, depth, path. Ordered by path.
+-- Write your statement below this line.

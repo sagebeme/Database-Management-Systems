@@ -1,0 +1,3 @@
+-- Every calendar day from the first to the last day in takings, with that day's amount (0 when closed):
+-- day, amount. In day order.
+-- Write your statement below this line.

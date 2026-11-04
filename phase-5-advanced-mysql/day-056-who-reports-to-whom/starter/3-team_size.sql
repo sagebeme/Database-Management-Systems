@@ -1,0 +1,2 @@
+-- Everyone who has people under them (at any depth): name, team_size. Biggest first, ties by name.
+-- Write your statement below this line.

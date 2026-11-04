@@ -1,0 +1,3 @@
+-- The lowest common boss of Brian Kiprono and Samuel Mutua: the closest person both of them report to,
+-- directly or not (someone counts as reporting to themselves). name.
+-- Write your statement below this line.
