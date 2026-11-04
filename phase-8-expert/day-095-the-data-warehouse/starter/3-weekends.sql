@@ -1,0 +1,2 @@
+-- For each category: category and weekend_share, the percentage of its revenue earned on Saturdays and Sundays,
+-- rounded to 1 decimal place. Highest share first, ties by category.

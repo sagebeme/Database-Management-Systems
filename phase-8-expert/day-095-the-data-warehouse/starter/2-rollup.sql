@@ -1,0 +1,3 @@
+-- Revenue by county and category, with a subtotal for each county and a grand total, in one query with ROLLUP:
+-- county, category, revenue. Subtotal rows have category NULL; the grand total has both NULL. Ordered by county
+-- then category, NULLs (the totals) after the rest.

@@ -1,0 +1,4 @@
+-- Load the warehouse from the shop system (extract, transform, load):
+--   dim_date: one row for every day from 2026-01-01 to 2026-12-31;
+--   dim_shop: every shop, valid from 2026-01-01, current; dim_product: every product;
+--   fact_sales: one row per sale, with revenue = qty * the product's price, pointing at the right dimension rows.

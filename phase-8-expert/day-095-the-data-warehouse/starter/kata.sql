@@ -1,0 +1,4 @@
+-- Kata: a slowly changing dimension, type 2. Some shops in the shop system have changed name or county. For each
+-- shop whose current dim_shop row no longer matches it: close that row (valid_to = CURRENT_DATE - 1, not current)
+-- and add a new current row valid from CURRENT_DATE. Shops that haven't changed are left alone, so running it
+-- twice changes nothing the second time. Old facts keep pointing at the old row.

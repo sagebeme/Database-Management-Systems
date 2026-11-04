@@ -1,0 +1,8 @@
+-- A star schema beside the shop system:
+--   dim_date:    date_key INT primary key (20260315 for 15 March 2026), day DATE, month INT, quarter INT, year INT,
+--                weekday TEXT (Monday, Tuesday, ...), is_weekend BOOLEAN; all required.
+--   dim_shop:    shop_key (identity, primary key), shop_id INT, name TEXT, county TEXT, valid_from DATE,
+--                valid_to DATE (NULL while current), is_current BOOLEAN; all but valid_to required.
+--   dim_product: product_key (identity, primary key), product_id INT, name TEXT, category TEXT; all required.
+--   fact_sales:  date_key, shop_key and product_key (each required and referencing its dimension), qty INT and
+--                revenue INT, both required.
