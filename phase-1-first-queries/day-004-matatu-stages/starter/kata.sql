@@ -1,0 +1,2 @@
+-- Kata: Shillings per Kilometre. Route number and fare per km (rounded to 2 places) of routes dearer than 5 bob a km.
+-- Write your statement below this line.
