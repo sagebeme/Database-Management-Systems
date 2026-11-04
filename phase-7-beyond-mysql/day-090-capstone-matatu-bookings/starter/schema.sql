@@ -1,0 +1,7 @@
+-- The bookings database, in PostgreSQL:
+--   routes:   number (TEXT, the primary key), fare (INT, required, above 0)
+--   trips:    id (an identity column, the primary key), route (TEXT, required, a route), departs (TIMESTAMPTZ,
+--             required), seats (INT, required, 1 to 70)
+--   bookings: id (identity, primary key), trip_id (INT, required, a trip), seat (INT, required, 1 or more),
+--             phone (TEXT, required), booked_at (TIMESTAMPTZ, required, now by default);
+--             a seat can be booked only once per trip.
