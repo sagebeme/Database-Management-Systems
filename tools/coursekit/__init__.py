@@ -148,6 +148,16 @@ class MySQL:
     def ping(self) -> None:
         self.run("SELECT 1;", database=None).check()
 
+    def connect(self, autocommit: bool = True):
+        """A PyMySQL connection to the same database, for code that needs to hold a session open: transactions,
+        two users at once, locks. Close it when you're done (or use it in a `with` block)."""
+        import pymysql
+
+        return pymysql.connect(
+            host=setting("MYSQL_HOST"), port=int(setting("MYSQL_PORT")), user=self.user, password=self.password,
+            database=self.database, autocommit=autocommit, charset="utf8mb4",
+        )
+
 
 class Postgres:
     """Runs SQL through `psql` against one database."""
