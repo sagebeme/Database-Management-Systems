@@ -100,18 +100,18 @@ Ends with: a school results system that keeps itself up to date
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 53 | Unique Users | constraints in depth: CHECK, ENUM, UNIQUE | Planned |
-| 54 | Fans by Country | ranking with window functions | Planned |
-| 55 | Running Totals | SUM OVER, LAG, LEAD, moving averages | Planned |
-| 56 | Who Reports to Whom | CTEs and recursive CTEs | Planned |
-| 57 | Band Lifespans | date arithmetic | Planned |
-| 58 | Stock Goes Down | triggers I | Planned |
-| 59 | Email Changed | triggers II: BEFORE UPDATE | Planned |
-| 60 | Add a Bonus | stored procedures | Planned |
-| 61 | Average Scores | procedures, functions, cursors | Planned |
-| 62 | Finding Names Fast | CREATE INDEX, prefix indexes, EXPLAIN | Planned |
-| 63 | Flexible Fields | JSON columns, generated columns | Planned |
-| 64 | Capstone: Results Day | triggers, procedures, views and indexes together | Planned |
+| 53 | Unique Users | constraints in depth: CHECK, ENUM, UNIQUE | Done |
+| 54 | Fans by Country | ranking with window functions | Done |
+| 55 | Running Totals | SUM OVER, LAG, LEAD, moving averages | Done |
+| 56 | Who Reports to Whom | CTEs and recursive CTEs | Done |
+| 57 | Band Lifespans | date arithmetic | Done |
+| 58 | Stock Goes Down | triggers I | Done |
+| 59 | Email Changed | triggers II: BEFORE UPDATE | Done |
+| 60 | Add a Bonus | stored procedures | Done |
+| 61 | Average Scores | procedures, functions, cursors | Done |
+| 62 | Finding Names Fast | CREATE INDEX, prefix indexes, EXPLAIN | Done |
+| 63 | Flexible Fields | JSON columns, generated columns | Done |
+| 64 | Capstone: Results Day | triggers, procedures, views and indexes together | Done |
 
 ## Phase 6: Transactions and storage
 
