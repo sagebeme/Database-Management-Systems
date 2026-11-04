@@ -1,5 +1,6 @@
 # Publishes the course website to GitHub Pages: site/ at the root, plus every Markdown file in the
-# repository at its own path, which is where the lesson page fetches the READMEs from.
+# repository at its own path, which is where the lesson page fetches the READMEs from, and the SVG
+# diagrams the READMEs show.
 name: Pages
 
 on:
@@ -34,12 +35,12 @@ jobs:
           mkdir _site
           cp -r site/. _site/
           rm -f _site/DESIGN.md
-          git ls-files '*.md' | grep -v '^site/' | while read -r f; do
+          git ls-files '*.md' '*.svg' | grep -v '^site/' | while read -r f; do
             mkdir -p "_site/$(dirname "$f")"
             cp "$f" "_site/$f"
           done
           touch _site/.nojekyll
-          echo "$(find _site -name '*.md' | wc -l) Markdown files published."
+          echo "$(find _site -name '*.md' | wc -l) Markdown files and $(find _site -name '*.svg' | wc -l) SVGs published."
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

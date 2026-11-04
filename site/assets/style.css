@@ -246,6 +246,9 @@ code { font-size: 0.85em; background: var(--canvas-soft); padding: 0.05em 0.3em;
 .sheet blockquote { margin: 0 0 1em; padding-left: 18px; border-left: 3px double var(--rule-strong); color: var(--ink-mute); font-style: italic; }
 .sheet hr { border: 0; border-top: 1px solid var(--rule-strong); margin: 2em 0; }
 .sheet img { max-width: 100%; height: auto; }
+/* Schema diagrams keep their real size, so their small labels stay readable; the link scrolls sideways. */
+.sheet a:has(> img[src$=".svg"]) { display: block; overflow-x: auto; border: 1px solid var(--rule); }
+.sheet img[src$=".svg"] { max-width: none; display: block; }
 .table-scroll { overflow-x: auto; margin: 0 0 1.3em; }
 .sheet table { border-collapse: collapse; font-size: 0.95rem; min-width: 60%; }
 .sheet th, .sheet td { text-align: left; vertical-align: top; padding: 8px 18px 8px 0; border-bottom: 1px solid var(--rule); }

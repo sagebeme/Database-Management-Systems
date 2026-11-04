@@ -39,6 +39,7 @@
       return (d ? P.dayUrl(d.day) : P.docUrl(target)) + hash;
     }
     if (/\.md\//.test(target)) return null;
+    if (/\.(svg|png|jpe?g|gif|webp)$/i.test(target)) return BASE + target;   // images are published with the site
     var isDir = /\/$/.test(target) || !/\.[a-z0-9]+$/i.test(target.split("/").pop());
     return (isDir ? TREE : BLOB) + target.replace(/\/$/, "") + hash;
   }
@@ -146,7 +147,7 @@
     });
     sheet.querySelectorAll("img[src]").forEach(function (img) {
       var src = img.getAttribute("src");
-      if (!/^(https?:|data:)/i.test(src)) img.src = C.repo.replace("github.com", "raw.githubusercontent.com") + "/" + C.branch + "/" + clean(dir + src);
+      if (!/^(https?:|data:)/i.test(src)) img.src = BASE + clean(dir + src);
       img.loading = "lazy";
     });
     sheet.querySelectorAll("table").forEach(function (t) {   // wide tables scroll inside the sheet, not the page
