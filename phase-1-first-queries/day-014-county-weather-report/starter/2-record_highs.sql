@@ -1,0 +1,2 @@
+-- Each county and the hottest reading it had (hottest), alphabetical by county.
+-- Write your statement below this line.

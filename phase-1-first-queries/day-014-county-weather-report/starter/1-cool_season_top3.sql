@@ -1,0 +1,2 @@
+-- The three counties with the highest average high in July and August: county and avg_max (1 place), hottest first.
+-- Write your statement below this line.

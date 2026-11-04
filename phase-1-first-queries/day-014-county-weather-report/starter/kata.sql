@@ -1,0 +1,2 @@
+-- Kata: Coldest Night. The single coldest reading of the year: county, recorded_on and min_c.
+-- Write your statement below this line.

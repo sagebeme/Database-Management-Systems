@@ -1,0 +1,2 @@
+-- Counties with missing rainfall readings: county and missing (how many), most first, ties alphabetical.
+-- Write your statement below this line.

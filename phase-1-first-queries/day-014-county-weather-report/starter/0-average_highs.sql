@@ -1,0 +1,2 @@
+-- Each county and its average daily high (avg_max, 1 decimal place), hottest first.
+-- Write your statement below this line.

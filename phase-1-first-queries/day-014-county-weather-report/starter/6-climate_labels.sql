@@ -1,0 +1,2 @@
+-- Each county, its avg_max (1 place) and a label: hot (average high 30 or more), warm (24 or more) or cool. Alphabetical.
+-- Write your statement below this line.

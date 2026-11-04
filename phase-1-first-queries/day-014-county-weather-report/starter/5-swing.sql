@@ -1,0 +1,2 @@
+-- Each county's swing: its hottest high minus its coldest low (swing), biggest first, ties alphabetical.
+-- Write your statement below this line.
