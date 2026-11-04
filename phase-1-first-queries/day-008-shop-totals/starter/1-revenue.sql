@@ -1,0 +1,2 @@
+-- Total money taken (quantity times unit price, added up), in a column called revenue.
+-- Write your statement below this line.

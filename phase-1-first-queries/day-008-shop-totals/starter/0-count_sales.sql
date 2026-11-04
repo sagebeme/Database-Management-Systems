@@ -1,0 +1,2 @@
+-- How many sales are there? One column called sales.
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- How many sales were paid by M-Pesa and how much they came to, in columns mpesa_sales and mpesa_revenue.
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- The average unit price of a sale, rounded to 2 places, in a column called average_price.
+-- Write your statement below this line.

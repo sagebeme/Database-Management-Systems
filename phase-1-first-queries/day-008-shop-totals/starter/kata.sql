@@ -1,0 +1,2 @@
+-- Kata: Range Check. How many different items were sold? One column called items.
+-- Write your statement below this line.
