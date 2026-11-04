@@ -1,0 +1,3 @@
+-- First, an index idx_placed_on on orders.placed_on. Then the number of orders and the total taken in June 2025
+-- (orders, takings), written so that the index can be used.
+-- Write your statement below this line.

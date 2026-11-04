@@ -1,0 +1,2 @@
+-- An index, idx_name_first_score, on the first letter of names.name and then score.
+-- Write your statement below this line.

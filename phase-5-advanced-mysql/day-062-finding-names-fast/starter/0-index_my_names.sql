@@ -1,0 +1,2 @@
+-- An index, idx_name_first, on the first letter of names.name.
+-- Write your statement below this line.

@@ -1,0 +1,4 @@
+-- An index, idx_customer_report, that answers this query from the index alone (EXPLAIN says "Using index"):
+--   SELECT customer_id, SUM(total) FROM orders WHERE placed_on >= '2026-01-01' GROUP BY customer_id;
+-- Write your statement below this line.
+CREATE INDEX idx_customer_report ON orders (placed_on, customer_id, total);
