@@ -33,7 +33,7 @@ A **GIN index** (`CREATE INDEX ... ON trips USING GIN (details)`) indexes every 
 
 ```sql
 SELECT to_tsvector('english', 'The Kencom stage is closing for a week');
--- 'close':4 'kencom':2 'stage':3 'week':7       words reduced to stems, little words dropped
+-- 'close':5 'kencom':2 'stage':3 'week':8       words reduced to stems, little words dropped
 SELECT to_tsquery('english', 'close & road');   -- & and, | or, ! not
 ```
 
