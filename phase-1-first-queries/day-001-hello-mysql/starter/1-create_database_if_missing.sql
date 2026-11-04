@@ -1,0 +1,2 @@
+-- Create the database mama_mboga, without an error if it already exists.
+-- Write your statement below this line.

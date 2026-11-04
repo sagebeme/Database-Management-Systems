@@ -1,0 +1,2 @@
+-- Delete the database mama_mboga, without an error if it doesn't exist.
+-- Write your statement below this line.
