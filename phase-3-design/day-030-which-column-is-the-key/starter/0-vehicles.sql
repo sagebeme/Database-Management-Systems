@@ -1,0 +1,3 @@
+-- Create vehicles: reg_no (CHAR(8), the primary key), chassis_no (CHAR(17), required, unique: the alternate key),
+-- sacco_id (required, a real sacco) and seats (TINYINT, required).
+-- Write your statement below this line.
