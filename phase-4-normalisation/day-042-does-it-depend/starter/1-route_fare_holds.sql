@@ -1,0 +1,2 @@
+-- One row, one column, holds: 1 if route -> fare holds in trips, otherwise 0.
+-- Write your statement below this line.
