@@ -1,0 +1,3 @@
+-- For each genre with rated shows, the show with the highest rating sum (all of them on a tie). Ordered by genre, then title.
+-- Columns: genre, title, rating
+-- Write your statement below this line.

@@ -1,0 +1,3 @@
+-- Every genre and how many shows it has, zero included. Most first, ties alphabetical.
+-- Columns: genre, shows
+-- Write your statement below this line.

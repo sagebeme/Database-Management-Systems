@@ -1,0 +1,3 @@
+-- The genres of the shows on akinyi's watchlist, each once. Alphabetical.
+-- Columns: genre
+-- Write your statement below this line.

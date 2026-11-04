@@ -1,0 +1,3 @@
+-- Each channel and how many shows it has. Alphabetical.
+-- Columns: channel, shows
+-- Write your statement below this line.

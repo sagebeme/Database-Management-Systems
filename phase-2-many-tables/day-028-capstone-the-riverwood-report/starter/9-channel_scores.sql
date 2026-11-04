@@ -1,0 +1,3 @@
+-- Each channel's average vote across all its shows' ratings (2 places). Channels with no votes are left out. Best first, ties alphabetical.
+-- Columns: channel, average
+-- Write your statement below this line.

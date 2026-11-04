@@ -1,0 +1,3 @@
+-- Every show with its genres (alphabetical, joined by ', '; NULL if none). Alphabetical by title.
+-- Columns: title, genres
+-- Write your statement below this line.

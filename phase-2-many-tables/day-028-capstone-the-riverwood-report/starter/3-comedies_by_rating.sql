@@ -1,0 +1,3 @@
+-- Rated comedies and their rating sums. Highest first, ties alphabetical.
+-- Columns: title, rating
+-- Write your statement below this line.
