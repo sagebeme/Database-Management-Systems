@@ -1,0 +1,1 @@
+-- Copy every row of payments_old into payments.

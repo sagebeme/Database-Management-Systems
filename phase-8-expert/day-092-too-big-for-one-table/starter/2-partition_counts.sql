@@ -1,0 +1,1 @@
+-- How many rows each partition holds: partition (its name, from tableoid) and payments, by partition name.

@@ -1,0 +1,2 @@
+-- paid_on and total (the sum of amount) for each day of March 2026, by date: written so Postgres reads only the
+-- March partition.

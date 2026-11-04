@@ -1,0 +1,3 @@
+-- A table payments like payments_old (id BIGINT, paid_on DATE, phone TEXT, amount INT, all required), partitioned
+-- by range on paid_on, with the primary key (id, paid_on); and four partitions: payments_2026_01,
+-- payments_2026_02 and payments_2026_03 for those months, and payments_default for any other date.
