@@ -38,20 +38,20 @@ Ends with: a report on Riverwood, a Kenyan film and TV database
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 15 | One Table Is Not Enough | repeated data and the trouble it causes | Planned |
-| 16 | Rules for Rows | PRIMARY KEY, AUTO_INCREMENT, UNIQUE, NOT NULL, DEFAULT | Planned |
-| 17 | Counties and Towns | FOREIGN KEY, ON DELETE | Planned |
-| 18 | Towns in Nakuru | subqueries | Planned |
-| 19 | Town, County | INNER JOIN | Planned |
-| 20 | Every Town, Even Alone | LEFT, RIGHT and full outer joins | Planned |
-| 21 | Riverwood: Shows and Genres | many-to-many and junction tables | Planned |
-| 22 | Not a Comedy | anti-joins, NOT IN, NOT EXISTS | Planned |
-| 23 | Ratings | joins with aggregates | Planned |
-| 24 | Changing the Shape | ALTER TABLE, DROP, TRUNCATE vs DELETE | Planned |
-| 25 | Who Can See What | users, GRANT, REVOKE | Planned |
-| 26 | Views | CREATE VIEW, updatable views | Planned |
-| 27 | Loading Real Data | importing CSV, LOAD DATA | Planned |
-| 28 | Capstone: The Riverwood Report | twelve questions about a film database | Planned |
+| 15 | One Table Is Not Enough | repeated data and the trouble it causes | Done |
+| 16 | Rules for Rows | PRIMARY KEY, AUTO_INCREMENT, UNIQUE, NOT NULL, DEFAULT | Done |
+| 17 | Counties and Towns | FOREIGN KEY, ON DELETE | Done |
+| 18 | Towns in Nakuru | subqueries | Done |
+| 19 | Town, County | INNER JOIN | Done |
+| 20 | Every Town, Even Alone | LEFT, RIGHT and full outer joins | Done |
+| 21 | Riverwood: Shows and Genres | many-to-many and junction tables | Done |
+| 22 | Not a Comedy | anti-joins, NOT IN, NOT EXISTS | Done |
+| 23 | Ratings | joins with aggregates | Done |
+| 24 | Changing the Shape | ALTER TABLE, DROP, TRUNCATE vs DELETE | Done |
+| 25 | Who Can See What | users, GRANT, REVOKE | Done |
+| 26 | Views | CREATE VIEW, updatable views | Done |
+| 27 | Loading Real Data | importing CSV, LOAD DATA | Done |
+| 28 | Capstone: The Riverwood Report | twelve questions about a TV database | Done |
 
 ## Phase 3: Designing databases
 
