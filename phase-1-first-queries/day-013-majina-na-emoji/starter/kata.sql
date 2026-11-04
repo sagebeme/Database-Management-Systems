@@ -1,0 +1,2 @@
+-- Kata: Shouting Names. Names of guests whose name starts with AMINA in capital letters exactly. In id order.
+-- Write your statement below this line.

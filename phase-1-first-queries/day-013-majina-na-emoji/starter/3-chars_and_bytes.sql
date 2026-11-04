@@ -1,0 +1,2 @@
+-- Each guest's name with its length in characters (chars) and in bytes (bytes), in id order.
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- Make utf8mb4 with the utf8mb4_unicode_ci collation the default for the current database, and convert the guests table to it.
+-- Write your statement below this line.

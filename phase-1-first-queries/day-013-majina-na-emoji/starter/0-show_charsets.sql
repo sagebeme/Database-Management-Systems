@@ -1,0 +1,2 @@
+-- For every column of guests: column_name, character_set_name and collation_name, in column order (text columns have a character set, others show NULL).
+-- Write your statement below this line.
