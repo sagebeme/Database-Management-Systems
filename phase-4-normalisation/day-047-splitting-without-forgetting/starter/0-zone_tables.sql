@@ -1,0 +1,2 @@
+-- Create zones (zone CHAR(3) primary key, town required) and addresses (street, zone -> zones, the pair as the key).
+-- Write your statement below this line.
