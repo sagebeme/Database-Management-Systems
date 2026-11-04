@@ -60,18 +60,18 @@ Ends with: a hospital database designed from a brief
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 29 | The Exercise Book Problem | files vs a DBMS, built in Python | Planned |
-| 30 | Which Column Is the Key? | super, candidate, primary, alternate and foreign keys | Planned |
-| 31 | Rules the Database Enforces | domain, entity and referential integrity | Planned |
-| 32 | Drawing the Shop | ER diagrams: entities, attributes, relationships | Planned |
-| 33 | One, Many, Many-to-Many | cardinality, participation, the fewest tables | Planned |
-| 34 | Dependants and Managers | weak entities, self-referential relationships | Planned |
-| 35 | Tables Are Sets | the relational model in maths | Planned |
-| 36 | Relational Algebra I | select, project, rename, union, difference, product | Planned |
-| 37 | Relational Algebra II | joins and division | Planned |
-| 38 | Relational Calculus | tuple and domain calculus, safe queries | Planned |
-| 39 | Practice Test 1 | GATE-style questions on Phases 1–3 | Planned |
-| 40 | Capstone: Design a Hospital | from a brief to an ER diagram, tables and queries | Planned |
+| 29 | The Exercise Book Problem | files vs a DBMS, built in Python | Done |
+| 30 | Which Column Is the Key? | super, candidate, primary, alternate and foreign keys | Done |
+| 31 | Rules the Database Enforces | domain, entity and referential integrity | Done |
+| 32 | Drawing the Shop | ER diagrams: entities, attributes, relationships | Done |
+| 33 | One, Many, Many-to-Many | cardinality, participation, the fewest tables | Done |
+| 34 | Dependants and Managers | weak entities, self-referential relationships | Done |
+| 35 | Tables Are Sets | the relational model in maths | Done |
+| 36 | Relational Algebra I | select, project, rename, union, difference, product | Done |
+| 37 | Relational Algebra II | joins and division | Done |
+| 38 | Relational Calculus | tuple and domain calculus, safe queries | Done |
+| 39 | Practice Test 1 | GATE-style questions on Phases 1–3 | Done |
+| 40 | Capstone: Design a Hospital | from a brief to an ER diagram, tables and queries | Done |
 
 ## Phase 4: Normalisation
 
