@@ -1,0 +1,32 @@
+"""Day 99: The Final Exam. Replace each None with your answer (see the README for the questions)."""
+
+Q1 = 7    # NAT: an int
+Q2 = 1    # NAT: an int
+Q3 = 2    # NAT: an int
+Q4 = 7    # NAT: an int
+Q5 = 5    # NAT: an int
+Q6 = 5    # NAT: an int
+Q7 = 2    # NAT: an int
+Q8 = 3    # NAT: an int
+Q9 = "B"    # MCQ: one letter, like "B"
+Q10 = "C"    # MCQ: one letter, like "B"
+Q11 = 2    # NAT: an int
+Q12 = {"B", "C"}    # MSQ: a set of letters, like {"A", "D"}
+Q13 = {"A", "B", "C"}    # MSQ: a set of letters, like {"A", "D"}
+Q14 = 4    # NAT: an int
+Q15 = "D"    # MCQ: one letter, like "B"
+Q16 = 10    # NAT: an int
+Q17 = "B"    # MCQ: one letter, like "B"
+Q18 = {"A", "B", "C"}    # MSQ: a set of letters, like {"A", "D"}
+Q19 = 5    # NAT: an int
+Q20 = 15    # NAT: an int
+Q21 = 57    # NAT: an int
+Q22 = 4    # NAT: an int
+Q23 = "B"    # MCQ: one letter, like "B"
+Q24 = 10500    # NAT: an int
+Q25 = 80    # NAT: an int
+Q26 = "D"    # MCQ: one letter, like "B"
+Q27 = {"A", "C"}    # MSQ: a set of letters, like {"A", "D"}
+Q28 = 19    # NAT: an int
+Q29 = "B"    # MCQ: one letter, like "B"
+Q30 = 15    # NAT: an int
