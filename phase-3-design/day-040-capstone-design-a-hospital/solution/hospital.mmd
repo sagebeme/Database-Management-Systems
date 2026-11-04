@@ -1,0 +1,50 @@
+erDiagram
+    %% Draw the hospital: DEPARTMENT, DOCTOR, PATIENT, NEXT_OF_KIN, VISIT, DRUG and PRESCRIPTION.
+    %% The README's brief says how they relate.
+    DEPARTMENT ||--o{ DOCTOR : employs
+    PATIENT ||--o{ NEXT_OF_KIN : names
+    PATIENT ||--o{ VISIT : makes
+    DOCTOR ||--o{ VISIT : sees
+    VISIT ||--o{ PRESCRIPTION : orders
+    DRUG ||--o{ PRESCRIPTION : "is in"
+
+    DEPARTMENT {
+        int id PK
+        string name UK
+    }
+    DOCTOR {
+        int id PK
+        string name
+        string licence_no UK
+        int department_id FK
+    }
+    PATIENT {
+        int id PK
+        string name
+        string national_id UK "none for children"
+        date born_on
+        string phone
+    }
+    NEXT_OF_KIN {
+        int patient_id PK, FK
+        string name PK
+        string relationship
+        string phone
+    }
+    VISIT {
+        int id PK
+        int patient_id FK
+        int doctor_id FK
+        datetime visited_at
+        string diagnosis
+    }
+    DRUG {
+        int id PK
+        string name UK
+        decimal unit_price
+    }
+    PRESCRIPTION {
+        int visit_id PK, FK
+        int drug_id PK, FK
+        int quantity
+    }

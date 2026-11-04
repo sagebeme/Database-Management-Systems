@@ -1,0 +1,3 @@
+-- Every department and how many doctors it has, zero included. Most first, ties alphabetical.
+-- Columns: department, doctors
+-- Write your statement below this line.

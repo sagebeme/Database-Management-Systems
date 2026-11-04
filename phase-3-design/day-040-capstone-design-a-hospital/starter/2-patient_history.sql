@@ -1,0 +1,3 @@
+-- Wanjiru Kamau's visits (look her up by name), oldest first.
+-- Columns: visited_at, doctor, department, diagnosis
+-- Write your statement below this line.

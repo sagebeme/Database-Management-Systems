@@ -1,0 +1,3 @@
+-- Patients seen by every doctor in the Outpatient department. Alphabetical.
+-- Columns: name
+-- Write your statement below this line.

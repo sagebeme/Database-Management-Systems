@@ -1,0 +1,3 @@
+-- The hospital's tables. The README lists the tables and columns the app expects; the keys,
+-- types and constraints are yours to choose. Make the rules in the brief impossible to break.
+-- Write your statements below this line.

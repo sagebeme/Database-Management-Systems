@@ -1,0 +1,3 @@
+-- Kata: The Pharmacy Board. Create the view drug_usage: every drug, how many prescriptions name it and how many units in all (0 if none).
+-- Columns: drug, prescriptions, units
+-- Write your statement below this line.

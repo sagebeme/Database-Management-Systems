@@ -1,0 +1,3 @@
+-- Registered patients with no visits. Alphabetical.
+-- Columns: name
+-- Write your statement below this line.

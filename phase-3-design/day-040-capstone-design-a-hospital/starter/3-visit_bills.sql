@@ -1,0 +1,3 @@
+-- Every visit's drug bill (quantity times unit price, added up; 0.00 when nothing was prescribed). In visit order.
+-- Columns: visit_id, patient, total
+-- Write your statement below this line.

@@ -1,0 +1,3 @@
+-- Every doctor and how many visits they've seen, zero included. Most first, ties alphabetical.
+-- Columns: doctor, visits
+-- Write your statement below this line.
