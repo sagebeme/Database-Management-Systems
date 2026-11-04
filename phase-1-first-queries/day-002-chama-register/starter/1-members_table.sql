@@ -1,0 +1,2 @@
+-- Create the members table (see the README for its columns), without an error if it exists.
+-- Write your statement below this line.

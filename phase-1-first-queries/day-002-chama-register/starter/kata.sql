@@ -1,0 +1,2 @@
+-- Kata: Table Count. Print how many tables the current database has, in a column called tables.
+-- Write your statement below this line.

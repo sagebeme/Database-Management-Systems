@@ -1,0 +1,2 @@
+-- Create the contributions table (see the README), without an error if it exists.
+-- Write your statement below this line.
