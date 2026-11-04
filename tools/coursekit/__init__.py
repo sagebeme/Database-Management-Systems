@@ -183,6 +183,15 @@ class Postgres:
     def ping(self) -> None:
         self.run("SELECT 1;").check()
 
+    def connect(self, autocommit: bool = True):
+        """A psycopg connection to the same database, for code that needs to hold a session open."""
+        import psycopg
+
+        return psycopg.connect(
+            host=setting("PGHOST"), port=int(setting("PGPORT")), user=self.user, password=self.password or None,
+            dbname=self.database, autocommit=autocommit, connect_timeout=5,
+        )
+
 
 class Mongo:
     """Runs a mongosh script against one database, the way `cat 2-insert | mongosh my_db` does."""
