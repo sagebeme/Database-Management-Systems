@@ -1,0 +1,3 @@
+-- Move owners into their own table, keeping every vehicle's owner:
+-- owners: id (identity, primary key), name (TEXT, required), phone (TEXT, required, unique), one row per phone,
+-- numbered in phone order; vehicles.owner_id, required, referencing owners; and no vehicles.owner column.

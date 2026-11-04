@@ -1,0 +1,1 @@
+-- Add seats to vehicles: INT, required, 14 for every vehicle already there and by default, and between 1 and 70.
