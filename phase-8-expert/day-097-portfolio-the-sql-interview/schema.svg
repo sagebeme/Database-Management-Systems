@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="400" viewBox="0 0 1080 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="interview-schema-title interview-schema-desc" id="schema-root">
+      <title id="interview-schema-title">The ride-hailing tables</title>
+      <desc id="interview-schema-desc">Three tables for the SQL interview: riders, who may have been referred by another rider; drivers with a county and vehicle; and trips joining a rider to a driver with fare, status, payment and an optional rating.</desc>
+      <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #schema-root { --color-paper: #EEF4F7; --color-ink: #0F2230; --color-muted: #45596A; --font-serif: 'Source Serif 4', Georgia, serif; --font-mono: 'IBM Plex Mono', ui-monospace, monospace; }
+      #schema-root { font-family: var(--font-serif); color: var(--color-ink); }
+      #schema-root .scroll { overflow-x: auto; }</style>
+        <marker id="schema-interview-schema-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#45596A"/></marker>
+      </defs>
+      <rect width="100%" height="100%" fill="#EEF4F7"/>
+<path d="M 480,128 L 400,128" fill="none" stroke="#45596A" stroke-width="1" marker-end="url(#schema-interview-schema-arrow)"/>
+<path d="M 720,152 L 800,152" fill="none" stroke="#45596A" stroke-width="1" marker-end="url(#schema-interview-schema-arrow)"/>
+<path d="M 160,200 L 128,200 Q 120,200 120,192 L 120,136 Q 120,128 128,128 L 160,128" fill="none" stroke="#45596A" stroke-width="1" marker-end="url(#schema-interview-schema-arrow)"/>
+<rect x="408" y="108" width="64" height="12" rx="2" fill="#EEF4F7"/>
+<text x="440" y="117" fill="#45596A" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">NO ACTION</text>
+<rect x="728" y="132" width="64" height="12" rx="2" fill="#EEF4F7"/>
+<text x="760" y="141" fill="#45596A" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">NO ACTION</text>
+<rect x="48" y="158" width="64" height="12" rx="2" fill="#EEF4F7"/>
+<text x="80" y="167" fill="#45596A" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">NO ACTION</text>
+<g class="table">
+<rect x="160" y="88" width="240" height="148" rx="6" fill="#FBFDFE" stroke="#0F2230" stroke-width="1"/>
+<path d="M 160.5,116 V 94 Q 160.5,88.5 166,88.5 H 394 Q 399.5,88.5 399.5,94 V 116 Z" fill="#5bc0eb" fill-opacity="0.22"/>
+<line x1="160" y1="116" x2="400" y2="116" stroke="#0f2230" stroke-width="1" stroke-opacity="0.22"/>
+<text x="172" y="106" fill="#0F2230" font-size="13" font-weight="600" font-family="'Source Serif 4', Georgia, serif">riders</text>
+<rect x="348" y="96" width="40" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="368" y="105" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">TABLE</text>
+<rect x="161" y="116" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="172" y="132" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">id</text>
+<rect x="288" y="122" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="298" y="131" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">PK</text>
+<text x="388" y="132" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<text x="172" y="156" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">name</text>
+<text x="388" y="156" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+<rect x="161" y="164" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="172" y="180" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">phone</text>
+<text x="388" y="180" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+<text x="172" y="204" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">referred_by</text>
+<rect x="288" y="194" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="298" y="203" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">FK</text>
+<rect x="312" y="194" width="32" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="328" y="203" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">NULL</text>
+<text x="388" y="204" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<rect x="161" y="212" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="172" y="228" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">banned</text>
+<text x="388" y="228" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">boolean</text>
+</g>
+<g class="table">
+<rect x="480" y="64" width="240" height="220" rx="6" fill="#FBFDFE" stroke="#0F2230" stroke-width="1"/>
+<path d="M 480.5,92 V 70 Q 480.5,64.5 486,64.5 H 714 Q 719.5,64.5 719.5,70 V 92 Z" fill="#5bc0eb" fill-opacity="0.22"/>
+<line x1="480" y1="92" x2="720" y2="92" stroke="#0f2230" stroke-width="1" stroke-opacity="0.22"/>
+<text x="492" y="82" fill="#0F2230" font-size="13" font-weight="600" font-family="'Source Serif 4', Georgia, serif">trips</text>
+<rect x="668" y="72" width="40" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="688" y="81" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">TABLE</text>
+<rect x="481" y="92" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="492" y="108" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">id</text>
+<rect x="608" y="98" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="618" y="107" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">PK</text>
+<text x="708" y="108" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<text x="492" y="132" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">rider_id</text>
+<rect x="608" y="122" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="618" y="131" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">FK</text>
+<text x="708" y="132" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<rect x="481" y="140" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="492" y="156" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">driver_id</text>
+<rect x="608" y="146" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="618" y="155" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">FK</text>
+<text x="708" y="156" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<text x="492" y="180" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">requested_at</text>
+<text x="708" y="180" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">timestamp</text>
+<rect x="481" y="188" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="492" y="204" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">fare</text>
+<text x="708" y="204" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<text x="492" y="228" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">status</text>
+<text x="708" y="228" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+<rect x="481" y="236" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="492" y="252" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">payment</text>
+<text x="708" y="252" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+<text x="492" y="276" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">rating</text>
+<rect x="608" y="266" width="32" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="624" y="275" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">NULL</text>
+<text x="708" y="276" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+</g>
+<g class="table">
+<rect x="800" y="112" width="240" height="124" rx="6" fill="#FBFDFE" stroke="#0F2230" stroke-width="1"/>
+<path d="M 800.5,140 V 118 Q 800.5,112.5 806,112.5 H 1034 Q 1039.5,112.5 1039.5,118 V 140 Z" fill="#5bc0eb" fill-opacity="0.22"/>
+<line x1="800" y1="140" x2="1040" y2="140" stroke="#0f2230" stroke-width="1" stroke-opacity="0.22"/>
+<text x="812" y="130" fill="#0F2230" font-size="13" font-weight="600" font-family="'Source Serif 4', Georgia, serif">drivers</text>
+<rect x="988" y="120" width="40" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="1008" y="129" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">TABLE</text>
+<rect x="801" y="140" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="812" y="156" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">id</text>
+<rect x="928" y="146" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="938" y="155" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">PK</text>
+<text x="1028" y="156" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<text x="812" y="180" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">name</text>
+<text x="1028" y="180" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+<rect x="801" y="188" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="812" y="204" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">county</text>
+<text x="1028" y="204" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+<text x="812" y="228" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">vehicle</text>
+<text x="1028" y="228" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+</g>
+<line x1="168" y1="264" x2="168" y2="316" stroke="#B81B66" stroke-width="2"/>
+<text x="180" y="276" fill="#0F2230" font-size="14" font-style="italic" font-family="'Source Serif 4', Georgia, serif">referred_by points back into riders:</text>
+<text x="180" y="294" fill="#0F2230" font-size="14" font-style="italic" font-family="'Source Serif 4', Georgia, serif">the chain the kata walks</text>
+<text x="180" y="312" fill="#0F2230" font-size="14" font-style="italic" font-family="'Source Serif 4', Georgia, serif">with WITH RECURSIVE.</text>
+<line x1="40" y1="340" x2="1040" y2="340" stroke="#0f2230" stroke-width="1" stroke-opacity="0.22"/>
+<rect x="40" y="358" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="50" y="367" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">PK</text>
+<text x="68" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">primary key</text>
+<rect x="162" y="358" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="172" y="367" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">FK</text>
+<text x="190" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">foreign key</text>
+<rect x="284" y="358" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="294" y="367" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">UQ</text>
+<text x="312" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">unique</text>
+<rect x="376" y="358" width="32" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="392" y="367" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">NULL</text>
+<text x="416" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">may be empty</text>
+<line x1="516" y1="364" x2="552" y2="364" stroke="#45596A" stroke-width="1" marker-end="url(#schema-interview-schema-arrow)"/>
+<text x="560" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">references</text>
+<text x="1040" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">every other column is NOT NULL</text>
+    </svg>

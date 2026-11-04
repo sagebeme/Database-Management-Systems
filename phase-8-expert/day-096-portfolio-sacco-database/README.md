@@ -55,3 +55,7 @@ At the AGM the SACCO pays a dividend on savings held at the end of the year. In 
 - **Two loans sharing guarantors deadlock**: lock the members in id order.
 - **A refused loan leaves guarantees behind**: check everything before inserting anything. (An error rolls back the whole statement anyway, but don't rely on the order you happened to write.)
 - **`unnest` of two arrays**: `unnest(a, b) AS x (m, a)` pairs them up, in `FROM`.
+
+## After it passes
+
+Compare your design with the reference one, drawn as a diagram: [solution-schema.svg](solution-schema.svg). Look at what it chose to make a constraint (the composite key on `guarantees`, the partial unique index on `loans`) and what it left to the functions. Yours can differ and still be right; the tests are the judge.

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960" height="400" viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="matatu-schema-title matatu-schema-desc" id="schema-root">
+      <title id="matatu-schema-title">Matatu bookings: the schema</title>
+      <desc id="matatu-schema-desc">Three PostgreSQL tables: routes keyed by route number, trips on a route with a seat count, and bookings of one seat on one trip, unique per trip and seat.</desc>
+      <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #schema-root { --color-paper: #EEF4F7; --color-ink: #0F2230; --color-muted: #45596A; --font-serif: 'Source Serif 4', Georgia, serif; --font-mono: 'IBM Plex Mono', ui-monospace, monospace; }
+      #schema-root { font-family: var(--font-serif); color: var(--color-ink); }
+      #schema-root .scroll { overflow-x: auto; }</style>
+        <marker id="schema-matatu-schema-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#45596A"/></marker>
+      </defs>
+      <rect width="100%" height="100%" fill="#EEF4F7"/>
+<path d="M 680,128 L 600,128" fill="none" stroke="#45596A" stroke-width="1" marker-end="url(#schema-matatu-schema-arrow)"/>
+<path d="M 360,152 L 280,152" fill="none" stroke="#45596A" stroke-width="1" marker-end="url(#schema-matatu-schema-arrow)"/>
+<rect x="608" y="108" width="64" height="12" rx="2" fill="#EEF4F7"/>
+<text x="640" y="117" fill="#45596A" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">NO ACTION</text>
+<rect x="288" y="132" width="64" height="12" rx="2" fill="#EEF4F7"/>
+<text x="320" y="141" fill="#45596A" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">NO ACTION</text>
+<g class="table">
+<rect x="40" y="112" width="240" height="76" rx="6" fill="#FBFDFE" stroke="#0F2230" stroke-width="1"/>
+<path d="M 40.5,140 V 118 Q 40.5,112.5 46,112.5 H 274 Q 279.5,112.5 279.5,118 V 140 Z" fill="#5bc0eb" fill-opacity="0.22"/>
+<line x1="40" y1="140" x2="280" y2="140" stroke="#0f2230" stroke-width="1" stroke-opacity="0.22"/>
+<text x="52" y="130" fill="#0F2230" font-size="13" font-weight="600" font-family="'Source Serif 4', Georgia, serif">routes</text>
+<rect x="228" y="120" width="40" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="248" y="129" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">TABLE</text>
+<rect x="41" y="140" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="52" y="156" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">number</text>
+<rect x="168" y="146" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="178" y="155" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">PK</text>
+<text x="268" y="156" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+<text x="52" y="180" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">fare</text>
+<text x="268" y="180" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+</g>
+<g class="table">
+<rect x="360" y="88" width="240" height="124" rx="6" fill="#FBFDFE" stroke="#0F2230" stroke-width="1"/>
+<path d="M 360.5,116 V 94 Q 360.5,88.5 366,88.5 H 594 Q 599.5,88.5 599.5,94 V 116 Z" fill="#5bc0eb" fill-opacity="0.22"/>
+<line x1="360" y1="116" x2="600" y2="116" stroke="#0f2230" stroke-width="1" stroke-opacity="0.22"/>
+<text x="372" y="106" fill="#0F2230" font-size="13" font-weight="600" font-family="'Source Serif 4', Georgia, serif">trips</text>
+<rect x="548" y="96" width="40" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="568" y="105" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">TABLE</text>
+<rect x="361" y="116" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="372" y="132" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">id</text>
+<rect x="488" y="122" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="498" y="131" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">PK</text>
+<text x="588" y="132" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<text x="372" y="156" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">route</text>
+<rect x="488" y="146" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="498" y="155" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">FK</text>
+<text x="588" y="156" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+<rect x="361" y="164" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="372" y="180" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">departs</text>
+<text x="588" y="180" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">timestamptz</text>
+<text x="372" y="204" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">seats</text>
+<text x="588" y="204" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+</g>
+<g class="table">
+<rect x="680" y="64" width="240" height="182" rx="6" fill="#FBFDFE" stroke="#0F2230" stroke-width="1"/>
+<path d="M 680.5,92 V 70 Q 680.5,64.5 686,64.5 H 914 Q 919.5,64.5 919.5,70 V 92 Z" fill="#5bc0eb" fill-opacity="0.22"/>
+<line x1="680" y1="92" x2="920" y2="92" stroke="#0f2230" stroke-width="1" stroke-opacity="0.22"/>
+<text x="692" y="82" fill="#0F2230" font-size="13" font-weight="600" font-family="'Source Serif 4', Georgia, serif">bookings</text>
+<rect x="868" y="72" width="40" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="888" y="81" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.08em">TABLE</text>
+<rect x="681" y="92" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="692" y="108" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">id</text>
+<rect x="808" y="98" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="818" y="107" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">PK</text>
+<text x="908" y="108" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<text x="692" y="132" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">trip_id</text>
+<rect x="808" y="122" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="818" y="131" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">FK</text>
+<text x="908" y="132" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<rect x="681" y="140" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="692" y="156" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">seat</text>
+<text x="908" y="156" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">integer</text>
+<text x="692" y="180" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">phone</text>
+<text x="908" y="180" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">text</text>
+<rect x="681" y="188" width="238" height="24" fill="#0f2230" fill-opacity="0.025"/>
+<text x="692" y="204" fill="#0F2230" font-size="12" font-family="'Source Serif 4', Georgia, serif">booked_at</text>
+<text x="908" y="204" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">timestamptz</text>
+<line x1="680" y1="212" x2="920" y2="212" stroke="#0f2230" stroke-width="1" stroke-opacity="0.22"/>
+<text x="692" y="224" fill="#45596A" font-size="8" font-weight="500" font-family="'IBM Plex Mono', ui-monospace, monospace" letter-spacing="0.18em">INDEXES</text>
+<text x="692" y="238" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">UQ (trip_id, seat)</text>
+</g>
+<line x1="368" y1="256" x2="368" y2="308" stroke="#B81B66" stroke-width="2"/>
+<text x="380" y="268" fill="#0F2230" font-size="14" font-style="italic" font-family="'Source Serif 4', Georgia, serif">A seat is sold once per trip:</text>
+<text x="380" y="286" fill="#0F2230" font-size="14" font-style="italic" font-family="'Source Serif 4', Georgia, serif">UNIQUE (trip_id, seat) holds even when</text>
+<text x="380" y="304" fill="#0F2230" font-size="14" font-style="italic" font-family="'Source Serif 4', Georgia, serif">two phones press Book at the same time.</text>
+<line x1="40" y1="340" x2="920" y2="340" stroke="#0f2230" stroke-width="1" stroke-opacity="0.22"/>
+<rect x="40" y="358" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="50" y="367" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">PK</text>
+<text x="68" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">primary key</text>
+<rect x="162" y="358" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="172" y="367" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">FK</text>
+<text x="190" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">foreign key</text>
+<rect x="284" y="358" width="20" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="294" y="367" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">UQ</text>
+<text x="312" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">unique</text>
+<rect x="376" y="358" width="32" height="12" rx="2" fill="none" stroke="#0f2230" stroke-width="0.8" stroke-opacity="0.40"/>
+<text x="392" y="367" fill="#0F2230" font-size="8" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="middle">NULL</text>
+<text x="416" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">may be empty</text>
+<line x1="516" y1="364" x2="552" y2="364" stroke="#45596A" stroke-width="1" marker-end="url(#schema-matatu-schema-arrow)"/>
+<text x="560" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace">references</text>
+<text x="920" y="368" fill="#45596A" font-size="9" font-family="'IBM Plex Mono', ui-monospace, monospace" text-anchor="end">every other column is NOT NULL</text>
+    </svg>

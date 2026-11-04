@@ -58,6 +58,14 @@ This phase mixes kinds of work, and each runs differently:
 On Windows, run all of this in the Ubuntu (WSL) terminal, not PowerShell: see [WINDOWS.md](../WINDOWS.md).
 
 
+## Finished schemas, drawn
+
+What a design from this phase looks like once it's built, foreign key to referenced column:
+
+- [Day 90: matatu bookings](../phase-7-beyond-mysql/day-090-capstone-matatu-bookings/schema.svg): three tables, one composite unique key.
+- [Day 97: the ride-hailing tables](../phase-8-expert/day-097-portfolio-the-sql-interview/schema.svg): a self-referencing foreign key.
+- [Day 96: the SACCO](../phase-8-expert/day-096-portfolio-sacco-database/solution-schema.svg): five tables. It's the reference answer to a portfolio day, so try Day 96 first.
+
 ## Further reading
 
 - [Mermaid ER diagram syntax](https://mermaid.js.org/syntax/entityRelationshipDiagram.html).

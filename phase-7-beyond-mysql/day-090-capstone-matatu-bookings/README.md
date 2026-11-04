@@ -10,6 +10,10 @@ A sacco wants passengers to book matatu seats on their phones. Pick route 46, th
 
 This is the shape of most real back ends: one relational database as the system of record, plus specialised stores beside it.
 
+The three tables in `starter/schema.sql`, drawn. Each arrow runs from a foreign key to the column it references:
+
+[![routes, trips and bookings: trips.route references routes.number, bookings.trip_id references trips.id, and bookings is unique on (trip_id, seat)](schema.svg)](schema.svg)
+
 ## What you'll use
 
 Everything from Days 79 to 89, plus one new idea: **who's responsible for what**.

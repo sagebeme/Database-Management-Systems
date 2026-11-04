@@ -8,6 +8,10 @@ No walkthrough today. Each question names the pattern it's testing, so you know 
 
 The tests run your answer on the data, then change the data (new riders and trips, a deleted range of ids, a banned rider, a new county, ties) and run it again. An answer that fits only today's rows fails the second run.
 
+The tables `setup.sql` builds. `referred_by` and `rating` are the only columns that can be `NULL`, and several of the twenty questions turn on exactly that:
+
+[![riders, drivers and trips: trips.rider_id references riders.id, trips.driver_id references drivers.id, and riders.referred_by references riders.id](schema.svg)](schema.svg)
+
 ## What you'll use
 
 ```
