@@ -1,0 +1,57 @@
+# Publishes the course website to GitHub Pages: site/ at the root, plus every Markdown file in the
+# repository at its own path, which is where the lesson page fetches the READMEs from.
+name: Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: The course data is up to date
+        run: python tools/sitedata.py --check
+
+      - name: Assemble the site
+        run: |
+          mkdir _site
+          cp -r site/. _site/
+          rm -f _site/DESIGN.md
+          git ls-files '*.md' | grep -v '^site/' | while read -r f; do
+            mkdir -p "_site/$(dirname "$f")"
+            cp "$f" "_site/$f"
+          done
+          touch _site/.nojekyll
+          echo "$(find _site -name '*.md' | wc -l) Markdown files published."
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
