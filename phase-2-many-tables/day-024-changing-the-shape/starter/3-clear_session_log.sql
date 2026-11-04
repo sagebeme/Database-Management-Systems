@@ -1,0 +1,2 @@
+-- Empty session_log completely, so its ids start again from 1.
+-- Write your statement below this line.

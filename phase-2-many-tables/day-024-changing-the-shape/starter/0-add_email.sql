@@ -1,0 +1,2 @@
+-- Add an optional email column (VARCHAR(100)) to subscribers, right after name.
+-- Write your statement below this line.

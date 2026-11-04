@@ -1,0 +1,2 @@
+-- Rename subscribers.phone to msisdn, keeping its type and data.
+-- Write your statement below this line.

@@ -1,0 +1,2 @@
+-- Kata: Room for Long Names. Widen subscribers.name to VARCHAR(100). It must stay required.
+-- Write your statement below this line.

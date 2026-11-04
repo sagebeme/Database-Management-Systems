@@ -1,0 +1,2 @@
+-- Remove the old_promo_codes table. Running the file twice must not fail.
+-- Write your statement below this line.
