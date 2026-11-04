@@ -1,0 +1,3 @@
+-- Each artist's share of their country's fans, as a percentage rounded to 1 decimal place:
+-- name, origin, fans, pct. By origin, then pct (biggest first), then name.
+-- Write your statement below this line.

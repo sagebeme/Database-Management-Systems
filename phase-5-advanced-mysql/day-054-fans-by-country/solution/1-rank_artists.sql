@@ -1,0 +1,6 @@
+-- Every artist's place by fans (most fans is place 1; equal fans share a place, and the next place is
+-- skipped): name, origin, fans, place. In place order, ties by name.
+-- Write your statement below this line.
+SELECT name, origin, fans, RANK() OVER (ORDER BY fans DESC) AS place
+FROM artists
+ORDER BY place, name;

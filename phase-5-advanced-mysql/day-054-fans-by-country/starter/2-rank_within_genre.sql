@@ -1,0 +1,3 @@
+-- Each artist's rank inside their genre by fans, with no gaps after a tie: genre, name, fans, genre_rank.
+-- By genre, then genre_rank, then name.
+-- Write your statement below this line.

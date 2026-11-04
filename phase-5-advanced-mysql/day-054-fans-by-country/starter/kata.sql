@@ -1,0 +1,2 @@
+-- The origin (or origins, if tied) with the second-highest total fans: origin, nb_fans.
+-- Write your statement below this line.
