@@ -1,0 +1,2 @@
+-- Every member and how many phones they have, zero included: name, phones. Most first, ties alphabetical.
+-- Write your statement below this line.

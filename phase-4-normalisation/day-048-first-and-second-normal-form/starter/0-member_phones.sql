@@ -1,0 +1,3 @@
+-- First normal form: create member_phones (member_id -> members_raw, phone CHAR(12), the pair as the key)
+-- and fill it with one row per phone, trimmed.
+-- Write your statement below this line.
