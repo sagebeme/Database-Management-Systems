@@ -1,0 +1,2 @@
+-- Each statement below must be refused by the database itself. Write at least five, each after a line
+-- starting "-- expect error:" that says what it tries.

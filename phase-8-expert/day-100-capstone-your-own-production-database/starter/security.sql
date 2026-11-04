@@ -1,0 +1,1 @@
+-- TODO: create the capstone_app role and grant it only what the app needs.
