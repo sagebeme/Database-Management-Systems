@@ -1,0 +1,2 @@
+-- Names of students registered for every core unit, alphabetical. (Division, with NOT EXISTS twice.)
+-- Write your statement below this line.
