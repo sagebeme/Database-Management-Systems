@@ -1,0 +1,2 @@
+-- Three roles that can log in, with no password and no special powers: sacco_teller, sacco_teller2 and
+-- sacco_auditor.

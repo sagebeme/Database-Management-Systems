@@ -1,0 +1,2 @@
+-- Row-level security on loans: a teller sees, and can add, only loans whose officer is themselves; the auditor
+-- sees every loan. (The table owner is not affected.)

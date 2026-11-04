@@ -1,0 +1,2 @@
+-- Kata: make audit_log append-only for everyone, its owner included: a trigger audit_log_append_only that raises
+-- an error on any UPDATE or DELETE of audit_log (and on TRUNCATE).
