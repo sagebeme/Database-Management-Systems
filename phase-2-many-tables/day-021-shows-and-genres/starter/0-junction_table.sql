@@ -1,0 +1,2 @@
+-- Create tv_show_genres, linking shows to genres: show_id and genre_id, both required and both real; each pair at most once.
+-- Write your statement below this line.

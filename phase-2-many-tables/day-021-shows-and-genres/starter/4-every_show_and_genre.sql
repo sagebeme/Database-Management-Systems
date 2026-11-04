@@ -1,0 +1,2 @@
+-- Every show with each of its genres (NULL for a show with none): title, genre. Ordered by title, then genre.
+-- Write your statement below this line.

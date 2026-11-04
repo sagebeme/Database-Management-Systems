@@ -1,0 +1,2 @@
+-- Each genre that has shows and how many (number_of_shows): genre, number_of_shows. Most first, ties alphabetical.
+-- Write your statement below this line.

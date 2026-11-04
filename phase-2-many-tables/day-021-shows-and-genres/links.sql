@@ -1,0 +1,25 @@
+-- Which show has which genres. Run it after your 0-junction_table.sql:
+--   tools/mysql.sh riverwood < phase-2-many-tables/day-021-shows-and-genres/links.sql
+INSERT INTO tv_show_genres (show_id, genre_id) VALUES
+    (1, 2),
+    (2, 3),
+    (2, 5),
+    (3, 5),
+    (3, 9),
+    (4, 1),
+    (4, 3),
+    (5, 2),
+    (5, 6),
+    (6, 5),
+    (7, 3),
+    (7, 11),
+    (8, 1),
+    (8, 2),
+    (9, 5),
+    (9, 7),
+    (9, 9),
+    (10, 8),
+    (11, 10),
+    (11, 11),
+    (12, 2),
+    (12, 6);
