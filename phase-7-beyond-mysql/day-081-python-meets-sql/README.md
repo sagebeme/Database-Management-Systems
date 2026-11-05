@@ -47,6 +47,65 @@ with conn.transaction():
 
 Raise inside the block and everything in it is undone. Lock the rows you're about to change with `SELECT ... FOR UPDATE` (Day 71), or two transfers at once can both spend the same shillings.
 
+### Where the password goes: the environment and `.env`
+
+The connection string above has no password, because your practice Postgres doesn't need one. A real one does, and it must never be in the code: a password in a `.py` file is in every copy of the repo, in its history for ever, and on GitHub within seconds of a push, where bots scan new commits for exactly this.
+
+Settings that change between computers, and every secret, come from **environment variables** instead. libpq, the library under psycopg, reads the standard ones by itself, so the code doesn't mention them at all:
+
+```bash
+export PGHOST=127.0.0.1 PGPORT=5434 PGUSER=sacco_app PGPASSWORD='…'
+```
+
+```python
+import os
+conn = psycopg.connect(dbname="sacco")                    # host, port, user and password from PG* variables
+url = os.environ["DATABASE_URL"]                          # a setting the app can't run without: fail loudly if missing
+pool_size = int(os.environ.get("POOL_SIZE", "5"))         # an optional one, with a default
+```
+
+Typing `export` in every new terminal gets old, so on your own computer the values live in a **`.env`** file instead: one `NAME=value` per line, next to the code. This course does exactly that. Open `.env.example` at the repo root, then read `setting()` in `tools/coursekit/__init__.py`: it takes a real environment variable first, then the `.env` value, then a default that matches `tools/devdb.sh`. Real servers (Docker, Render, CI) set real environment variables and have no `.env` at all.
+
+The rules:
+
+- **`.env` is in `.gitignore`**, before the first commit. Check with `git check-ignore -v .env`.
+- **Commit `.env.example`** with every name and a placeholder or a safe default, never a real value. It's how the next developer finds out what to set.
+- **One account per program, with only the privileges it needs** (Day 25). The back office's password shouldn't be able to drop tables.
+- **Never print or log a secret**, not even in an error message.
+- **A leaked password is changed, not deleted.** Removing it from the code leaves it in the git history and in every clone. `ALTER USER … IDENTIFIED BY …` (Day 25) first, then clean up.
+
+### `requirements.txt` and its counterparts
+
+`psycopg` isn't part of Python. It came from `pip install -r requirements.txt` when you set up the course. Open that file; it starts:
+
+```text
+pytest==9.2.0
+PyMySQL==1.2.3
+psycopg[binary]==3.3.7
+```
+
+| Written | Means |
+|---|---|
+| `psycopg==3.3.7` | exactly 3.3.7. This course pins every package, so your tests run against what CI ran. |
+| `psycopg~=3.3.7` | 3.3.7 or a later 3.3.x: patches only |
+| `psycopg>=3.3` | anything newer, including a 4.0 that may break you |
+| `psycopg[binary]` | an **extra**: also install the prebuilt `psycopg-binary`, so you don't need a C compiler and the Postgres headers |
+
+**The virtual environment.** `pip install` puts packages into one Python. The `.venv` folder you made at setup is a private Python for this project, so its versions can't clash with another project's, and Ubuntu and Debian refuse a plain `pip install` into the system Python anyway (`externally-managed-environment`). `.venv` is gitignored, like `node_modules`: never commit it, and delete and recreate it whenever it acts strangely or you upgrade Python.
+
+**Packages your packages need.** `requirements.txt` lists what this course asked for; pip also installed what those need. `pip freeze` lists everything, with exact versions. Apps that need fully repeatable installs keep a **lock** of that whole list: `pip-compile` (from pip-tools) turns a short `requirements.in` into a fully pinned `requirements.txt`, and `uv` and Poetry write `uv.lock` and `poetry.lock`. Newer projects declare their dependencies in **`pyproject.toml`**'s `[project] dependencies` instead; this repo's `pyproject.toml` only configures pytest.
+
+| Task | npm | pip (in the venv) | uv |
+|---|---|---|---|
+| Install everything | `npm ci` | `pip install -r requirements.txt` | `uv sync` |
+| Add a package | `npm install redis` | `pip install redis`, then add it to `requirements.txt` yourself | `uv add redis` |
+| What's installed | `npm ls` | `pip list` / `pip freeze` | `uv pip list` |
+| What a package needs | `npm ls redis` | `pip show pymongo` (its `Requires:` line: `dnspython`) | `uv tree` |
+| What's out of date | `npm outdated` | `pip list --outdated` | `uv pip list --outdated` |
+| Known security problems | `npm audit` | `pip-audit -r requirements.txt` (`pip install pip-audit`) | same |
+
+**Before adding a package, check it's the real one.** Look it up on pypi.org: who publishes it, when it started, how many releases. Attackers publish packages with names one letter off popular ones, and AI coding tools sometimes suggest packages that don't exist, which someone can then register.
+
 ## Steps
 
 ```bash
@@ -59,6 +118,14 @@ tools/psql.sh sacco -f phase-7-beyond-mysql/day-081-python-meets-sql/setup.sql
 3. `transfer`: all or nothing. Lock both rows, check, update both, record it. A test makes the last step fail and checks the first ones are undone; another fires four transfers at once from four connections.
 4. The rest of `starter/answers.py`.
 5. `pytest phase-7-beyond-mysql/day-081-python-meets-sql`
+6. **Explore**, inside the course's `.venv`:
+
+   ```bash
+   git check-ignore -v .env          # which .gitignore line keeps .env out of git
+   pip show pymongo                  # its version, and what it needs (dnspython)
+   pip freeze                        # everything installed, not only what requirements.txt asked for
+   pip list --outdated               # newer releases than the pinned ones
+   ```
 
 ## The kata: Sort by Anything (Safely)
 
