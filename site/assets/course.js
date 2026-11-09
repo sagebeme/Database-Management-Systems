@@ -25,7 +25,7 @@ window.DBMS_COURSE = {
    "phase": 3,
    "title": "Designing databases",
    "dir": "phase-3-design",
-   "learn": "why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, the relational model, relational algebra, tuple and domain relational calculus",
+   "learn": "why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, top-down and bottom-up design, the relational model, relational algebra, tuple and domain relational calculus",
    "ends": "a hospital database designed from a brief",
    "first": 29,
    "last": 40
@@ -70,7 +70,7 @@ window.DBMS_COURSE = {
    "phase": 8,
    "title": "Expert",
    "dir": "phase-8-expert",
-   "learn": "query plans and join algorithms, partitioning and sharding, replication and backups, security, data warehousing",
+   "learn": "query plans and join algorithms, partitioning and sharding, replication and backups, security and password hashing, data warehousing",
    "ends": "a production-ready database for a real business, designed and defended",
    "first": 91,
    "last": 100

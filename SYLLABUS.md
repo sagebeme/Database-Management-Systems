@@ -55,7 +55,7 @@ Ends with: a report on Riverwood, a Kenyan film and TV database
 
 ## Phase 3: Designing databases
 
-Learn: why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, the relational model, relational algebra, tuple and domain relational calculus
+Learn: why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, top-down and bottom-up design, the relational model, relational algebra, tuple and domain relational calculus
 Ends with: a hospital database designed from a brief
 
 | Day | Project | What it teaches | Status |
@@ -157,7 +157,7 @@ Ends with: a matatu booking system using three databases
 
 ## Phase 8: Expert
 
-Learn: query plans and join algorithms, partitioning and sharding, replication and backups, security, data warehousing
+Learn: query plans and join algorithms, partitioning and sharding, replication and backups, security and password hashing, data warehousing
 Ends with: a production-ready database for a real business, designed and defended
 
 | Day | Project | What it teaches | Status |

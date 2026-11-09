@@ -2,7 +2,7 @@
 
 Before you write a table you design it. This phase is the theory behind tables: keys, integrity, ER diagrams, and the maths of relational algebra and calculus, the core of GATE's databases questions.
 
-**You learn:** why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, the relational model, relational algebra, tuple and domain relational calculus.
+**You learn:** why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, top-down and bottom-up design, the relational model, relational algebra, tuple and domain relational calculus.
 
 **It ends with:** a hospital database designed from a brief.
 

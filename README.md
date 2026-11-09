@@ -12,7 +12,8 @@ No experience needed. If you can open a terminal and edit a text file, you can s
 - Design a database from a business brief: ER diagrams, keys, constraints, and normalisation up to BCNF and 4NF.
 - Explain and use transactions, isolation levels and locks, and know what really happens when two people update the same row.
 - Know how a database stores data on disk: pages, B+ trees, indexes and logs, and how to make a slow query fast.
-- Use PostgreSQL, MongoDB and Redis as well as MySQL, and choose between them.
+- Use PostgreSQL, MongoDB and Redis as well as MySQL, choose between them, and know where the rest (SQLite, search engines, warehouses, distributed SQL) fit.
+- Lock a database down: least privilege, row-level security, an audit trail, and passwords stored as hashes, never as text.
 - Pass the databases section of GATE CSE, and the SQL rounds of a technical interview.
 
 The topics cover the full GATE CSE databases syllabus and the SQL and NoSQL projects of the ALX software engineering programme. [SYLLABUS.md](SYLLABUS.md) lists all hundred days.
@@ -23,18 +24,18 @@ The topics cover the full GATE CSE databases syllabus and the SQL and NoSQL proj
 |---|---|---|---|
 | 1. SQL from zero | 1–14 | tables, types, `SELECT`, `WHERE`, sorting, aggregates, `GROUP BY`, `HAVING`, `NULL`, functions, character sets | a weather report for eight counties |
 | 2. Many tables | 15–28 | keys, foreign keys, subqueries, joins, many-to-many, `ALTER`, users and privileges, views, imports | a report on a Kenyan film database |
-| 3. Designing databases | 29–40 | files vs a DBMS, keys, integrity, ER diagrams, the relational model, relational algebra and calculus | a hospital database designed from a brief |
+| 3. Designing databases | 29–40 | files vs a DBMS, keys, integrity, ER diagrams, top-down and bottom-up design, the relational model, relational algebra and calculus | a hospital database designed from a brief |
 | 4. Normalisation | 41–52 | functional dependencies, closure, covers, decomposition, 1NF to 4NF | a messy spreadsheet turned into a clean schema |
 | 5. Advanced MySQL | 53–64 | window functions, CTEs, triggers, stored procedures, indexes, JSON | a school results system |
 | 6. Transactions and storage | 65–78 | ACID, isolation, serializability, locking, recovery, B+ trees, index design | a tiny storage engine of your own |
 | 7. Beyond MySQL | 79–90 | PostgreSQL, Python and SQL, migrations, MongoDB, Redis | a booking system using three databases |
-| 8. Expert | 91–100 | query plans, partitioning, replication, security, warehousing, portfolio projects | your own production database, designed and defended |
+| 8. Expert | 91–100 | query plans, partitioning, replication, security and password hashing, warehousing, portfolio projects | your own production database, designed and defended |
 
 Each phase folder has its own README: the days, how to run and test that phase's kind of work, and further reading.
 
 ## Outside the hundred days
 
-Extras that make the theory stick, mostly for GATE. Nothing later depends on them:
+Extras: practice for GATE and interviews, a detective case, and a map of the wider database world. Nothing later depends on them:
 
 | Where | What | When |
 |---|---|---|

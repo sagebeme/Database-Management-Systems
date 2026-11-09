@@ -1,8 +1,8 @@
 # Phase 8: Expert
 
-Running databases for real: reading query plans, partitioning and sharding, backups, security, warehousing, then three portfolio projects, the final exam and your own production database.
+Running databases for real: reading query plans, partitioning and sharding, backups, security (including storing passwords safely), warehousing, then three portfolio projects, the final exam and your own production database.
 
-**You learn:** query plans and join algorithms, partitioning and sharding, replication and backups, security, data warehousing.
+**You learn:** query plans and join algorithms, partitioning and sharding, replication and backups, security and password hashing, data warehousing.
 
 **It ends with:** a production-ready database for a real business, designed and defended.
 
