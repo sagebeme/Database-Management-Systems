@@ -30,6 +30,7 @@ Real data never fits in one table. This phase connects tables with keys, then as
 These don't count towards the hundred days, and nothing later depends on them. They're there to make the theory stick.
 
 - [Extra: Predict the Output](extra-predict-the-output/README.md): seventeen "what does this query return?" questions on the traps exams love (`NULL`, empty subqueries, `ALL` and `ANY`, outer joins). Do it after Day 28.
+- [Extra: The Breach](extra-the-breach/README.md): a detective case. A shop's customer list is for sale online, and five queries over its staff logs find out who leaked it. Do it after Day 28.
 
 ## How to test your work
 

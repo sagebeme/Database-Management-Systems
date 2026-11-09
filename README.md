@@ -39,6 +39,7 @@ Extras that make the theory stick, mostly for GATE. Nothing later depends on the
 | Where | What | When |
 |---|---|---|
 | [Phase 2](phase-2-many-tables/extra-predict-the-output/README.md) | **Predict the Output**: 17 "what does this query return?" traps, including `ALL` and `ANY` | after Day 28 |
+| [Phase 2](phase-2-many-tables/extra-the-breach/README.md) | **The Breach**: a detective case, five queries over a shop's logs to find who leaked its customer list | after Day 28 |
 | [Phase 3](phase-3-design/worked-examples.md), [4](phase-4-normalisation/worked-examples.md), [6](phase-6-transactions-and-storage/worked-examples.md) | **Worked examples**: exam problems solved step by step | before each practice test |
 | [Phase 4](phase-4-normalisation/checkpoint-2-practice-test-2/README.md) | **Checkpoint 2**: a practice test on normalisation | after Day 52 |
 | [Phase 6](phase-6-transactions-and-storage/checkpoint-3-practice-test-3/README.md) | **Checkpoint 3**: a practice test on transactions and storage | after Day 78 |

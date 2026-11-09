@@ -178,6 +178,7 @@ Ends with: a production-ready database for a real business, designed and defende
 | After | Extra | What it is |
 |---|---|---|
 | Day 28 | [Predict the Output](phase-2-many-tables/extra-predict-the-output/README.md) | 17 SQL output traps: `NULL`, empty subqueries, `ALL` and `ANY`, outer joins |
+| Day 28 | [The Breach](phase-2-many-tables/extra-the-breach/README.md) | a detective case: five queries over a shop's logs find who leaked its customer list |
 | Day 38 | [Phase 3 worked examples](phase-3-design/worked-examples.md) | keys, ER to tables, join sizes, division, calculus, step by step |
 | Day 49 | [Phase 4 worked examples](phase-4-normalisation/worked-examples.md) | closure, keys, covers, the chase, normal forms, synthesis, BCNF, 4NF |
 | Day 52 | [Checkpoint 2: Practice Test 2](phase-4-normalisation/checkpoint-2-practice-test-2/README.md) | GATE-style questions on Phase 4 |

@@ -1768,6 +1768,13 @@ window.DBMS_COURSE = {
    "path": "phase-2-many-tables/extra-predict-the-output/README.md"
   },
   {
+   "after": 28,
+   "phase": 2,
+   "kind": "extra",
+   "title": "The Breach",
+   "path": "phase-2-many-tables/extra-the-breach/README.md"
+  },
+  {
    "after": 38,
    "phase": 3,
    "kind": "notes",

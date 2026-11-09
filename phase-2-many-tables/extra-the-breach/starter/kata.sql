@@ -1,0 +1,2 @@
+-- Kata: Close the Door. One UPDATE that disables the account of everyone who has left, and nobody else's.
+-- Write your statement below this line.
