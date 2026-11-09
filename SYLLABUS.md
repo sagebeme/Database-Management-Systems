@@ -184,3 +184,4 @@ Ends with: a production-ready database for a real business, designed and defende
 | Day 52 | [Checkpoint 2: Practice Test 2](phase-4-normalisation/checkpoint-2-practice-test-2/README.md) | GATE-style questions on Phase 4 |
 | Day 77 | [Phase 6 worked examples](phase-6-transactions-and-storage/worked-examples.md) | schedules, locking, timestamps, recovery, blocks, B+ trees |
 | Day 78 | [Checkpoint 3: Practice Test 3](phase-6-transactions-and-storage/checkpoint-3-practice-test-3/README.md) | GATE-style questions on Phase 6 |
+| Day 90 | [The database landscape](phase-7-beyond-mysql/the-database-landscape.md) | a map of the other databases: SQLite to Spanner, search engines, warehouses, Kafka, vectors, and when to use each |

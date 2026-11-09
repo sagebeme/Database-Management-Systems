@@ -1809,6 +1809,13 @@ window.DBMS_COURSE = {
    "kind": "checkpoint",
    "title": "Checkpoint 3: Practice Test 3",
    "path": "phase-6-transactions-and-storage/checkpoint-3-practice-test-3/README.md"
+  },
+  {
+   "after": 90,
+   "phase": 7,
+   "kind": "notes",
+   "title": "The database landscape",
+   "path": "phase-7-beyond-mysql/the-database-landscape.md"
   }
  ],
  "guides": [

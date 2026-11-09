@@ -43,6 +43,7 @@ Extras that make the theory stick, mostly for GATE. Nothing later depends on the
 | [Phase 3](phase-3-design/worked-examples.md), [4](phase-4-normalisation/worked-examples.md), [6](phase-6-transactions-and-storage/worked-examples.md) | **Worked examples**: exam problems solved step by step | before each practice test |
 | [Phase 4](phase-4-normalisation/checkpoint-2-practice-test-2/README.md) | **Checkpoint 2**: a practice test on normalisation | after Day 52 |
 | [Phase 6](phase-6-transactions-and-storage/checkpoint-3-practice-test-3/README.md) | **Checkpoint 3**: a practice test on transactions and storage | after Day 78 |
+| [Phase 7](phase-7-beyond-mysql/the-database-landscape.md) | **The database landscape**: every other kind of database, from SQLite to Spanner, and when to use each | after Day 90 |
 
 With Day 39 (Practice Test 1) and Day 99 (the final exam), that's a checkpoint after every theory phase.
 
