@@ -21,7 +21,7 @@ Before you write a table you design it. This phase is the theory behind tables: 
 | 37 | [Relational Algebra II](day-037-relational-algebra-ii/README.md) | joins and division |
 | 38 | [Relational Calculus](day-038-relational-calculus/README.md) | tuple and domain calculus, safe queries |
 | 39 | [Practice Test 1](day-039-practice-test-1/README.md) | GATE-style questions on Phases 1–3 |
-| 40 | [Capstone: Design a Hospital](day-040-capstone-design-a-hospital/README.md) | from a brief to an ER diagram, tables and queries |
+| 40 | [Capstone: Design a Hospital](day-040-capstone-design-a-hospital/README.md) | from a brief to an ER diagram, tables and queries; top-down vs bottom-up design |
 
 ## Outside the hundred days
 

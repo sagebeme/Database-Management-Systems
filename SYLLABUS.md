@@ -71,7 +71,7 @@ Ends with: a hospital database designed from a brief
 | 37 | Relational Algebra II | joins and division | Done |
 | 38 | Relational Calculus | tuple and domain calculus, safe queries | Done |
 | 39 | Practice Test 1 | GATE-style questions on Phases 1–3 | Done |
-| 40 | Capstone: Design a Hospital | from a brief to an ER diagram, tables and queries | Done |
+| 40 | Capstone: Design a Hospital | from a brief to an ER diagram, tables and queries; top-down vs bottom-up design | Done |
 
 ## Phase 4: Normalisation
 

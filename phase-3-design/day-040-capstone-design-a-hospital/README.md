@@ -18,6 +18,23 @@ There's no walkthrough. This is Phase 3's design work from end to end: the diagr
 
 Days 15–38: keys and constraints (16, 17, 30, 31), ER diagrams and their mapping (32–34), joins and anti-joins (19–22), aggregates (23), views (26) and division (37).
 
+**Two ways into a design.** Designers come at a new database from one of two ends, and good ones use both.
+
+- **Top-down: start from the business.** Read the brief, pick out the *things* (nouns become entities: department, doctor, patient) and how they *relate* (verbs become relationships: a doctor *works in* a department). Draw the ER diagram, then turn it into tables. This is today: Dr Wekesa's brief is all you have.
+- **Bottom-up: start from the data that already exists.** Collect the paper forms, receipts, spreadsheets and reports, list every field on them, and group the fields into tables by what depends on what. That's Phase 4's tool, normalisation, and its capstone (Day 52) does exactly this with three M-Pesa agents' ledgers typed into one spreadsheet.
+
+Top-down gets the big picture right but can miss a field nobody mentioned. Bottom-up catches every field but copies the old system's mistakes. So once your diagram is drawn, check it against the real forms: here, the hospital's paper register. Is every column on the register somewhere in your tables?
+
+Either way, the work goes through the same stages, each turning the last into something more concrete:
+
+1. **Requirements**: what the business needs to store and ask (the brief).
+2. **Conceptual design**: the ER diagram, with no thought yet of which database (Days 32–34).
+3. **Logical design**: tables, keys and constraints (Days 30–31, and today's `schema.sql`).
+4. **Physical design**: types, indexes and storage for one real database (Phase 5 and Phase 6).
+5. **Build, test and look after it**: migrations as it changes (Day 82), backups (Day 93), and tuning (Day 91).
+
+Skipping a stage doesn't save time. A table designed straight from a brief, with no diagram, is how you end up with the exercise book from Day 29.
+
 **The contract.** The hospital's app developers are building against these table and column names, so use exactly these. Everything else (types, keys, `NULL` or not, `UNIQUE`, `CHECK`, foreign keys and their `ON DELETE`) is yours to decide from the brief:
 
 | Table | Columns |

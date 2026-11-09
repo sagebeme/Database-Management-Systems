@@ -761,7 +761,7 @@ window.DBMS_COURSE = {
    "day": 40,
    "phase": 3,
    "title": "Capstone: Design a Hospital",
-   "teaches": "from a brief to an ER diagram, tables and queries",
+   "teaches": "from a brief to an ER diagram, tables and queries; top-down vs bottom-up design",
    "dir": "phase-3-design/day-040-capstone-design-a-hospital",
    "brief": "Dr Wekesa, the medical superintendent of a county referral hospital, is replacing the outpatient clinic's paper registers.",
    "files": [
