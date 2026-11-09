@@ -1,0 +1,8 @@
+-- Passwords for the members' app. Never store a password, only a slow, salted hash of it (bcrypt, from pgcrypto).
+-- A table member_logins (member_id INT primary key referencing members, password_hash TEXT NOT NULL), and two functions:
+--   set_password(member INT, password TEXT) RETURNS void: stores the bcrypt hash of the password (cost 10), replacing any
+--     old one. It refuses passwords shorter than 8 characters with an error. Only the owner may call it.
+--   check_password(member INT, password TEXT) RETURNS boolean: true if the password is that member's, false otherwise
+--     (also false, not NULL, for a member with no password). Tellers may call it, though they can't read member_logins.
+-- Nobody but the owner can read member_logins, not even the auditor.
+-- Write your statements below this line.

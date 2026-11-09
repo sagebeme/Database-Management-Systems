@@ -1627,7 +1627,7 @@ window.DBMS_COURSE = {
    "day": 94,
    "phase": 8,
    "title": "Lock It Down",
-   "teaches": "least privilege, row-level security, auditing",
+   "teaches": "least privilege, row-level security, auditing, password hashing",
    "dir": "phase-8-expert/day-094-lock-it-down",
    "brief": "Kenya's Data Protection Act 2019 makes a SACCO answerable for who sees its members' phone numbers and ID numbers.",
    "files": [
@@ -1635,6 +1635,7 @@ window.DBMS_COURSE = {
     "1-grants.sql",
     "2-row_security.sql",
     "3-audit.sql",
+    "4-passwords.sql",
     "kata.sql"
    ],
    "setup": "setup.sql",

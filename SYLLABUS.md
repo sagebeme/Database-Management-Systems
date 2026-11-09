@@ -165,7 +165,7 @@ Ends with: a production-ready database for a real business, designed and defende
 | 91 | Reading Query Plans | EXPLAIN ANALYZE, join algorithms, cost | Done |
 | 92 | Too Big for One Table | partitioning and sharding | Done |
 | 93 | Never Lose Data | backups, restores, replication | Done |
-| 94 | Lock It Down | least privilege, row-level security, auditing | Done |
+| 94 | Lock It Down | least privilege, row-level security, auditing, password hashing | Done |
 | 95 | The Data Warehouse | star schemas, OLTP vs OLAP, ETL | Done |
 | 96 | Portfolio: SACCO Database | a brief and its tests, no walkthrough | Done |
 | 97 | Portfolio: The SQL Interview | twenty hard questions, HackerRank-style | Done |
