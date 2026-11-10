@@ -1,8 +1,8 @@
 # Phase 8: Expert
 
-Running databases for real: reading query plans, partitioning and sharding, backups, security, warehousing, then three portfolio projects, the final exam and your own production database.
+Running databases for real: reading query plans, partitioning and sharding, backups, security (including storing passwords safely), warehousing, then three portfolio projects, the final exam and your own production database.
 
-**You learn:** query plans and join algorithms, partitioning and sharding, replication and backups, security, data warehousing.
+**You learn:** query plans and join algorithms, partitioning and sharding, replication and backups, security and password hashing, data warehousing.
 
 **It ends with:** a production-ready database for a real business, designed and defended.
 
@@ -13,7 +13,7 @@ Running databases for real: reading query plans, partitioning and sharding, back
 | 91 | [Reading Query Plans](day-091-reading-query-plans/README.md) | EXPLAIN ANALYZE, join algorithms, cost |
 | 92 | [Too Big for One Table](day-092-too-big-for-one-table/README.md) | partitioning and sharding |
 | 93 | [Never Lose Data](day-093-never-lose-data/README.md) | backups, restores, replication |
-| 94 | [Lock It Down](day-094-lock-it-down/README.md) | least privilege, row-level security, auditing |
+| 94 | [Lock It Down](day-094-lock-it-down/README.md) | least privilege, row-level security, auditing, password hashing |
 | 95 | [The Data Warehouse](day-095-the-data-warehouse/README.md) | star schemas, OLTP vs OLAP, ETL |
 | 96 | [Portfolio: SACCO Database](day-096-portfolio-sacco-database/README.md) | a brief and its tests, no walkthrough |
 | 97 | [Portfolio: The SQL Interview](day-097-portfolio-the-sql-interview/README.md) | twenty hard questions, HackerRank-style |

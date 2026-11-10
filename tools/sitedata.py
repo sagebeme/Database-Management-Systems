@@ -22,11 +22,13 @@ SKIP = {"__pycache__", ".pytest_cache"}
 # The extras sit in the ledger after the day they follow. Each is (after day, kind, title, path).
 EXTRAS = [
     (28, "extra", "Predict the Output", "phase-2-many-tables/extra-predict-the-output/README.md"),
+    (28, "extra", "The Breach", "phase-2-many-tables/extra-the-breach/README.md"),
     (38, "notes", "Worked examples: design and algebra", "phase-3-design/worked-examples.md"),
     (49, "notes", "Worked examples: normalisation", "phase-4-normalisation/worked-examples.md"),
     (52, "checkpoint", "Checkpoint 2: Practice Test 2", "phase-4-normalisation/checkpoint-2-practice-test-2/README.md"),
     (77, "notes", "Worked examples: transactions and storage", "phase-6-transactions-and-storage/worked-examples.md"),
     (78, "checkpoint", "Checkpoint 3: Practice Test 3", "phase-6-transactions-and-storage/checkpoint-3-practice-test-3/README.md"),
+    (90, "notes", "The database landscape", "phase-7-beyond-mysql/the-database-landscape.md"),
 ]
 
 GUIDES = [

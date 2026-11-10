@@ -93,6 +93,30 @@ def test_audit(locked, target):
     assert len(as_role(locked, "sacco_auditor").run("SELECT * FROM audit_log;").check().rows) == 3
 
 
+def test_passwords(locked, target):
+    locked.run_file(target / "4-passwords.sql").check()
+    locked.run("SELECT set_password(1, 'mpesa2026'); SELECT set_password(2, 'mpesa2026');").check()
+    hashes = locked.run("SELECT password_hash FROM member_logins ORDER BY member_id;").check().column()
+    assert len(hashes) == 2 and all(h.startswith("$2") and len(h) == 60 for h in hashes), "store bcrypt hashes"
+    assert all("mpesa2026" not in h for h in hashes), "never store the password itself"
+    assert hashes[0] != hashes[1], "the same password must hash differently each time: use a fresh salt"
+    assert all(h.startswith("$2a$10$") for h in hashes), "bcrypt with cost 10"
+    checks = locked.run("SELECT check_password(1, 'mpesa2026'), check_password(1, 'mpesa2025'), "
+                        "check_password(3, 'mpesa2026');").check().rows
+    assert checks == [("t", "f", "f")], "right password true, wrong one false, and no password at all false"
+    short = locked.run("SELECT set_password(1, 'short');")
+    assert not short.ok, "passwords under 8 characters are refused"
+    locked.run("SELECT set_password(1, 'newer-pin-77');").check()
+    assert locked.run("SELECT check_password(1, 'mpesa2026'), check_password(1, 'newer-pin-77');").check().rows \
+        == [("f", "t")], "setting a password replaces the old one"
+    teller, auditor = as_role(locked, "sacco_teller"), as_role(locked, "sacco_auditor")
+    assert teller.run("SELECT check_password(2, 'mpesa2026');").check().rows == [("t",)], "tellers can check"
+    for role, sql in ((teller, "SELECT * FROM member_logins;"), (auditor, "SELECT * FROM member_logins;"),
+                      (teller, "SELECT set_password(2, 'taken-over-1');"),
+                      (auditor, "SELECT check_password(2, 'mpesa2026');")):
+        assert not role.run(sql).ok, f"{role.user} mustn't be able to run {sql}"
+
+
 def test_kata_append_only(locked, target):
     locked.run_file(target / "3-audit.sql").check()
     locked.run_file(target / "kata.sql").check()

@@ -25,7 +25,7 @@ window.DBMS_COURSE = {
    "phase": 3,
    "title": "Designing databases",
    "dir": "phase-3-design",
-   "learn": "why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, the relational model, relational algebra, tuple and domain relational calculus",
+   "learn": "why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, top-down and bottom-up design, the relational model, relational algebra, tuple and domain relational calculus",
    "ends": "a hospital database designed from a brief",
    "first": 29,
    "last": 40
@@ -70,7 +70,7 @@ window.DBMS_COURSE = {
    "phase": 8,
    "title": "Expert",
    "dir": "phase-8-expert",
-   "learn": "query plans and join algorithms, partitioning and sharding, replication and backups, security, data warehousing",
+   "learn": "query plans and join algorithms, partitioning and sharding, replication and backups, security and password hashing, data warehousing",
    "ends": "a production-ready database for a real business, designed and defended",
    "first": 91,
    "last": 100
@@ -761,7 +761,7 @@ window.DBMS_COURSE = {
    "day": 40,
    "phase": 3,
    "title": "Capstone: Design a Hospital",
-   "teaches": "from a brief to an ER diagram, tables and queries",
+   "teaches": "from a brief to an ER diagram, tables and queries; top-down vs bottom-up design",
    "dir": "phase-3-design/day-040-capstone-design-a-hospital",
    "brief": "Dr Wekesa, the medical superintendent of a county referral hospital, is replacing the outpatient clinic's paper registers.",
    "files": [
@@ -1627,7 +1627,7 @@ window.DBMS_COURSE = {
    "day": 94,
    "phase": 8,
    "title": "Lock It Down",
-   "teaches": "least privilege, row-level security, auditing",
+   "teaches": "least privilege, row-level security, auditing, password hashing",
    "dir": "phase-8-expert/day-094-lock-it-down",
    "brief": "Kenya's Data Protection Act 2019 makes a SACCO answerable for who sees its members' phone numbers and ID numbers.",
    "files": [
@@ -1635,6 +1635,7 @@ window.DBMS_COURSE = {
     "1-grants.sql",
     "2-row_security.sql",
     "3-audit.sql",
+    "4-passwords.sql",
     "kata.sql"
    ],
    "setup": "setup.sql",
@@ -1768,6 +1769,13 @@ window.DBMS_COURSE = {
    "path": "phase-2-many-tables/extra-predict-the-output/README.md"
   },
   {
+   "after": 28,
+   "phase": 2,
+   "kind": "extra",
+   "title": "The Breach",
+   "path": "phase-2-many-tables/extra-the-breach/README.md"
+  },
+  {
    "after": 38,
    "phase": 3,
    "kind": "notes",
@@ -1801,6 +1809,13 @@ window.DBMS_COURSE = {
    "kind": "checkpoint",
    "title": "Checkpoint 3: Practice Test 3",
    "path": "phase-6-transactions-and-storage/checkpoint-3-practice-test-3/README.md"
+  },
+  {
+   "after": 90,
+   "phase": 7,
+   "kind": "notes",
+   "title": "The database landscape",
+   "path": "phase-7-beyond-mysql/the-database-landscape.md"
   }
  ],
  "guides": [

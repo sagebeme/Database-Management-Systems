@@ -80,6 +80,10 @@ Check what you have: `mongod --version` (7.x or 8.x), `mongosh --version` (2.x),
 **If you're also doing the ALX project itself**, write the new names. If its checker still expects the old output format, that's the checker's age, not your code: the queries are the same.
 
 
+## Outside the hundred days
+
+- [The database landscape](the-database-landscape.md): a map of the databases this course doesn't teach (SQLite, SQL Server, distributed SQL, search engines, warehouses, Kafka, vectors), what each is for, and the rule for choosing. Read it after Day 90.
+
 ## Further reading
 
 - [PostgreSQL 17 documentation](https://www.postgresql.org/docs/17/).

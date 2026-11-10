@@ -1,0 +1,3 @@
+-- Clue 3. Ghost logins: every successful login by an account whose owner had already left (after their last day,
+-- left_on): username, ip, at, oldest first.
+-- Write your statement below this line.

@@ -55,7 +55,7 @@ Ends with: a report on Riverwood, a Kenyan film and TV database
 
 ## Phase 3: Designing databases
 
-Learn: why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, the relational model, relational algebra, tuple and domain relational calculus
+Learn: why a DBMS beats files, keys, integrity constraints, ER diagrams, cardinality, weak entities, top-down and bottom-up design, the relational model, relational algebra, tuple and domain relational calculus
 Ends with: a hospital database designed from a brief
 
 | Day | Project | What it teaches | Status |
@@ -71,7 +71,7 @@ Ends with: a hospital database designed from a brief
 | 37 | Relational Algebra II | joins and division | Done |
 | 38 | Relational Calculus | tuple and domain calculus, safe queries | Done |
 | 39 | Practice Test 1 | GATE-style questions on Phases 1–3 | Done |
-| 40 | Capstone: Design a Hospital | from a brief to an ER diagram, tables and queries | Done |
+| 40 | Capstone: Design a Hospital | from a brief to an ER diagram, tables and queries; top-down vs bottom-up design | Done |
 
 ## Phase 4: Normalisation
 
@@ -157,7 +157,7 @@ Ends with: a matatu booking system using three databases
 
 ## Phase 8: Expert
 
-Learn: query plans and join algorithms, partitioning and sharding, replication and backups, security, data warehousing
+Learn: query plans and join algorithms, partitioning and sharding, replication and backups, security and password hashing, data warehousing
 Ends with: a production-ready database for a real business, designed and defended
 
 | Day | Project | What it teaches | Status |
@@ -165,7 +165,7 @@ Ends with: a production-ready database for a real business, designed and defende
 | 91 | Reading Query Plans | EXPLAIN ANALYZE, join algorithms, cost | Done |
 | 92 | Too Big for One Table | partitioning and sharding | Done |
 | 93 | Never Lose Data | backups, restores, replication | Done |
-| 94 | Lock It Down | least privilege, row-level security, auditing | Done |
+| 94 | Lock It Down | least privilege, row-level security, auditing, password hashing | Done |
 | 95 | The Data Warehouse | star schemas, OLTP vs OLAP, ETL | Done |
 | 96 | Portfolio: SACCO Database | a brief and its tests, no walkthrough | Done |
 | 97 | Portfolio: The SQL Interview | twenty hard questions, HackerRank-style | Done |
@@ -178,8 +178,10 @@ Ends with: a production-ready database for a real business, designed and defende
 | After | Extra | What it is |
 |---|---|---|
 | Day 28 | [Predict the Output](phase-2-many-tables/extra-predict-the-output/README.md) | 17 SQL output traps: `NULL`, empty subqueries, `ALL` and `ANY`, outer joins |
+| Day 28 | [The Breach](phase-2-many-tables/extra-the-breach/README.md) | a detective case: five queries over a shop's logs find who leaked its customer list |
 | Day 38 | [Phase 3 worked examples](phase-3-design/worked-examples.md) | keys, ER to tables, join sizes, division, calculus, step by step |
 | Day 49 | [Phase 4 worked examples](phase-4-normalisation/worked-examples.md) | closure, keys, covers, the chase, normal forms, synthesis, BCNF, 4NF |
 | Day 52 | [Checkpoint 2: Practice Test 2](phase-4-normalisation/checkpoint-2-practice-test-2/README.md) | GATE-style questions on Phase 4 |
 | Day 77 | [Phase 6 worked examples](phase-6-transactions-and-storage/worked-examples.md) | schedules, locking, timestamps, recovery, blocks, B+ trees |
 | Day 78 | [Checkpoint 3: Practice Test 3](phase-6-transactions-and-storage/checkpoint-3-practice-test-3/README.md) | GATE-style questions on Phase 6 |
+| Day 90 | [The database landscape](phase-7-beyond-mysql/the-database-landscape.md) | a map of the other databases: SQLite to Spanner, search engines, warehouses, Kafka, vectors, and when to use each |

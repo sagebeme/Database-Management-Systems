@@ -1,0 +1,2 @@
+-- Clue 1. Every export of the customers table with more than 1,000 rows: id, username, at, row_count, oldest first.
+-- Write your statement below this line.
