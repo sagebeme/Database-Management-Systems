@@ -53,6 +53,7 @@ def day_dirs(selected: set[int], names: set[str] | None = None) -> list[Path]:
 
 
 def files_in(folder: Path) -> set[str]:
+    """Every file under `folder`, as a path relative to it, leaving out caches and OS clutter (IGNORED)."""
     return {
         str(p.relative_to(folder)) for p in folder.rglob("*")
         if p.is_file() and not (set(p.relative_to(folder).parts) & IGNORED)
@@ -60,6 +61,8 @@ def files_in(folder: Path) -> set[str]:
 
 
 def check_layout(day: Path) -> list[str]:
+    """What's wrong with a day folder's layout: missing files, starter/ and solution/ holding different file
+    names, README sections missing. An empty list means it's fine."""
     problems = []
     for needed in ("README.md", "test_day.py", "starter", "solution"):
         if not (day / needed).exists():
@@ -80,6 +83,9 @@ def check_layout(day: Path) -> list[str]:
 
 
 def run_pytest(days: list[Path], which: str) -> dict[str, list[dict]]:
+    """Run the days' tests against `which` ("starter" or "solution") in one pytest process. Returns each
+    day folder (relative to the repository) mapped to its tests' outcomes, as conftest.py reports them:
+    {"nodeid", "outcome", "passes_on_starter"}. A day missing from the result ran no tests."""
     with tempfile.NamedTemporaryFile("w+", suffix=".jsonl", delete=False) as report:
         report_path = report.name
     env = {**os.environ, "DBMS_TARGET": which, "DBMS_REQUIRE": "1", "DBMS_REPORT": report_path}
@@ -98,6 +104,8 @@ def run_pytest(days: list[Path], which: str) -> dict[str, list[dict]]:
 
 
 def main(argv: list[str]) -> int:
+    """Check the days named in `argv` (numbers or words, see the top of this file; all of them if none) and
+    print one line per folder. Returns the exit status: 1 if any folder has a problem or none matched, else 0."""
     selected = {int(a) for a in argv if a.isdigit()}
     days = day_dirs(selected, {a for a in argv if not a.isdigit()})
     if not days:

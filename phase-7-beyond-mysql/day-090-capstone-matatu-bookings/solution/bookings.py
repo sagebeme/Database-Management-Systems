@@ -14,7 +14,7 @@ Event documents: {"type": "held" | "booked" | "released" | "fare_changed", "trip
 """
 
 import json
-from datetime import datetime, timezone
+from datetime import datetime, UTC
 
 HOLD_SECONDS = 120
 CACHE_SECONDS = 60
@@ -32,7 +32,7 @@ class Bookings:
 
     def _log(self, kind, **fields):
         """Record one event in MongoDB. (Done for you.)"""
-        self.events.insert_one({"type": kind, **fields, "at": datetime.now(timezone.utc)})
+        self.events.insert_one({"type": kind, **fields, "at": datetime.now(UTC)})
 
     def routes(self):
         """[(number, fare)] for every route, by number. Read them from the cache:routes key if it's there;

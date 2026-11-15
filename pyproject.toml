@@ -12,3 +12,18 @@ python_files = ["test_*.py"]
 markers = [
     "passes_on_starter: this test checks something the untouched starter already gets right (tools/verify.py won't expect it to fail)",
 ]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+# Ruff's defaults (E4, E7, E9, F) plus warnings, bugbear and pyupgrade. Long lines (E501) aren't checked: the
+# tests hold SQL and expected rows that read best on one line.
+select = ["E4", "E7", "E9", "F", "W", "B", "UP"]
+# zip(strict=...) would add noise to teaching code whose lists match in length by construction.
+ignore = ["B905"]
+
+[tool.ruff.lint.per-file-ignores]
+# Starters import what the learner will need before they write the code that uses it.
+"**/starter/*.py" = ["F401"]

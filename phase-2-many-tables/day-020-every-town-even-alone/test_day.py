@@ -21,7 +21,7 @@ def got(db, path, columns):
 
 
 def code_of(path):
-    return " ".join(l for l in path.read_text().splitlines() if not l.strip().startswith("--")).upper()
+    return " ".join(line for line in path.read_text().splitlines() if not line.strip().startswith("--")).upper()
 
 
 def test_towns_and_their_shops(places, target):

@@ -79,14 +79,19 @@ class Result:
 
     @property
     def ok(self) -> bool:
+        """True if the client exited with status 0, i.e. every statement ran without an error."""
         return self.returncode == 0
 
     def column(self, name_or_index: str | int = 0) -> list[str]:
+        """One column of the last result set, top to bottom, picked by name or by position (the first by
+        default). Raises ValueError for a column name the result doesn't have, IndexError for a position past the
+        end."""
         index = name_or_index if isinstance(name_or_index, int) else self.columns.index(name_or_index)
         return [row[index] for row in self.rows]
 
-    def check(self) -> "Result":
-        """Raise with the client's error message if the file failed."""
+    def check(self) -> Result:
+        """Return this result, so you can chain `.rows` after it; raise AssertionError with the client's error
+        message if the SQL failed."""
         if not self.ok:
             raise AssertionError(f"the SQL failed:\n{self.stderr.strip() or self.stdout.strip()}")
         return self
@@ -135,6 +140,10 @@ class MySQL:
         return argv
 
     def run(self, sql: str, database: str | None = "", stdin_name: str = "<sql>") -> Result:
+        """Pipe `sql` into `mysql --batch` and return what it printed, parsed into columns and rows (every value
+        a string, NULL as "NULL"). `database` picks another database for this call; None runs with none selected;
+        left out, it's this object's database. A failing statement doesn't raise: check `.ok` or call `.check()`.
+        Raises DatabaseUnavailable if the client isn't installed or can't reach the server."""
         db = self.database if database == "" else database
         proc = _run(self._argv(db), sql, env={"MYSQL_PWD": self.password})
         if proc.returncode != 0 and "Can't connect" in proc.stderr:
@@ -143,9 +152,12 @@ class MySQL:
         return Result(proc.stdout, proc.stderr, proc.returncode, columns, rows)
 
     def run_file(self, path: Path | str, database: str | None = "") -> Result:
+        """Run a .sql file, the way `mysql my_db < file.sql` does. Same `database` choices and result as run()."""
         return self.run(Path(path).read_text(encoding="utf-8"), database)
 
     def ping(self) -> None:
+        """Check the server answers. Raises DatabaseUnavailable if it can't be reached, AssertionError if it
+        refuses the login."""
         self.run("SELECT 1;", database=None).check()
 
     def connect(self, autocommit: bool = True):
@@ -168,6 +180,10 @@ class Postgres:
         self.password = setting("PGPASSWORD") if password is None else password
 
     def run(self, sql: str, database: str | None = None) -> Result:
+        """Pipe `sql` into `psql` (stopping at the first error) and return what it printed, parsed into columns
+        and rows (every value a string, NULL as "NULL"). `database` picks another database for this call. A failing
+        statement doesn't raise: check `.ok` or call `.check()`. Raises DatabaseUnavailable if the client isn't
+        installed or can't reach the server."""
         argv = ["psql", "-X", "-w", "-q", "-v", "ON_ERROR_STOP=1", "-A", "-F", "\t", "-P", "footer=off",
                 "-P", "null=NULL", "-h", setting("PGHOST"), "-p", setting("PGPORT"), "-U", self.user,
                 "-d", database or self.database]
@@ -178,9 +194,12 @@ class Postgres:
         return Result(proc.stdout, proc.stderr, proc.returncode, columns, rows)
 
     def run_file(self, path: Path | str, database: str | None = None) -> Result:
+        """Run a .sql file, the way `psql -d my_db < file.sql` does. Same `database` choice and result as run()."""
         return self.run(Path(path).read_text(encoding="utf-8"), database)
 
     def ping(self) -> None:
+        """Check the server answers. Raises DatabaseUnavailable if it can't be reached, AssertionError if it
+        refuses the login."""
         self.run("SELECT 1;").check()
 
     def connect(self, autocommit: bool = True):
@@ -200,6 +219,9 @@ class Mongo:
         self.database = database
 
     def run(self, script: str) -> Result:
+        """Pipe a mongosh script into `mongosh` and return what it printed (no columns or rows: read `.stdout`).
+        A failing script doesn't raise: check `.ok` or call `.check()`. Raises DatabaseUnavailable if mongosh isn't
+        installed or can't reach the server."""
         url = setting("MONGO_URL").rstrip("/") + "/" + self.database
         proc = _run(["mongosh", "--quiet", "--norc", url], script)
         if proc.returncode != 0 and ("ECONNREFUSED" in proc.stderr + proc.stdout):
@@ -207,6 +229,7 @@ class Mongo:
         return Result(proc.stdout, proc.stderr, proc.returncode)
 
     def run_file(self, path: Path | str) -> Result:
+        """Run a .js file, the way `cat file.js | mongosh my_db` does. Same result as run()."""
         return self.run(Path(path).read_text(encoding="utf-8"))
 
 

@@ -16,6 +16,7 @@ from __future__ import annotations
 import os
 import sys
 from pathlib import Path
+from typing import NoReturn
 
 import pytest
 
@@ -28,7 +29,7 @@ from coursekit import (  # noqa: E402
 HINT = "Start it with: tools/devdb.sh up  (or see 'Setting up' in the README)"
 
 
-def _unavailable(what: str, error: Exception) -> None:
+def _unavailable(what: str, error: Exception) -> NoReturn:
     message = f"{what} isn't available ({error}). {HINT}"
     if os.environ.get("DBMS_REQUIRE") == "1":
         pytest.fail(message)
@@ -43,6 +44,7 @@ def day(request) -> Path:
 
 @pytest.fixture
 def target(day: Path) -> Path:
+    """The folder whose files the tests check: the day's starter/, or solution/ when DBMS_TARGET=solution."""
     which = os.environ.get("DBMS_TARGET", "starter")
     if which not in ("starter", "solution"):
         raise pytest.UsageError("DBMS_TARGET must be 'starter' or 'solution'")
@@ -59,6 +61,8 @@ class MySQLDatabase(MySQL):
 
 @pytest.fixture
 def mysql():
+    """A fresh, empty MySQL database (a MySQLDatabase), dropped after the test. Skips the test if MySQL isn't
+    running (fails it when DBMS_REQUIRE=1)."""
     server = MySQL()
     try:
         server.ping()
@@ -85,12 +89,17 @@ def mysql_server():
 
 
 class PostgresDatabase(Postgres):
+    """A PostgreSQL database that exists only for one test."""
+
     def load(self, path: Path | str) -> None:
+        """Run a setup file (tables and rows the task starts from); fail loudly if it breaks."""
         self.run_file(path).check()
 
 
 @pytest.fixture
 def postgres():
+    """A fresh, empty PostgreSQL database (a PostgresDatabase), dropped after the test. Skips the test if
+    PostgreSQL isn't running (fails it when DBMS_REQUIRE=1)."""
     server = Postgres()
     try:
         server.ping()
@@ -106,6 +115,8 @@ def postgres():
 
 @pytest.fixture
 def mongo():
+    """A fresh MongoDB database (a Mongo), dropped after the test. Skips the test if MongoDB isn't running
+    (fails it when DBMS_REQUIRE=1)."""
     name = new_name()
     db = Mongo(name)
     try:
@@ -122,11 +133,14 @@ def mongo():
 
 @pytest.fixture
 def mongo_url() -> str:
+    """The MongoDB server's URL from the settings, for code that connects with pymongo itself."""
     return setting("MONGO_URL")
 
 
 @pytest.fixture
 def redis_db():
+    """A redis.Redis client on the course's Redis, emptied before and after the test. Skips the test if Redis
+    isn't running (fails it when DBMS_REQUIRE=1)."""
     try:
         import redis
     except ImportError as e:  # pragma: no cover

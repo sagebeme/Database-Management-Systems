@@ -65,7 +65,9 @@ def serial_orders(schedule):
 def conflict_equivalent(s1, s2):
     """Same operations (as a multiset, ignoring commits and aborts), and every conflicting pair in the same
     order."""
-    ops = lambda s: sorted((o.kind, o.txn, o.item) for o in s if o.kind in ("r", "w"))
+    def ops(s):
+        return sorted((o.kind, o.txn, o.item) for o in s if o.kind in ("r", "w"))
+
     return ops(s1) == ops(s2) and set(conflicts(s1)) == set(conflicts(s2))
 
 

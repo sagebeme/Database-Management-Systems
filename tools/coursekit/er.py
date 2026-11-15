@@ -39,6 +39,8 @@ class DiagramError(ValueError):
 
 @dataclass
 class Attribute:
+    """One attribute line of an entity: its type, its key markers (PK, FK, UK) and its comment."""
+
     type: str
     keys: set[str] = field(default_factory=set)
     comment: str = ""
@@ -46,6 +48,8 @@ class Attribute:
 
 @dataclass
 class Relationship:
+    """One relationship line: the two entities, how many of each, whether it's identifying, and its label."""
+
     left: str
     right: str
     left_card: tuple  # how many `left` rows go with one `right` row
@@ -56,6 +60,8 @@ class Relationship:
 
 @dataclass
 class Diagram:
+    """A parsed diagram: entity name -> {attribute name -> Attribute}, and the relationships in file order."""
+
     entities: dict[str, dict[str, Attribute]] = field(default_factory=dict)
     relationships: list[Relationship] = field(default_factory=list)
 
@@ -67,12 +73,17 @@ class Diagram:
         raise AssertionError(f"there's no entity called {name}; the diagram has {sorted(self.entities)}")
 
     def has_entity(self, name: str) -> bool:
+        """True if the diagram has an entity called `name`, ignoring case."""
         return any(key.lower() == name.lower() for key in self.entities)
 
     def keys(self, name: str, kind: str = "PK") -> set[str]:
+        """The names of entity `name`'s attributes marked `kind` (PK, FK or UK). Raises AssertionError if
+        there's no such entity."""
         return {a for a, attr in self.entity(name).items() if kind in attr.keys}
 
     def between(self, a: str, b: str) -> list[Relationship]:
+        """Every relationship joining entities `a` and `b`, whichever side each is on, ignoring case. With
+        a == b, the relationships from that entity to itself."""
         a, b = a.lower(), b.lower()
         return [r for r in self.relationships if {r.left.lower(), r.right.lower()} == {a, b} or
                 (a == b and r.left.lower() == r.right.lower() == a)]
@@ -94,13 +105,15 @@ def _unquote(name: str) -> str:
 
 
 def parse(text: str) -> Diagram:
+    """Read the text of a Mermaid `erDiagram` (``` fences and %% comments are skipped). Raises DiagramError
+    naming the first line it can't read."""
     lines = [ln.split("%%", 1)[0].strip() for ln in text.splitlines()]
     lines = [ln for ln in lines if ln and not ln.startswith("```")]
     if not lines or lines[0] != "erDiagram":
         raise DiagramError("the diagram must start with a line saying erDiagram")
     diagram = Diagram()
     current: str | None = None
-    for number, line in enumerate(lines[1:], 2):
+    for line in lines[1:]:
         if current is not None:
             if line == "}":
                 current = None

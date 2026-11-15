@@ -28,7 +28,7 @@ def closure(x, fds):
 
 
 def equivalent(f, g):
-    return all(r <= closure(l, f) for l, r in g) and all(r <= closure(l, g) for l, r in f)
+    return all(rhs <= closure(lhs, f) for lhs, rhs in g) and all(rhs <= closure(lhs, g) for lhs, rhs in f)
 
 
 @pytest.fixture

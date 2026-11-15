@@ -41,7 +41,7 @@ def candidate_keys(schema, fds):
     on_right = frozenset().union(*(rhs - lhs for lhs, rhs in fds)) & schema
     on_left = frozenset().union(*(lhs for lhs, _ in fds)) & schema
     core = schema - on_right
-    maybe = sorted((schema & on_right & on_left))
+    maybe = sorted(schema & on_right & on_left)
     keys = []
     for size in range(len(maybe) + 1):
         for extra in combinations(maybe, size):

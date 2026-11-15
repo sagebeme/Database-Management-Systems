@@ -64,8 +64,8 @@ def spurious(rows, parts):
     joined = [dict(t) for t in project(rows, parts[0])]
     for part in parts[1:]:
         right = [dict(t) for t in project(rows, part)]
-        joined = [{**l, **r} for l in joined for r in right
-                  if all(l[a] == r[a] for a in set(l) & set(r))]
+        joined = [{**j, **r} for j in joined for r in right
+                  if all(j[a] == r[a] for a in set(j) & set(r))]
     original = {tuple(sorted(r.items())) for r in rows}
     ghosts = {tuple(sorted(j.items())) for j in joined} - original
     return [dict(g) for g in sorted(ghosts, key=lambda g: [v for _, v in g])]

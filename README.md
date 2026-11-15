@@ -67,6 +67,8 @@ phase-1-first-queries/day-004-matatu-stages/
 
 The tests run your files exactly the way you'd run them yourself (`mysql my_db < 3-something.sql`), in a fresh, empty database each time, and compare what comes back with the right answer. Many tests also change the data and run your query again, so an answer typed in by hand won't pass.
 
+[CODING-RULES.md](CODING-RULES.md) is how we write answers in this course: what "done" means, readable SQL, running the tests before you stop, and never committing passwords. Read it once before Day 1; it's one screen.
+
 Open `solution/` only after you've tried. Read it, close it, and write your own version from memory.
 
 ## Setting up

@@ -56,7 +56,8 @@ def test_march_days_reads_one_partition(parted, target, day):
     assert len(got.rows) == 31 and got.rows[0][0] == "2026-03-01" and got.rows[-1][0] == "2026-03-31"
     assert got.rows == parted.run("SELECT paid_on, sum(amount) FROM payments_old WHERE paid_on BETWEEN "
                                   "'2026-03-01' AND '2026-03-31' GROUP BY 1 ORDER BY 1;").check().rows
-    query = "\n".join(l for l in (target / "3-march_days.sql").read_text().splitlines() if not l.startswith("--"))
+    query = "\n".join(line for line in (target / "3-march_days.sql").read_text().splitlines()
+                      if not line.startswith("--"))
     plan = "\n".join(r[0] for r in parted.run("EXPLAIN (COSTS OFF) " + query).check().rows)
     assert "payments_2026_03" in plan
     for other in ("payments_2026_01", "payments_2026_02", "payments_default"):
