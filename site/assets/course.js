@@ -1832,6 +1832,10 @@ window.DBMS_COURSE = {
    "title": "The syllabus"
   },
   {
+   "path": "CODING-RULES.md",
+   "title": "How we write code in this course"
+  },
+  {
    "path": "phase-1-first-queries/README.md",
    "title": "Phase 1: SQL from zero"
   },

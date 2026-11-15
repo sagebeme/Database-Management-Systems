@@ -32,7 +32,7 @@ The four you see are MySQL's own. You'll add `mama_mboga`.
 
 ## Steps
 
-If you haven't set up yet, follow **Setting up** in the main README (start the databases with `tools/devdb.sh up`).
+If you haven't set up yet, follow **Setting up** in the main README (start the databases with `tools/devdb.sh up`). Then read [How we write code in this course](../../CODING-RULES.md): one screen, and it applies to every day from today.
 
 1. Open a MySQL prompt and look around:
 

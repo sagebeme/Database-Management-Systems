@@ -35,6 +35,7 @@ GUIDES = [
     ("README.md", "About the course and setting up"),
     ("WINDOWS.md", "Doing the course on Windows"),
     ("SYLLABUS.md", "The syllabus"),
+    ("CODING-RULES.md", "How we write code in this course"),
 ]
 
 
