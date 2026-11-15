@@ -93,7 +93,7 @@ psycopg[binary]==3.3.7
 
 **The virtual environment.** `pip install` puts packages into one Python. The `.venv` folder you made at setup is a private Python for this project, so its versions can't clash with another project's, and Ubuntu and Debian refuse a plain `pip install` into the system Python anyway (`externally-managed-environment`). `.venv` is gitignored, like `node_modules`: never commit it, and delete and recreate it whenever it acts strangely or you upgrade Python.
 
-**Packages your packages need.** `requirements.txt` lists what this course asked for; pip also installed what those need. `pip freeze` lists everything, with exact versions. Apps that need fully repeatable installs keep a **lock** of that whole list: `pip-compile` (from pip-tools) turns a short `requirements.in` into a fully pinned `requirements.txt`, and `uv` and Poetry write `uv.lock` and `poetry.lock`. Newer projects declare their dependencies in **`pyproject.toml`**'s `[project] dependencies` instead; this repo's `pyproject.toml` only configures pytest.
+**Packages your packages need.** `requirements.txt` lists what this course asked for; pip also installed what those need. `pip freeze` lists everything, with exact versions. Apps that need fully repeatable installs keep a **lock** of that whole list: `pip-compile` (from pip-tools) turns a short `requirements.in` into a fully pinned `requirements.txt`, and `uv` and Poetry write `uv.lock` and `poetry.lock`. Newer projects declare their dependencies in **`pyproject.toml`**'s `[project] dependencies` instead; this repo's `pyproject.toml` only configures pytest and Ruff, the linter.
 
 | Task | npm | pip (in the venv) | uv |
 |---|---|---|---|
