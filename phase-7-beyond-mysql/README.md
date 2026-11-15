@@ -50,6 +50,8 @@ Each database has its own prompt, and the tests use the same programs:
 
 **Mongo scripts have no extension** (`starter/3-match`), the way the ALX checker names them. When you pipe one into `mongosh`, it prints a `practice>` prompt before each result. That's normal; the tests ignore it.
 
+**On Python days, lint your file too**: `ruff check phase-7-beyond-mysql/day-084-mongodb-from-python` (install it once with `pip install ruff==0.17.5`). The rest of the habits are in [CODING-RULES.md](../CODING-RULES.md).
+
 **Redis keys survive between runs** of your own code: `redis-cli -p 6380 flushdb` clears the course's Redis. The tests flush it before and after every test.
 
 **Still stuck?** Read the day's "When you're stuck" section first: it lists the mistakes people actually make. Then open the same file in `solution/` and compare. It spoils the answer, so read it, close it, and write your own version from memory.
