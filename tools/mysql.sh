@@ -8,6 +8,7 @@
 # Anything after the database name goes straight to the mysql client.
 set -euo pipefail
 root="$(cd "$(dirname "$0")/.." && pwd)"
+# shellcheck source=/dev/null  # .env is your own settings file, not part of the repository
 [ -f "$root/.env" ] && set -a && . "$root/.env" && set +a
 export MYSQL_PWD="${MYSQL_PASSWORD:-}"
 exec mysql --no-defaults -h"${MYSQL_HOST:-127.0.0.1}" -P"${MYSQL_PORT:-3307}" -u"${MYSQL_USER:-root}" \

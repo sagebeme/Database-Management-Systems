@@ -5,6 +5,7 @@
 #   tools/psql.sh shop_db < 3-x.sql     run a file in shop_db
 set -euo pipefail
 root="$(cd "$(dirname "$0")/.." && pwd)"
+# shellcheck source=/dev/null  # .env is your own settings file, not part of the repository
 [ -f "$root/.env" ] && set -a && . "$root/.env" && set +a
 db="${1:-postgres}"; [ $# -gt 0 ] && shift
 exec psql -X -h "${PGHOST:-127.0.0.1}" -p "${PGPORT:-5434}" -U "${PGUSER:-postgres}" -d "$db" "$@"

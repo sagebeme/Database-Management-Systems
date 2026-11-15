@@ -11,7 +11,8 @@ permissions:
   contents: read
 
 jobs:
-  # The Python is linted with Ruff (settings in pyproject.toml).
+  # The Python is linted with Ruff (settings in pyproject.toml) and the shell scripts with ShellCheck, which the
+  # runner already has.
   lint:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
@@ -26,6 +27,9 @@ jobs:
         run: |
           pip install ruff==0.17.5
           ruff check --output-format=github .
+
+      - name: ShellCheck
+        run: shellcheck tools/*.sh
 
   verify:
     runs-on: ubuntu-24.04
