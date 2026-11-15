@@ -85,7 +85,7 @@ class Result:
         index = name_or_index if isinstance(name_or_index, int) else self.columns.index(name_or_index)
         return [row[index] for row in self.rows]
 
-    def check(self) -> "Result":
+    def check(self) -> Result:
         """Raise with the client's error message if the file failed."""
         if not self.ok:
             raise AssertionError(f"the SQL failed:\n{self.stderr.strip() or self.stdout.strip()}")

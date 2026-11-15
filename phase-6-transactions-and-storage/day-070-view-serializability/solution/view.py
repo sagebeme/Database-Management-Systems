@@ -45,7 +45,9 @@ def final_writes(schedule):
 def view_equivalent(s1, s2):
     """The same reads and writes by the same transactions, every read seeing the same writer (or the initial
     value), and the same final writes."""
-    ops = lambda s: Counter((o.kind, o.txn, o.item) for o in s if o.kind in ("r", "w"))
+    def ops(s):
+        return Counter((o.kind, o.txn, o.item) for o in s if o.kind in ("r", "w"))
+
     return ops(s1) == ops(s2) and reads(s1) == reads(s2) and final_writes(s1) == final_writes(s2)
 
 

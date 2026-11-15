@@ -100,7 +100,7 @@ def parse(text: str) -> Diagram:
         raise DiagramError("the diagram must start with a line saying erDiagram")
     diagram = Diagram()
     current: str | None = None
-    for number, line in enumerate(lines[1:], 2):
+    for line in lines[1:]:
         if current is not None:
             if line == "}":
                 current = None

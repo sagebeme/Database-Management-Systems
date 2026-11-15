@@ -1,7 +1,7 @@
 """Day 90 capstone: Matatu Bookings."""
 
 import threading
-from datetime import datetime, timezone
+from datetime import datetime, UTC
 
 import pymongo
 import pytest
@@ -195,13 +195,13 @@ def test_kata_trip_report(svc, mongo_db):
     svc.release(1, 1, A)
     # The three holds above happened this hour; hour 4 gets four, so it wins whatever the time is now.
     mongo_db.events.insert_many([
-        {"type": "held", "trip": 2, "seat": 9, "phone": C, "at": datetime(2026, 3, 2, 4, 10, tzinfo=timezone.utc)},
-        {"type": "held", "trip": 2, "seat": 8, "phone": C, "at": datetime(2026, 3, 2, 4, 50, tzinfo=timezone.utc)},
-        {"type": "held", "trip": 2, "seat": 7, "phone": C, "at": datetime(2026, 3, 2, 4, 55, tzinfo=timezone.utc)},
-        {"type": "held", "trip": 2, "seat": 5, "phone": C, "at": datetime(2026, 3, 2, 4, 58, tzinfo=timezone.utc)},
-        {"type": "held", "trip": 2, "seat": 6, "phone": C, "at": datetime(2026, 3, 2, 5, 0, tzinfo=timezone.utc)},
-        {"type": "booked", "trip": 2, "seat": 6, "phone": C, "at": datetime(2026, 3, 2, 4, 0, tzinfo=timezone.utc)},
+        {"type": "held", "trip": 2, "seat": 9, "phone": C, "at": datetime(2026, 3, 2, 4, 10, tzinfo=UTC)},
+        {"type": "held", "trip": 2, "seat": 8, "phone": C, "at": datetime(2026, 3, 2, 4, 50, tzinfo=UTC)},
+        {"type": "held", "trip": 2, "seat": 7, "phone": C, "at": datetime(2026, 3, 2, 4, 55, tzinfo=UTC)},
+        {"type": "held", "trip": 2, "seat": 5, "phone": C, "at": datetime(2026, 3, 2, 4, 58, tzinfo=UTC)},
+        {"type": "held", "trip": 2, "seat": 6, "phone": C, "at": datetime(2026, 3, 2, 5, 0, tzinfo=UTC)},
+        {"type": "booked", "trip": 2, "seat": 6, "phone": C, "at": datetime(2026, 3, 2, 4, 0, tzinfo=UTC)},
     ])
     assert svc.trip_report(2) == {"booked": 2, "takings": 200, "holds_given_up": 1, "busiest_hour": 4}
-    with pytest.raises(Exception):
+    with pytest.raises(Exception):  # noqa: B017 - the README doesn't say which error, so any will do
         svc.trip_report(99)

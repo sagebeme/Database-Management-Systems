@@ -26,14 +26,15 @@ def write_skew(connect, engine, level):
         going = {name: cur for name, cur in doctors.items() if read_one(cur, on_call) >= 2}
         for name, cur in list(going.items()):
             try:
-                was_blocked, _ = blocked(lambda: cur.execute(
-                    f"UPDATE doctors SET on_call = FALSE WHERE name = '{name}'"))
+                # blocked() calls the lambda before the loop moves on, so it sees this pass's cur and name.
+                was_blocked, _ = blocked(lambda: cur.execute(  # noqa: B023
+                    f"UPDATE doctors SET on_call = FALSE WHERE name = '{name}'"))  # noqa: B023
             except (pymysql.err.OperationalError, psycopg.errors.SerializationFailure):
                 was_blocked = True
             if was_blocked:
                 cur.execute("ROLLBACK")
                 del going[name]
-        for name, cur in doctors.items():
+        for cur in doctors.values():
             try:
                 cur.execute("COMMIT")
             except psycopg.errors.SerializationFailure:

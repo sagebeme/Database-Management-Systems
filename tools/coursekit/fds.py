@@ -57,4 +57,4 @@ def _side(s) -> str:
 
 def fmt(fds) -> str:
     """'AB->C; C->D', sorted, for messages."""
-    return "; ".join(sorted(f"{_side(l)}->{_side(r)}" for l, r in fds))
+    return "; ".join(sorted(f"{_side(lhs)}->{_side(rhs)}" for lhs, rhs in fds))

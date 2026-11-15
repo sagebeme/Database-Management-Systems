@@ -82,7 +82,7 @@ def decompose_4nf(schema, fds, mvds):
     while True:
         for i, part in enumerate(parts):
             inside = []
-            for x, y in fds:
+            for x, _ in fds:
                 if x <= part:
                     inside.append((x, closure(x, fds) & part))
             for x, y in mvds:

@@ -3,7 +3,7 @@
 Every operator takes relations and returns a NEW relation; nothing is changed in place.
 """
 
-from coursekit.relational import Relation, make
+from coursekit.relational import make
 
 
 def _aligned(r, s):

@@ -68,7 +68,10 @@ def test_on_other_data(catalogue, day, target, name):
 
 def test_kata_phone_shape(catalogue, target):
     catalogue.run_file(target / "kata.sql").check()
-    phone = lambda i, attrs: catalogue.run(INSERT.format(i, f"Phone {i}", "phone", 1000, attrs))
+
+    def phone(i, attrs):
+        return catalogue.run(INSERT.format(i, f"Phone {i}", "phone", 1000, attrs))
+
     assert not phone(20, '{"ram_gb": "4", "storage_gb": 64}').ok, "a number, not text"
     assert not phone(21, '{"ram_gb": 4}').ok, "storage_gb is required"
     assert not phone(22, '{"storage_gb": 4}').ok, "ram_gb is required"

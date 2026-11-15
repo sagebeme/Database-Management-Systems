@@ -65,7 +65,7 @@ def to_2nf(schema, fds):
     partials = partial_dependencies(schema, fds)
     lefts = []
     for x, _ in partials:
-        if not any(l < x for l in lefts) and x not in lefts:
+        if not any(left < x for left in lefts) and x not in lefts:
             lefts.append(x)
     lefts.sort(key=lambda x: (len(x), sorted(x)))
     parts, moved = [], set()
